@@ -1,0 +1,19 @@
+\begin{verbatim}
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 file_or_directory1 [file_or_directory2 ...]"
+    exit 1
+fi
+for item in "$@"
+do
+    if [ -f "$item" ]; then
+        echo "'$item' is a regular file."
+        line_count=$(wc -l < "$item")
+        echo "Number of lines in '$item': $line_count"
+    elif [ -d "$item" ]; then
+        echo "'$item' is a directory."
+    else
+        echo "'$item' is neither a file nor a directory."
+    fi
+    echo "----------------------------"
+done
+\end{verbatim}

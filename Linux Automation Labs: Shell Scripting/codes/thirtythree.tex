@@ -1,0 +1,55 @@
+\begin{verbatim}
+datafile="employee_data.txt"
+if [ ! -f "$datafile" ]; then
+    touch "$datafile"
+fi
+while true
+do
+    echo ""
+    echo "=========== Employee Record System ==========="
+    echo "1. Insert New Employee Record"
+    echo "2. Display All Records"
+    echo "3. Display Salary of an Employee (by ID)"
+    echo "4. Exit"
+    echo "=============================================="
+    read -p "Enter your choice [1-4]: " choice
+    case $choice in
+        1)
+            echo "---- Insert New Employee ----"
+            read -p "Enter Employee ID: " eid
+            read -p "Enter Employee Name: " name
+            read -p "Enter Designation: " desig
+            read -p "Enter Salary: " salary
+            echo "$eid,$name,$desig,$salary" >> $datafile
+            echo "Record inserted successfully."
+            ;;
+        2)
+            echo "---- All Employee Records ----"
+            if [ -s $datafile ]; then
+                echo "EmpID, Name, Designation, Salary"
+                cat $datafile
+            else
+                echo "No records found."
+            fi
+            ;;
+        3)
+            echo "---- Search Employee Salary ----"
+            read -p "Enter Employee ID: " search_id
+            result=$(grep "^$search_id," $datafile)
+            if [ -n "$result" ]; then
+                salary=$(echo "$result" | cut -d',' -f4)
+                echo -e "ID $search_id \n Salary:$salary"
+            else
+                 echo "Employee with ID $search_id not found."
+            fi
+            ;;
+        4)
+            echo "Exiting. Thank you!"
+            exit 0
+            ;;
+        *)
+            echo "Invalid choice. Please select between 1 and 4."
+            ;;
+    esac
+done
+\end{verbatim}

@@ -1,0 +1,14 @@
+\begin{verbatim}
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 number"
+    exit 1
+fi
+num=$1
+rev=$(echo "$num" | rev)
+
+if [ "$num" -eq "$rev" ]; then
+    echo "$num is a palindrome."
+else
+    echo "$num is not a palindrome."
+fi
+\end{verbatim}

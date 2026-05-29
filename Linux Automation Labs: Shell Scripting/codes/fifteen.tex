@@ -1,0 +1,15 @@
+\begin{verbatim}
+if [ $# -ne 2 ]; then
+    echo "Usage: $0 input_file output_file"
+    exit 1
+fi
+input=$1
+output=$2
+
+if [ ! -f "$input" ]; then
+    echo "Error: File '$input' not found!"
+    exit 2
+fi
+tr -d 'aeiouAEIOU' < "$input" > "$output"
+echo "Data transferred to '$output' without vowels."
+\end{verbatim}

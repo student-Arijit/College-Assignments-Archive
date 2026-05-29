@@ -1,0 +1,14 @@
+\begin{verbatim}
+read -p "Enter a word: " word
+length=${#word}
+if [ $length -lt 4 ]; then
+    echo "The word must be at least 4 characters long."
+    exit 1
+fi
+reverse=$(echo "$word" | rev)
+if [ "$word" = "$reverse" ]; then
+    echo "The word '$word' is a palindrome."
+else
+    echo "The word '$word' is not a palindrome."
+fi
+\end{verbatim}

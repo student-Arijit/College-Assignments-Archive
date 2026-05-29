@@ -1,0 +1,19 @@
+\begin{verbatim}
+if [ $# -ne 3 ]; then
+    echo "Usage: $0 filename m n"
+    exit 1
+fi
+filename=$1
+m=$2
+n=$3
+if [ ! -f "$filename" ]; then
+    echo "File '$filename' not found!"
+    exit 2
+fi
+if ! [[ "$m" =~ ^[0-9]+$ && "$n" =~ ^[0-9]+$ && "$m" -le "$n" ]]; 
+then
+    echo "Error: m and n should be positive integers with m <= n"
+    exit 3
+fi
+sed -n "${m},${n}p" "$filename"
+\end{verbatim}

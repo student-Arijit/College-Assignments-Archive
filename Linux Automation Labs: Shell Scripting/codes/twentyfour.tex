@@ -1,0 +1,22 @@
+\begin{verbatim}
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <positive-integer>"
+    exit 1
+fi
+num=$1
+if ! [[ "$num" =~ ^[0-9]+$ ]] || [ "$num" -le 1 ]; then
+    echo "Error: Please enter an integer greater than 1."
+    exit 1
+fi
+echo "Prime factors of $num are:"
+i=2
+while [ $num -ge $i ]
+do
+    if [ $((num % i)) -eq 0 ]; then
+        echo $i
+        num=$((num / i))
+    else
+        i=$((i + 1))
+    fi
+done
+\end{verbatim}

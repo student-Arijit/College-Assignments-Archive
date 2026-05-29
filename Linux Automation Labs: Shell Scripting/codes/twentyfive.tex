@@ -1,0 +1,11 @@
+\begin{verbatim}
+read -p "Enter the file name: " filename
+if [ ! -f "$filename" ]; then
+    echo "File '$filename' not found."
+    exit 1
+fi
+read -p "Enter the word to search: " word
+count=$(grep -o "\b$word\b" "$filename" | wc -l)
+echo "The word '$word' occurred $count times in the file
+'$filename'."
+\end{verbatim}

@@ -1,0 +1,24 @@
+\begin{verbatim}
+read -p "Enter numbers separated by space: " -a arr
+n=${#arr[@]}
+if [ $# -ne 1 ] || { [ "$1" != "1" ] && [ "$1" != "2" ]; }; then
+    echo "Usage: $0 1 (asc) or 2 (desc)"
+    exit 1
+fi
+for ((i = 0; i < n - 1; i++)); do
+    for ((j = 0; j < n - i - 1; j++)); do
+        if [ "$1" -eq 1 ] && [ "${arr[j]}" -gt "${arr[j+1]}" ]; 
+        then
+            temp=${arr[j]}
+            arr[j]=${arr[j+1]}
+            arr[j+1]=$temp
+        elif [ "$1" -eq 2 ] && [ "${arr[j]}" -lt "${arr[j+1]}" ];
+        then
+            temp=${arr[j]}
+            arr[j]=${arr[j+1]}
+            arr[j+1]=$temp
+        fi
+    done
+done
+echo "Sorted array: ${arr[@]}"
+\end{verbatim}

@@ -1,0 +1,17 @@
+\begin{verbatim}
+echo "Enter array elements (space-separated):"
+read -a arr
+read -p "Enter the number to search: " key
+found=0
+for (( i=0; i<${#arr[@]}; i++ ))
+do
+    if [ "${arr[$i]}" -eq "$key" ]; then
+        echo "Number $key found at position $((i+1))."
+        found=1
+        break
+    fi
+done
+if [ $found -eq 0 ]; then
+    echo "Number $key not found in the array."
+fi
+\end{verbatim}

@@ -1,0 +1,13 @@
+\begin{verbatim}
+read -p "Enter a non-negative integer: " num
+if ! [[ "$num" =~ ^[0-9]+$ ]]; then
+    echo "Error: Input must be a non-negative integer."
+    exit 1
+fi
+fact=1
+for (( i=1; i<=num; i++ ))
+do
+    fact=$((fact * i))
+done
+echo "Factorial of $num is: $fact"
+\end{verbatim}

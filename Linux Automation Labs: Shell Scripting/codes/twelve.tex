@@ -1,0 +1,20 @@
+\begin{verbatim}
+read -p "Enter sorted numbers (space separated): " -a arr
+read -p "Enter the number to search: " key
+low=0
+high=$((${#arr[@]} - 1))
+found=0
+while [ $low -le $high ]; do
+    mid=$(((low + high) / 2))
+    if [ "${arr[mid]}" -eq "$key" ]; then
+        echo "Number found at index $mid"
+        found=1
+        break
+    elif [ "$key" -lt "${arr[mid]}" ]; then
+        high=$((mid - 1))
+    else
+        low=$((mid + 1))
+    fi
+done
+[ $found -eq 0 ] && echo "Number not found"
+\end{verbatim}

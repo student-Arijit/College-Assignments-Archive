@@ -1,0 +1,26 @@
+\begin{verbatim}
+echo "Enter coefficients a, b, and c (for ax^2 + bx + c = 0):"
+read -p "a: " a
+read -p "b: " b
+read -p "c: " c
+if [ "$a" -eq 0 ]; then
+    echo "This is not a quadratic equation (a cannot be 0)"
+    exit 1
+fi
+d=$(echo "$b * $b - 4 * $a * $c" | bc)
+if [ "$d" -gt 0 ]; then
+    echo "Discriminant is $d > 0 → Two real and distinct roots."
+    root1=$(echo "scale=4; (-$b + sqrt($d)) / (2 * $a)" | bc -l)
+    root2=$(echo "scale=4; (-$b - sqrt($d)) / (2 * $a)" | bc -l)
+    echo "Roots: $root1 and $root2"
+elif [ "$d" -eq 0 ]; then
+    echo "Discriminant is $d = 0 → One real and repeated root."
+    root=$(echo "scale=4; -$b / (2 * $a)" | bc -l)
+    echo "Root: $root"
+else
+    echo "Discriminant is $d < 0 → Complex roots."
+    real=$(echo "scale=4; -$b / (2 * $a)" | bc -l)
+    imag=$(echo "scale=4; sqrt(-$d) / (2 * $a)" | bc -l)
+    echo "Roots: $real + ${imag}i and $real - ${imag}i"
+fi
+\end{verbatim}

@@ -1,0 +1,15 @@
+\begin{verbatim}
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 input_file"
+    exit 1
+fi
+file=$1
+
+if [ ! -f "$file" ]; then
+    echo "Error: File '$file' not found!"
+    exit 2
+fi
+sort "$file" | uniq > unique_lines.txt
+echo "Duplicate lines removed. Output written to 
+'unique.txt'"
+\end{verbatim}

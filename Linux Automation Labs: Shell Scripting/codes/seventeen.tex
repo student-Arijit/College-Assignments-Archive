@@ -1,0 +1,16 @@
+\begin{verbatim}
+read -p "Enter numbers separated by space: " -a arr
+n=${#arr[@]}
+for ((i = 0; i < n - 1; i++)); do
+    max_idx=$i
+    for ((j = i + 1; j < n; j++)); do
+        if [ "${arr[j]}" -gt "${arr[max_idx]}" ]; then
+            max_idx=$j
+        fi
+    done
+    temp=${arr[i]}
+    arr[i]=${arr[max_idx]}
+    arr[max_idx]=$temp
+done
+echo "Sorted array in descending order: ${arr[@]}"
+\end{verbatim}

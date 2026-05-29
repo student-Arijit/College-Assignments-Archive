@@ -1,0 +1,26 @@
+\begin{verbatim}
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 filename"
+    exit 1
+fi
+file=$1
+if [ ! -f "$file" ]; then
+    echo "Error: File '$file' not found!"
+    exit 2
+fi
+echo "Choose an option:"
+echo "1. Convert to UPPER case"
+echo "2. Convert to lower case"
+read -p "Enter your choice (1 or 2): " choice
+case $choice in
+    1)
+        tr 'a-z' 'A-Z' < "$file"
+        ;;
+    2)
+        tr 'A-Z' 'a-z' < "$file"
+        ;;
+    *)
+        echo "Invalid choice."
+        ;;
+esac
+\end{verbatim}

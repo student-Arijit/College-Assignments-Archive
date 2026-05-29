@@ -1,0 +1,12 @@
+\begin{verbatim}
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 filename"
+    exit 1
+fi
+if [ ! -f "$1" ]; then
+    echo "File not found!"
+    exit 2
+fi
+sed -i '/college/d' "$1"
+echo "Lines containing 'college' have been deleted from $1"
+\end{verbatim}

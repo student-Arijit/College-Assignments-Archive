@@ -1,0 +1,24 @@
+\begin{verbatim}
+read -p "Enter numbers separated by space: " -a arr
+if [ ${#arr[@]} -lt 2 ]; then
+    echo "Need at least two numbers"
+    exit 1
+fi
+max=-999999
+second=-999999
+for num in "${arr[@]}"; do
+    if [ "$num" -gt "$max" ]; then
+        second=$max
+        max=$num
+    elif [ "$num" -gt "$second" ] && [ "$num" -ne "$max" ]; then
+        second=$num
+    fi
+done
+if [ "$second" -eq -999999 ]; then
+    echo "No second highest number found 
+    (all numbers may be same)"
+
+else
+    echo "Second highest number is: $second"
+fi
+\end{verbatim}
