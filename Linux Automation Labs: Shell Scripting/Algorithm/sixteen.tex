@@ -1,0 +1,45 @@
+\begin{enumerate}
+    \item Start
+    \item Prompt user to input coefficients $a$, $b$, and $c$
+    \item Read the values of $a$, $b$, and $c$
+    \item If $a = 0$:
+    \begin{enumerate}
+        \item Display error: "Not a quadratic equation" and exit
+    \end{enumerate}
+    \item Calculate discriminant $d = b^2 - 4ac$
+    \item Check the value of discriminant $d$
+    \begin{enumerate}
+        \item If $d > 0$:
+        \begin{enumerate}
+            \item Display: "Two real and distinct roots"
+            \item Calculate roots using:
+            \[
+            \text{root}_1 = \frac{-b + \sqrt{d}}{2a},\quad
+            \text{root}_2 = \frac{-b - \sqrt{d}}{2a}
+            \]
+        \end{enumerate}
+        \item Else if $d = 0$:
+        \begin{enumerate}
+            \item Display: "One real and repeated root"
+            \item Calculate root using:
+            \[
+            \text{root} = \frac{-b}{2a}
+            \]
+        \end{enumerate}
+        \item Else ($d < 0$):
+        \begin{enumerate}
+            \item Display: "Complex roots"
+            \item Calculate:
+            \[
+            \text{real part} = \frac{-b}{2a},\quad
+            \text{imaginary part} = \frac{\sqrt{-d}}{2a}
+            \]
+            \item Display complex roots as:
+            \[
+            \text{real} \pm \text{imag}i
+            \]
+        \end{enumerate}
+    \end{enumerate}
+    \item End
+\end{enumerate}
+

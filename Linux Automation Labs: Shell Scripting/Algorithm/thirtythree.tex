@@ -1,0 +1,47 @@
+\begin{enumerate}
+    \item Start
+    \item Set \texttt{datafile} as \texttt{"employee\_data.txt"}
+    \item \textbf{If} file \texttt{employee\_data.txt} does not exist:
+    \begin{itemize}
+        \item Create the file using \texttt{touch}
+    \end{itemize}
+    \item Repeat the following steps until user selects Exit:
+    \begin{enumerate}[label=\alph*.]
+        \item Display the menu:
+        \begin{itemize}
+            \item 1. Insert New Employee Record
+            \item 2. Display All Records
+            \item 3. Display Salary of an Employee (by ID)
+            \item 4. Exit
+        \end{itemize}
+        \item Prompt user to enter choice
+        \item \textbf{Switch case} on user's choice:
+        \begin{itemize}
+            \item \textbf{Case 1: Insert New Employee}
+            \begin{itemize}
+                \item Prompt for Employee ID, Name, Designation, and Salary
+                \item Append these values as a comma-separated line to \texttt{datafile}
+            \end{itemize}
+            \item \textbf{Case 2: Display All Records}
+            \begin{itemize}
+                \item If file is non-empty, display column headers and contents
+                \item Else, show ``No records found''
+            \end{itemize}
+            \item \textbf{Case 3: Display Salary of an Employee}
+            \begin{itemize}
+                \item Prompt for Employee ID
+                \item Search for matching line in the file
+                \item If found, extract and display salary field
+                \item Else, display ``Employee not found''
+            \end{itemize}
+            \item \textbf{Case 4: Exit}
+            \begin{itemize}
+                \item Display exit message
+                \item Terminate the program
+            \end{itemize}
+            \item \textbf{Default:} Display ``Invalid choice''
+        \end{itemize}
+    \end{enumerate}
+\item End
+\end{enumerate}
+

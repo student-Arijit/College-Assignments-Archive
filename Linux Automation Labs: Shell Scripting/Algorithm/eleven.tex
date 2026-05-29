@@ -1,0 +1,24 @@
+\begin{enumerate}
+    \item Start
+    \item Read a list of numbers into an array
+    \item Initialize two variables:
+    \begin{itemize}
+        \item \texttt{max} = very small value
+        \item \texttt{second\_max} = very small value
+    \end{itemize}
+    \item For each number in the array:
+    \begin{enumerate}
+        \item If number > \texttt{max}:
+        \begin{enumerate}
+            \item Set \texttt{second\_max} = \texttt{max}
+            \item Set \texttt{max} = number
+        \end{enumerate}
+        \item Else if number > \texttt{second\_max} and number ≠ \texttt{max}:
+        \begin{enumerate}
+            \item Set \texttt{second\_max} = number
+        \end{enumerate}
+    \end{enumerate}
+    \item If \texttt{second\_max} is unchanged, print "Second highest not found"
+    \item Else, display \texttt{second\_max}
+    \item End
+\end{enumerate}

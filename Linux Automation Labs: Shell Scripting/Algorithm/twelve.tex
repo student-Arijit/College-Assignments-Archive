@@ -1,0 +1,32 @@
+\begin{enumerate}
+    \item Start
+    \item Read a sorted list of numbers into an array
+    \item Read the target number to search
+    \item Initialize variables:
+    \begin{itemize}
+        \item \texttt{low} = 0
+        \item \texttt{high} = length of array - 1
+    \end{itemize}
+    \item Repeat while \texttt{low} $\leq$ \texttt{high}:
+    \begin{enumerate}
+        \item Calculate \texttt{mid} = (low + high) / 2
+        \item If \texttt{arr[mid]} == target:
+        \begin{enumerate}
+            \item Display position and exit
+        \end{enumerate}
+        \item Else if target < \texttt{arr[mid]}:
+        \begin{enumerate}
+            \item Set \texttt{high} = mid - 1
+        \end{enumerate}
+        \item Else:
+        \begin{enumerate}
+            \item Set \texttt{low} = mid + 1
+        \end{enumerate}
+    \end{enumerate}
+    \item If loop ends and element is not found:
+    \begin{enumerate}
+        \item Display "Element not found"
+    \end{enumerate}
+    \item End
+\end{enumerate}
+

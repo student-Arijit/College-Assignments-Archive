@@ -1,0 +1,23 @@
+\begin{enumerate}
+    \item \textbf{Start}
+    \item Check if exactly one command-line argument is provided
+    \begin{itemize}
+        \item If not, display: ``Usage: \$0 <filename>'' and exit
+    \end{itemize}
+    \item Store the argument in variable \texttt{filename}
+    \item Check if the file \texttt{filename} exists
+    \begin{itemize}
+        \item If not, display: ``Error: File 'filename' does not exist.'' and exit
+    \end{itemize}
+    \item Use \texttt{wc -l} to count and store number of lines in \texttt{lines}
+    \item Use \texttt{wc -w} to count and store number of words in \texttt{words}
+    \item Use \texttt{wc -c} to count and store number of characters in \texttt{chars}
+    \item Display:
+    \begin{itemize}
+        \item File name
+        \item Number of lines
+        \item Number of words
+        \item Number of characters
+    \end{itemize}
+    \item \textbf{End}
+\end{enumerate}

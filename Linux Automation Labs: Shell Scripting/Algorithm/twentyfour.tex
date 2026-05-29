@@ -1,0 +1,27 @@
+\begin{enumerate}
+    \item \textbf{Start}
+    \item Check if exactly one command-line argument is passed
+    \begin{itemize}
+        \item If not, display usage message and exit
+    \end{itemize}
+    \item Let \texttt{num} = command-line argument
+    \item Check if \texttt{num} is a valid positive integer greater than 1
+    \begin{itemize}
+        \item If not, display error and exit
+    \end{itemize}
+    \item Display message: "Prime factors of \texttt{num} are:"
+    \item Initialize \texttt{i = 2}
+    \item While \texttt{num >= i}, do:
+    \begin{itemize}
+        \item If \texttt{num \% i == 0}, then:
+        \begin{itemize}
+            \item Print \texttt{i}
+            \item Set \texttt{num = num / i}
+        \end{itemize}
+        \item Else:
+        \begin{itemize}
+            \item Increment \texttt{i = i + 1}
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{End}
+\end{enumerate}

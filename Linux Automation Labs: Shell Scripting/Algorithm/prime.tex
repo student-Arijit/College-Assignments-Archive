@@ -1,0 +1,19 @@
+\begin{enumerate}
+    \item Start
+    \item Read command-line arguments into start and end
+    \item For each number i from start to end - 1:
+    \begin{enumerate}
+        \item If $i < 2$, skip (as numbers $< 2$ are not prime)
+        \item Set $flag = 1$ (assume $i$ is prime)
+        \item For each number j from 2 to sqrt(i):
+        \begin{enumerate}
+            \item If $i \% j == 0:$
+            \begin{enumerate}
+                \item Set $flag = 0$ (not prime)
+                \item Break
+            \end{enumerate}
+        \end{enumerate}
+        \item If $flag == 1$, print $i$
+    \end{enumerate}
+    \item End
+\end{enumerate}

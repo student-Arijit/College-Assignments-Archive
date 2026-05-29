@@ -1,0 +1,17 @@
+\begin{enumerate}
+    \item Start
+    \item Read an array of numbers from the user
+    \item Determine the size of the array ($n$)
+    \item Repeat for $i = 0$ to $n - 2$:
+    \begin{enumerate}
+        \item Set \texttt{max\_idx} = $i$
+        \item Repeat for $j = i + 1$ to $n - 1$:
+        \begin{enumerate}
+            \item If \texttt{arr[j] > arr[max\_idx]}, then set \texttt{max\_idx} = $j$
+        \end{enumerate}
+        \item Swap \texttt{arr[i]} and \texttt{arr[max\_idx]}
+    \end{enumerate}
+    \item Display the sorted array in descending order
+    \item End
+\end{enumerate}
+

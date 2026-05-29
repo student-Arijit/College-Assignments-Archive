@@ -1,0 +1,13 @@
+\begin{enumerate}
+    \item \textbf{Start}
+    \item Prompt the user to enter a filename and store it in \texttt{filename}
+    \item Check if the file \texttt{filename} exists
+    \begin{itemize}
+        \item If the file does not exist, display ``File not found'' and exit
+    \end{itemize}
+    \item Prompt the user to enter the word to search and store it in \texttt{word}
+    \item Use \texttt{grep} with \texttt{-o} and word boundaries (\texttt{\textbackslash b}) to find all occurrences of \texttt{word} in the file
+    \item Count the number of lines output by \texttt{grep} using \texttt{wc -l}, and store the result in \texttt{count}
+    \item Display: ``The word '\texttt{word}' occurred \texttt{count} times in the file '\texttt{filename}'.''
+    \item \textbf{End}
+\end{enumerate}

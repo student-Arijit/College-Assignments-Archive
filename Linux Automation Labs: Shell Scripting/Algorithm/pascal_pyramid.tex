@@ -1,0 +1,18 @@
+\begin{enumerate}
+    \item Accept the number of rows as a command-line argument.
+    \item Initialize the binomial coefficient variable: \texttt{$coef = 1$}.
+    \item Loop from \texttt{$i = 0$} to \texttt{$row - 1$}:
+    \begin{itemize}
+        \item Print appropriate spaces to center the row.
+        \item Loop through each element of the row (\texttt{j$ = 0$} to \texttt{$i$}):
+        \begin{itemize}
+            \item If \texttt{$j == 0$} or \texttt{$i == 0$}, set \texttt{$coef = 1$}.
+            \item Else, calculate using recurrence:
+            \[
+            C(i, j) = C(i, j-1) \times \frac{(i - j + 1)}{j}
+            \]
+            \item Print the coefficient with formatting.
+        \end{itemize}
+    \end{itemize}
+    \item Move to the next line after each row.
+\end{enumerate}

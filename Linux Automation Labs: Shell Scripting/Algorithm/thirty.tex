@@ -1,0 +1,20 @@
+\begin{enumerate}
+    \item \textbf{Start}
+    \item Prompt the user to enter sorted array elements and store them in array \texttt{arr}
+    \item Prompt the user to enter the number to search and store in variable \texttt{key}
+    \item Initialize \texttt{low = 0}, \texttt{high = length of array - 1}, and \texttt{found = 0}
+    \item While \texttt{low} is less than or equal to \texttt{high}, repeat:
+    \begin{enumerate}[label*=\arabic*.]
+        \item Compute \texttt{mid = (low + high) / 2}
+        \item If \texttt{arr[mid] == key}:
+        \begin{itemize}
+            \item Print position \texttt{mid + 1}
+            \item Set \texttt{found = 1}
+            \item Break the loop
+        \end{itemize}
+        \item Else if \texttt{arr[mid] < key}, set \texttt{low = mid + 1}
+        \item Else set \texttt{high = mid - 1}
+    \end{enumerate}
+    \item If \texttt{found == 0}, print ``Number not found in the array''
+    \item \textbf{End}
+\end{enumerate}

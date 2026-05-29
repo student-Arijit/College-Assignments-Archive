@@ -1,0 +1,27 @@
+\begin{enumerate}
+    \item \textbf{Start}
+    \item Check if the number of command-line arguments is not equal to 1
+    \begin{itemize}
+        \item If true, display usage message: \texttt{Usage: \$0 filename}
+        \item Exit the script
+    \end{itemize}
+    \item Assign the first argument to variable \texttt{file}
+    \item Check if the file exists
+    \begin{itemize}
+        \item If not, display error message and exit
+    \end{itemize}
+    \item Display options to the user:
+    \begin{itemize}
+        \item 1. Convert to UPPER case
+        \item 2. Convert to lower case
+    \end{itemize}
+    \item Read user's choice into variable \texttt{choice}
+    \item Use \texttt{case} to perform corresponding action:
+    \begin{itemize}
+        \item Case 1: Use \texttt{tr 'a-z' 'A-Z'} to convert file content to uppercase
+        \item Case 2: Use \texttt{tr 'A-Z' 'a-z'} to convert file content to lowercase
+        \item Default: Display \texttt{Invalid choice}
+    \end{itemize}
+    \item \textbf{End}
+\end{enumerate}
+
