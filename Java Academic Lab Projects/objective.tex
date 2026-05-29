@@ -1,0 +1,520 @@
+\newcommand{\objone}{
+\begin{itemize}
+    \item \textbf{Input Handling:}  
+    To write a Java program that takes input for an array of integers from the user.  
+    The program should be able to handle any valid size of the array entered by the user.
+
+    \item \textbf{Array Splitting:}  
+    To divide the array into two halves based on its length.  
+    If the array has an odd number of elements, the extra element belongs to the second half.
+
+    \item \textbf{Ascending Sort:}  
+    To sort the first half of the array in ascending order using Java’s built-in sorting method.  
+    This ensures that the initial part of the array is organized from smallest to largest.
+
+    \item \textbf{Descending Sort:}  
+    To sort the second half of the array in descending order.  
+    This requires converting the elements to an object array to use reverse order sorting.
+
+    \item \textbf{Combining Halves:}  
+    To combine both sorted halves back into the original array.  
+    Care should be taken to maintain the order of each sorted half during merging.
+
+    \item \textbf{Output Display:}  
+    To display the final array with the first half sorted in ascending order  
+    and the second half in descending order as the final output to the user.
+\end{itemize}
+}
+
+\newcommand{\objtwo}{
+\begin{itemize}
+    \item \textbf{Matrix Input:}  
+    To develop a Java program that reads a 2D matrix from the user.  
+    The program should accept user-defined numbers of rows and columns.
+
+    \item \textbf{Storing Data:}  
+    To store the entered matrix elements into a 2D array structure.  
+    This allows further processing for analysis and output.
+
+    \item \textbf{Row Minimums:}  
+    To compute the minimum element from each row of the matrix.  
+    These values will be displayed alongside each respective row.
+
+    \item \textbf{Column Minimums:}  
+    To determine the smallest value from each column in the matrix.  
+    These values will be printed separately after the matrix.
+
+    \item \textbf{Formatted Output:}  
+    To display the matrix elements clearly in a tabular form.  
+    Row minimums are shown at the end of each row for readability.
+
+    \item \textbf{Minimum Summary:}  
+    To provide a summary of column minimums below the matrix.  
+    This ensures the output reflects both row-wise and column-wise analysis.
+\end{itemize}
+}
+
+\newcommand{\objthree}{
+\begin{itemize}
+    \item \textbf{User Input:}  
+    To create a Java program that accepts a string from the user.  
+    The input may contain alphabets, numbers, symbols, and spaces.
+
+    \item \textbf{Character Analysis:}  
+    To process each character in the string and identify whether it is a vowel, consonant, or non-letter.  
+    The identification is case-insensitive.
+
+    \item \textbf{Vowel Retention:}  
+    To retain all vowels (A, E, I, O, U and their lowercase forms) in the output.  
+    These characters are preserved in their original order.
+
+    \item \textbf{Consonant Removal:}  
+    To remove all consonant characters from the string.  
+    Only alphabetic consonants are excluded; other characters remain unchanged.
+
+    \item \textbf{Result Construction:}  
+    To build the resulting string by appending valid characters (vowels and non-letters).  
+    A `StringBuilder` or similar structure may be used for efficient concatenation.
+
+    \item \textbf{Output Display:}  
+    To display the final string after removing consonants.  
+    The output reflects only vowels and non-alphabet characters from the original input.
+\end{itemize}
+}
+
+\newcommand{\objfour}{
+\begin{itemize}
+
+    \item \textbf{Class Definition:} 
+    Define a class named \texttt{MyPoint} to model a point in 2D space with integer coordinates \texttt{x} and \texttt{y}.
+
+    \item \textbf{Default Constructor:} 
+    Create a no-argument constructor to initialize the point at (0, 0), representing the origin.
+
+    \item \textbf{Parameterized Constructor:} 
+    Define an overloaded constructor that accepts two integers to set custom values of \texttt{x} and \texttt{y}.
+
+    \item \textbf{Setting Values:} 
+    Implement a method \texttt{setXY()} that assigns values to both \texttt{x} and \texttt{y} simultaneously.
+
+    \item \textbf{Returning Coordinates:} 
+    Implement \texttt{getXY()} to return a 2-element array containing the current values of \texttt{x} and \texttt{y}.
+
+    \item \textbf{Custom String Output:} 
+    Override the \texttt{toString()} method to return a string in the format \texttt{"(x, y)"}.
+
+    \item \textbf{Distance Calculation:} 
+    Write a method \texttt{distance(int x, int y)} that computes the distance from the current point to another point using the distance formula.
+
+    \item \textbf{Test Class Creation:} 
+    Define a separate class \texttt{TestMyPoint} containing the \texttt{main()} method to test the functionality of the \texttt{MyPoint} class.
+
+    \item \textbf{Object Instantiation and Testing:} 
+    In the test class, create one or more \texttt{MyPoint} objects and call all public methods to verify expected behavior.
+
+    \item \textbf{Display Results:} 
+    Print the output from all test cases, including coordinates, string representation, and distance values.
+
+\end{itemize}
+}
+
+\newcommand{\objfive}{
+\begin{itemize}
+
+    \item \textbf{Define Superclass \texttt{Person}:}
+    Create a superclass named \texttt{Person} with common attributes such as \texttt{name}, \texttt{address}, and methods for setting and displaying information.
+
+    \item \textbf{Create Subclass \texttt{Student}:}
+    Extend the \texttt{Person} class to form a \texttt{Student} class with additional attributes like \texttt{program}, \texttt{year}, and \texttt{fee}.
+
+    \item \textbf{Create Subclass \texttt{Staff}:}
+    Similarly, create another subclass \texttt{Staff} with specific attributes such as \texttt{school} and \texttt{pay}.
+
+    \item \textbf{Implement Constructors:}
+    Define constructors in all classes for proper initialization of attributes, using \texttt{super} keyword where needed to invoke the superclass constructor.
+
+    \item \textbf{Override \texttt{toString()} Methods:}
+    Provide meaningful string representations for each class by overriding the \texttt{toString()} method to include both inherited and specific attributes.
+
+    \item \textbf{Use Setter and Getter Methods:}
+    Implement getter and setter methods to allow controlled access to private data fields and to demonstrate encapsulation.
+
+    \item \textbf{Instantiate Classes in Main:}
+    In a separate driver class, create objects of \texttt{Person}, \texttt{Student}, and \texttt{Staff}, initializing them with suitable values.
+
+    \item \textbf{Demonstrate Polymorphism:}
+    Use polymorphism by referring to subclass objects using superclass references and calling overridden methods.
+
+    \item \textbf{Display Object Details:}
+    Call the \texttt{toString()} methods for each object and print their information on the console for verification.
+
+    \item \textbf{Test and Validate:}
+    Verify the correctness of constructor chaining, method overriding, and data handling through sample output and debugging if needed.
+
+\end{itemize}
+}
+
+\newcommand{\objsix}{
+\begin{itemize}
+    \item \textbf{Understanding Inheritance:} 
+    To demonstrate how a derived class can extend the functionality of a base class by inheriting its properties.
+
+    \item \textbf{Constructor Usage:} 
+    To learn how to initialize variables of both base and derived classes using constructors, including the use of the \texttt{super} keyword.
+
+    \item \textbf{Method Overriding:} 
+    To practice method overriding by redefining the \texttt{getVolume()} method in the derived class to provide specific functionality.
+
+    \item \textbf{Applying Mathematical Concepts:} 
+    To apply formulas for volume calculation of a cube and a cylinder using class methods.
+
+    \item \textbf{Encapsulation and Reusability:} 
+    To reinforce the importance of encapsulating data and designing reusable components using object-oriented principles.
+
+    \item \textbf{Polymorphism Implementation:} 
+    To understand how runtime polymorphism works through method overriding in an inheritance hierarchy.
+\end{itemize}
+}
+
+\newcommand{\objseven}{
+\begin{itemize}
+    \item \textbf{Understanding Interfaces:} 
+    To learn how to define and use interfaces in Java for specifying a contract of functionalities.
+
+    \item \textbf{Abstraction in OOP:} 
+    To implement abstraction by separating engine behavior definitions from their implementation using interfaces.
+
+    \item \textbf{Implementing Interface Methods:} 
+    To understand that any class implementing an interface must provide concrete implementations for all declared methods.
+
+    \item \textbf{Encapsulation of Engine Properties:} 
+    To encapsulate engine-related data such as \texttt{speed} and \texttt{gear} within a class.
+
+    \item \textbf{Customizing Behavior:} 
+    To allow specific behavior for speed and gear changes by implementing methods like 
+    \\\texttt{speedUp(value)} and \texttt{changeGear(value)}.
+
+    \item \textbf{Designing Flexible Systems:} 
+    To design flexible and extensible systems where multiple classes can implement the same interface with different logic.
+\end{itemize}
+}
+
+\newcommand{\objeight}{
+\begin{itemize}
+
+    \item \textbf{Understanding Exception Handling:} \\
+    To learn how Java's exception mechanism works by using \texttt{try}, \texttt{catch}, and \texttt{finally} blocks. This helps manage runtime anomalies without abruptly terminating the program.
+
+    \item \textbf{Handling Multiple Exceptions:} \\
+    To demonstrate the handling of multiple types of exceptions (such as \texttt{ArrayIndexOutOfBoundsException},  using separate or multi-catch blocks in one program.
+
+    \item \textbf{Improving Program Robustness:} \\
+    To build fault-tolerant applications that anticipate and recover from common errors, resulting in more stable and user-friendly software.
+
+    \item \textbf{Using Control Structures:} \\
+    To integrate exception handling with conditional statements to define alternative execution paths and ensure uninterrupted program flow during error conditions.
+
+    \item \textbf{Practicing Defensive Programming:} \\
+    To follow best practices for error prevention and validation of user inputs, reducing the likelihood of unhandled exceptions and promoting reliable code execution.
+
+    \item \textbf{Using Finally Block for Cleanup:} \\
+    To ensure that important cleanup operations (like closing resources) are executed regardless of whether an exception occurs or not.
+
+    \item \textbf{Enhancing Code Debugging and Maintenance:} \\
+    To use exception messages and stack traces to quickly locate the source of errors, simplifying the debugging and maintenance process of the application.
+
+\end{itemize}
+}
+
+\newcommand{\objnine}{
+
+\begin{itemize}
+    \item \textbf{Understanding JDBC Connectivity:} 
+    To learn how to establish a connection between a Java application and a relational database using JDBC (Java Database Connectivity).
+
+    \item \textbf{Data Insertion into Database:} 
+    To insert user input data (Registration Number, Student Name, City, and Contact Number) into a database table using SQL INSERT statements.
+
+    \item \textbf{Retrieving and Displaying Data:} 
+    To fetch and display all records from the \texttt{Student\_info} table in a structured, tabular format using SQL SELECT queries.
+
+    \item \textbf{Prepared Statements and Input Handling:} 
+    To use \texttt{PreparedStatement} for secure and efficient execution of SQL commands while handling user input.
+
+    \item \textbf{Database Design and Table Structure:} 
+    To design a basic database schema that models student data in a tabular form.
+
+    \item \textbf{Developing Practical Database Applications:} 
+    To apply theoretical knowledge of databases in practical applications that involve both front-end input and back-end storage.
+\end{itemize}
+}
+
+\newcommand{\objten}{
+\begin{itemize}
+    \item \textbf{Understanding Array Operations:} 
+    To develop a clear understanding of how arrays work in Java, including traversal and manipulation.
+
+    \item \textbf{Removing Elements Manually:} 
+    To implement logic for removing a specific element from an array, as Java arrays have fixed size and no built-in remove method.
+
+    \item \textbf{Using Conditional Statements:} 
+    To practice decision-making using conditions for identifying the target element to remove.
+
+    \item \textbf{Enhancing Logical Thinking:} 
+    To improve algorithmic thinking by handling array reconstruction after removing an element.
+
+    \item \textbf{Working with User Input:} 
+    To read dynamic input from users for both the array and the element to be removed.
+\end{itemize}
+}
+
+\newcommand{\objeleven}{
+\begin{itemize}
+    \item \textbf{Understanding Array Structure:}
+    To gain a fundamental understanding of how arrays are organized and indexed in Java.
+
+    \item \textbf{Element Insertion Logic:}
+    To implement logic for inserting a new element into an existing array at a specific position by shifting elements.
+
+    \item \textbf{Working with Fixed-Size Data Structures:}
+    To handle fixed-size arrays in Java and create new arrays when modifications are required.
+
+    \item \textbf{Input Validation and User Interaction:}
+    To accept user input for the array, the element, and the target position, ensuring proper handling of input constraints.
+
+    \item \textbf{Problem-Solving with Arrays:}
+    To enhance problem-solving and algorithmic skills through manual manipulation of data structures.
+\end{itemize}
+}
+
+\newcommand{\objtwelve}{
+\begin{itemize}
+    \item \textbf{Understanding Array Traversal:}
+    To practice iterating over arrays using nested loops for pairwise comparison of elements.
+
+    \item \textbf{Solving a Real-World Problem:}
+    To identify element pairs that satisfy a given condition (sum = target), a common problem in algorithm and interview practice.
+
+    \item \textbf{Improving Logical Thinking:}
+    To enhance problem-solving and algorithmic thinking by implementing efficient search strategies.
+
+    \item \textbf{Working with Conditional Statements:}
+    To use conditional logic to check for pairs that satisfy a mathematical condition.
+
+    \item \textbf{User Interaction and Input Handling:}
+    To accept dynamic user input for the array elements and target sum, ensuring real-time processing of data.
+\end{itemize}
+}
+
+\newcommand{\objthirteen}{
+\begin{itemize}
+    \item \textbf{Understanding Array Manipulation:}
+    To learn how to manipulate array data by identifying and eliminating duplicate values.
+
+    \item \textbf{Practicing Sorting Techniques:}
+    To use array sorting as a strategy to simplify the detection and removal of duplicates.
+
+    \item \textbf{Improving Algorithmic Thinking:}
+    To implement logic that filters unique values and constructs a new array of non-repeating elements.
+
+    \item \textbf{Calculating Effective Array Size:}
+    To determine and return the updated length of the array after removing duplicates.
+
+    \item \textbf{Handling User Input:}
+    To accept dynamic input from users and process it effectively through iterative and conditional logic.
+\end{itemize}
+}
+
+\newcommand{\objfourteen}{
+\begin{itemize}
+    \item \textbf{Understanding Sequence Detection:}
+    To learn how to identify consecutive sequences within an unsorted array of integers.
+
+    \item \textbf{Working with Unordered Data:}
+    To handle and process unsorted data using data structures such as arrays and sets.
+
+    \item \textbf{Applying Efficient Algorithms:}
+    To implement an optimized algorithm (using HashSet or sorting) to find the longest sequence without unnecessary computation.
+
+    \item \textbf{Enhancing Problem-Solving Skills:}
+    To develop algorithmic thinking by solving a classic array-based problem commonly asked in coding interviews.
+
+    \item \textbf{Practicing Java Collections:}
+    To apply Java collections like \texttt{HashSet} for fast lookups and sequence tracking.
+
+    \item \textbf{Handling Edge Cases:}
+    To account for duplicate elements and disconnected number sequences during processing.
+\end{itemize}
+}
+
+\newcommand{\objfifteen}{
+\begin{itemize}
+    \item \textbf{Understanding String Comparison:}
+    To learn how to compare two strings lexicographically using built-in Java methods.
+
+    \item \textbf{Exploring the \texttt{compareTo()} Method:}
+    To demonstrate the use of the \texttt{String.compareTo()} method for determining the ordering of strings based on Unicode values.
+
+    \item \textbf{Handling Alphabetical Ordering:}
+    To understand how strings are ordered in dictionaries and how Java handles such ordering internally.
+
+    \item \textbf{Practicing Conditional Statements:}
+    To implement logic that interprets the result of a lexicographical comparison and outputs meaningful messages.
+
+    \item \textbf{Strengthening String Manipulation Skills:}
+    To build proficiency in working with Java's \texttt{String} class and related methods.
+\end{itemize}
+}
+
+\newcommand{\objsixteen}{
+\begin{itemize}
+    \item \textbf{Understanding String Comparison Techniques:}
+    To learn how to compare specific parts (substrings) of two strings rather than comparing entire strings.
+
+    \item \textbf{Using \texttt{regionMatches()} Method:}
+    To explore the usage of the \texttt{regionMatches()} method in the \texttt{String} class for partial string comparison.
+
+    \item \textbf{Improving String Manipulation Skills:}
+    To gain hands-on experience in working with string indexing and substring matching.
+
+    \item \textbf{Practicing Conditional Logic:}
+    To apply conditional checks based on the outcome of region comparison for logical decision making.
+
+    \item \textbf{Enhancing Debugging and Output Interpretation:}
+    To interpret substring match results and print them clearly in a formatted manner.
+\end{itemize}
+}
+
+\newcommand{\objseventeen}{
+\begin{itemize}
+    \item \textbf{Understanding String Permutations with Repetition:}  
+    To learn how to generate all possible string permutations when characters are allowed to repeat.
+
+    \item \textbf{Implementing Nested Loops for Permutation Logic:}  
+    To apply nested loops effectively for generating combinations of characters from the input string.
+
+    \item \textbf{Practicing Character Access and Concatenation:}  
+    To improve skills in accessing individual characters and forming new string patterns.
+
+    \item \textbf{Improving Loop Control and Iteration:}  
+    To gain hands-on experience in iterating through multiple levels to generate repeated patterns.
+
+    \item \textbf{Enhancing Output Formatting Skills:}  
+    To display generated permutations in a clear, structured, and readable format.
+\end{itemize}
+}
+
+\newcommand{\objeighteen}{
+\begin{itemize}
+    \item \textbf{Understanding String Tokenization:}  
+    To learn how to break a string into individual words using built-in methods like \texttt{split()}.
+
+    \item \textbf{Handling Whitespace and Input Variations:}  
+    To correctly manage extra spaces, tabs, and newline characters when counting words.
+
+    \item \textbf{Practicing Conditional and Null Checks:}  
+    To implement safe checks for null or empty strings to avoid runtime errors.
+
+    \item \textbf{Improving User Interaction via Console Input:}  
+    To use \texttt{Scanner} for accepting user input and processing it efficiently.
+
+    \item \textbf{Enhancing Output Formatting and Validation:}  
+    To display the total word count in a user-friendly and formatted manner.
+\end{itemize}
+}
+
+\newcommand{\objnineteen}{
+\begin{itemize}
+    \item \textbf{Understanding Object as Constructor Argument:}  
+    To learn how to use an object as a parameter in a constructor for initializing another object's data members.
+
+    \item \textbf{Applying Class and Object Concepts:}  
+    To reinforce knowledge of class creation, object instantiation, and constructor overloading.
+
+    \item \textbf{Practicing Data Encapsulation:}  
+    To encapsulate box dimensions and provide a method to compute volume based on internal data.
+
+    \item \textbf{Enhancing Method Creation Skills:}  
+    To define and invoke a method that performs a computation (volume) and returns the result.
+
+    \item \textbf{Improving Output Presentation:}  
+    To display the computed volume in a clear and formatted way from the \texttt{main()} method.
+\end{itemize}
+}
+
+
+\newcommand{\objtwenty}{
+\begin{itemize}
+    \item \textbf{Understanding Constructor Overloading:}  
+    To learn how to define and use both default and parameterized constructors, including object copy constructors.
+
+    \item \textbf{Applying Object-Oriented Principles:}  
+    To reinforce core OOP concepts like encapsulation, object passing, and method return types.
+
+    \item \textbf{Practicing Salary Component Calculations:}  
+    To implement a method that calculates PF (Provident Fund), allowances, and other salary components.
+
+    \item \textbf{Returning Multiple Values via Objects:}  
+    To return multiple calculated values using an object instead of primitive return types.
+
+    \item \textbf{Enhancing Output Formatting and Data Handling:}  
+    To display employee details and salary breakdown in a well-structured and readable format.
+\end{itemize}
+}
+
+\newcommand{\objtwentyone}{
+\begin{itemize}
+    \item \textbf{Understanding User-Defined Exceptions:}  
+    To learn how to create custom exception classes in Java by extending the \texttt{Exception} class.
+
+    \item \textbf{Applying Exception Handling Mechanism:}  
+    To implement \texttt{try-catch} blocks to detect and handle exceptional cases such as negative array sizes.
+
+    \item \textbf{Improving Input Validation:}  
+    To validate user inputs and throw exceptions proactively when inputs do not meet defined constraints.
+
+    \item \textbf{Practicing Constructor Overriding in Exception Class:}  
+    To define custom constructors and messages within user-defined exception classes.
+
+    \item \textbf{Enhancing Robustness and User Feedback:}  
+    To ensure the program fails gracefully with meaningful error messages instead of crashing on invalid input.
+\end{itemize}
+}
+
+\newcommand{\objtwentytwo}{
+\begin{itemize}
+    \item \textbf{Understanding Object Comparison:}  
+    To implement a method that compares two objects' data members to determine logical equality.
+
+    \item \textbf{Practicing Constructor Initialization:}  
+    To learn how to use parameterized constructors to initialize object attributes effectively.
+
+    \item \textbf{Applying Boolean Logic and Return Types:}  
+    To return a boolean value from a user-defined method based on conditional checks.
+
+    \item \textbf{Reinforcing Object-Oriented Principles:}  
+    To develop a clear understanding of object creation, passing objects as parameters, and encapsulating logic.
+
+    \item \textbf{Displaying Logical Results Clearly:}  
+    To display meaningful output in the \texttt{main()} method indicating whether two objects are equal or not.
+\end{itemize}
+}
+
+\newcommand{\objtwentythree}{
+\begin{itemize}
+    \item \textbf{Understanding Abstract Classes and Methods:}  
+    To learn how to define and use abstract classes and abstract methods in Java for enforcing method implementation in derived classes.
+
+    \item \textbf{Practicing Inheritance and Method Overriding:}  
+    To implement inheritance by creating subclasses that extend an abstract class and override its methods.
+
+    \item \textbf{Implementing Polymorphic Behavior:}  
+    To use dynamic method dispatch by invoking overridden methods using base class references.
+
+    \item \textbf{Designing Role-Specific Salary Calculation:}  
+    To define and implement different logic for calculating net salary based on employee type (Manager or Clerk).
+
+    \item \textbf{Enhancing Data Encapsulation and Output Clarity:}  
+    To encapsulate employee properties and ensure well-formatted display of employee details using overridden methods.
+\end{itemize}
+}

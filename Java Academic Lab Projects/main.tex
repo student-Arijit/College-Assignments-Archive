@@ -1,0 +1,1041 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[margin=1in, left=1in, right=1in]{geometry}
+\usepackage[most, shadows]{tcolorbox}
+\usetikzlibrary{shadows}
+\usepackage[utf8]{inputenc}
+\usepackage{catchfile}
+\usepackage{xstring}
+\usepackage{etoolbox}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{pifont}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{caption}
+\usepackage{amsmath}
+\input{questions}
+\input{conclusion}
+\usepackage{tikz}
+\usepackage[pages=all]{background}
+\usetikzlibrary{calc}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[R]{Java Assignment}
+\renewcommand{\headrulewidth}{0pt}
+\input{objective}
+\backgroundsetup{
+  scale=1,
+  color= black,
+  opacity=1,
+  angle=0,
+  contents={
+    \begin{tikzpicture}[remember picture,overlay]
+      \draw[line width=1pt]
+        ($(current page.north west)+(1cm,-1cm)$) 
+        rectangle 
+        ($(current page.south east)+(-1cm,1cm)$);
+    \end{tikzpicture}
+  }
+}
+
+% Problem Statement heading
+\newcommand{\prbst}[1]{
+    \underline{\textbf{Problem Statement-{#1}:-}}
+}
+
+% Define a custom box with shadow
+\newtcolorbox{searchbox}{
+  colback=white,
+  colframe=black,
+  sharp corners,
+  boxrule=0.5pt,
+  width=\textwidth,
+  enhanced,
+  drop shadow,
+}
+
+% question block
+\newcommand{\questionbox}[1]{
+  \begin{searchbox}
+    \textbf{#1}
+  \end{searchbox}
+}
+
+\begin{document}
+
+% Introduction Page
+\begin{center}
+    {\LARGE\underline{\textbf{Introduction}}}
+\end{center}
+\Large{\input{introduction}}
+
+%=======Loop=======
+\lstset{
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{gray!15},
+  frame=single,
+  breaklines=true,
+  keywordstyle=\color{black},
+  commentstyle=\color{black},
+  stringstyle=\color{black},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+}
+
+\newpage
+\begin{center}
+    \Huge\bfseries \textcolor{black}{Loops in Java}
+\end{center}
+\vspace{0.5cm}
+
+\noindent
+Loops in Java are fundamental control structures that enable repeated execution of a block of code based on a specific condition. Rather than writing the same code multiple times, loops allow programmers to automate repetitive tasks efficiently and elegantly. Mastering loops is crucial for building logical constructs such as data processing, pattern generation, iterative calculations, and more.
+
+Java provides three primary types of loops, each tailored to different use cases:
+
+\vspace{0.5cm}
+
+\begin{tcolorbox}[colback=black!5!white,colframe=black,title=\textbf{Types of Loops in Java}]
+\begin{itemize}[leftmargin=2em]
+    \item \textbf{\texttt{for} loop} – Used when the number of iterations is predetermined. Ideal for counter-controlled loops.
+    \item \textbf{\texttt{while} loop} – Condition is evaluated before each iteration. Suitable when the number of iterations is not known in advance.
+    \item \textbf{\texttt{do-while} loop} – Executes the loop body at least once, since the condition is checked after the loop body.
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+\subsection*{Example: Sum of First 5 Natural Numbers Using \texttt{for} Loop}
+\begin{lstlisting}[language=Java,caption=Java Program to Find Sum of First 5 Natural Numbers,label=lst:sumForLoop]
+public class LoopExample {
+    public static void main(String[] args) {
+        int sum = 0;
+        for (int i = 1; i <= 5; i++) {
+            sum += i;
+        }
+        System.out.println("Sum=" + sum);
+    }
+}
+\end{lstlisting}
+
+\noindent\textbf{Output:} \texttt{Sum = 15}
+
+%========Functing Overloading===========
+\newpage
+\begin{center}
+    \Huge\bfseries \textcolor{black}{Function Overloading in Java}
+\end{center}
+\vspace{0.5cm}
+
+\noindent
+Function Overloading in Java is a feature that allows a class to have more than one method with the same name, but with different parameter lists. It enhances readability and reusability of code and is a part of **compile-time (static) polymorphism**.
+
+Overloaded methods must differ in the **number**, **type**, or **order** of parameters. Return type alone is not sufficient for method overloading.
+
+\vspace{0.5cm}
+
+\begin{tcolorbox}[colback=black!5!white,colframe=black,title=\textbf{Rules of Function Overloading}]
+\begin{itemize}[leftmargin=2em]
+    \item Same method name but different parameter list.
+    \item Method can differ by:
+    \begin{itemize}
+        \item Number of parameters
+        \item Data type of parameters
+        \item Order of parameters
+    \end{itemize}
+    \item Return type can be different but it’s not used to distinguish overloaded methods.
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+\subsection*{Example: Function Overloading with Varying Parameters}
+\begin{lstlisting}[language=Java,caption=Java Program Demonstrating Function Overloading,label=lst:functionOverloading]
+public class Calculator {
+ public int add(int a, int b) {
+        return a + b;}public int add(int a, int b, int c) {return a + b +c;
+    }public double add(double a, double b) {return a + b;
+    }public static void main(String[] args) { Calculator calc = new Calculator();
+        System.out.println("Sum of 2 ints: " + calc.add(5, 10));
+        System.out.println("Sum of 3 ints: " + calc.add(5, 10, 15));
+        System.out.println("Sum of 2 doubles: " + calc.add(5.5, 4.5)); }}
+\end{lstlisting}
+
+\noindent\textbf{Output:}
+\begin{verbatim}
+Sum of 2 ints: 15
+Sum of 3 ints: 30
+Sum of 2 doubles: 10.0
+\end{verbatim}
+
+%=======Array=======
+\newpage
+\begin{center}
+    \Huge\bfseries \textcolor{black}{Arrays in Java}
+\end{center}
+\vspace{0.5cm}
+
+\noindent
+Arrays in Java are fundamental data structures that allow storage of multiple values of the same data type under a single variable name. They are useful for efficiently handling collections of data such as lists of numbers, names, or objects, and they simplify iteration and processing of related values. Each element in the array is identified by its index, starting from 0.
+
+\vspace{0.5cm}
+
+\begin{tcolorbox}[colback=black!5!white,colframe=black,title=\textbf{Key Features of Arrays in Java}]
+\begin{itemize}[leftmargin=2em]
+    \item Arrays are indexed collections of fixed size.
+    \item The index starts from 0 and goes up to (length - 1).
+    \item Arrays can store primitive data types and objects.
+    \item Declared with square brackets \texttt{[]}.
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+\subsection*{Example: Storing and Printing Elements of an Integer Array}
+\begin{lstlisting}[language=Java,caption=Java Program to Print Elements of an Array,label=lst:arrayIntro]
+public class ArrayExample {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+        System.out.println("Array elements are:");
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("Element atindex" + i + ": " + numbers[i]);
+        }
+    }
+}
+\end{lstlisting}
+
+\noindent\textbf{Output:}
+\begin{verbatim}
+Array elements are:
+Element at index 0: 10
+Element at index 1: 20
+Element at index 2: 30
+Element at index 3: 40
+Element at index 4: 50
+\end{verbatim}
+
+%=====OOP=====
+
+\newpage
+\begin{center}
+    \Huge\bfseries \textcolor{black}{OOP Concepts in Java}
+\end{center}
+\vspace{0.5cm}
+
+\noindent
+Object-Oriented Programming (OOP) is a paradigm that organizes software design around data, or objects, rather than functions and logic. Java is a pure object-oriented language (except for primitive types) and supports all major OOP principles. Mastering OOP helps in building scalable, reusable, and maintainable applications.
+
+\vspace{0.5cm}
+
+\begin{tcolorbox}[colback=black!5!white,colframe=black,title=\textbf{Four Pillars of OOP in Java}]
+\begin{itemize}[leftmargin=2em]
+    \item \textbf{Encapsulation} – Binding data and code together within a class and restricting direct access to some components.
+    \item \textbf{Inheritance} – Mechanism by which one class acquires the properties and behavior (methods) of another class.
+    \item \textbf{Polymorphism} – Ability of a variable, function, or object to take multiple forms.
+    \item \textbf{Abstraction} – Hiding complex implementation details and showing only the essential features.
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+\subsection*{Example: Demonstrating Encapsulation in Java}
+\begin{lstlisting}[language=Java,caption=Java Program to Demonstrate Encapsulation,label=lst:oopEncapsulation]
+class Student {
+    private String name;  // Private = Encapsulation
+
+    // Getter method
+    public String getName() {
+        return name;  }
+    // Setter method
+    public void setName(String newName) {
+        name = newName; }}
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        s1.setName("Alice");
+        System.out.println("Student Name: " + s1.getName());}}
+\end{lstlisting}
+
+\noindent\textbf{Output:} \texttt{Student Name: Alice}
+
+%=======Threading========
+\newpage
+\begin{center}
+    \Huge\bfseries \textcolor{black}{Threading in Java}
+\end{center}
+\vspace{0.5cm}
+
+\noindent
+Threading in Java allows a program to perform multiple tasks concurrently, improving the efficiency and responsiveness of applications. Java provides built-in support for multithreading through the Thread class and the Runnable interface. These enable the creation and management of threads that can execute independently or cooperatively, depending on the design of the application.
+
+A thread is a lightweight sub-process and the smallest unit of CPU execution. Unlike processes, threads share the same memory space, which allows for easy communication between them, but also introduces challenges such as synchronization and thread safety.
+
+Multithreading is especially beneficial in situations such as:
+
+Animations and GUI applications, where user interface responsiveness is critical.
+
+File I/O operations, where reading and writing files can occur in the background without blocking the main thread.
+
+Parallel computations, such as sorting large datasets or performing mathematical calculations concurrently.
+
+Network operations, where waiting for data from remote sources can be handled asynchronously.
+
+In Java, you can create a thread in two primary ways:
+
+Extending the Thread class and overriding its run() method.
+
+Implementing the Runnable interface, passing an instance of the class to a Thread object.
+
+Additionally, Java provides high-level concurrency utilities in the javautil package, including ExecutorService, Callable, Future, and synchronization tools like locks, semaphores, and countdown latches.
+
+Proper use of threading can greatly improve application performance, but it must be handled with care to avoid issues such as:
+
+Race conditions
+
+Deadlocks
+
+Thread starvation
+
+By understanding and applying multithreading principles effectively, developers can build robust, efficient, and responsive Java applications.
+
+\vspace{0.5cm}
+
+\begin{tcolorbox}[colback=black!5!white,colframe=black,title=\textbf{Key Concepts in Java Threading}]
+\begin{itemize}[leftmargin=2em]
+    \item \textbf{Thread Class} – Inherit the \texttt{Thread} class and override the \texttt{run()} method.
+    \item \textbf{Runnable Interface} – Implement \texttt{Runnable} and pass the object to a \texttt{Thread}.
+    \item \textbf{start()} – Starts a new thread which calls the \texttt{run()} method internally.
+    \item \textbf{run()} – Contains the code that should execute in a separate thread.
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+\subsection*{Example: Creating Threads by Extending \texttt{Thread} Class}
+\begin{lstlisting}[language=Java,caption=Java Program to Create Threads Using Thread Class,label=lst:threadExample]class MyThread extends Thread {
+public void run() {
+for (int i = 1; i <= 5; i++) { 
+System.out.println(Thread.currentThread().getName() + " - Count: " + i);try {Thread.sleep(500); 
+// pause for 0.5 seconds
+            } 
+            catch (InterruptedException e) {System.out.println(e);}} }}
+    public class ThreadDemo {
+    
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        
+        MyThread t2 = new MyThread();
+        
+        t1.setName("Thread A");t2.setName("Thread B");t1.start();t2.start(); 
+        }
+        }
+\end{lstlisting}
+
+\noindent\textbf{Sample Output:}
+\begin{verbatim}
+Thread A - Count: 1
+Thread B - Count: 1
+Thread A - Count: 2
+Thread B - Count: 2
+\end{verbatim}
+
+%======JDBC========
+\newpage
+\begin{center}
+    \Huge\bfseries \textcolor{black}{JDBC in Java}
+\end{center}
+\vspace{0.5cm}
+
+\noindent
+JDBC (Java Database Connectivity) is an API that allows Java programs to interact with relational databases. Using JDBC, Java applications can connect to a database, send SQL queries, and retrieve and manipulate data in a standardized way.
+
+JDBC is part of the Java Standard Edition platform and works with all major databases like MySQL, Oracle, PostgreSQL, and SQLite.
+
+\vspace{0.5cm}
+
+\begin{tcolorbox}[colback=black!5!white,colframe=black,title=\textbf{Steps to Use JDBC in Java}]
+\begin{enumerate}[leftmargin=2em]
+    \item \textbf{Import JDBC packages:} \texttt{import java.sql.*;}
+    \item \textbf{Load JDBC driver:} \texttt{Class.forName("com.mysql.cj.jdbc. Driver");}
+    \item \textbf{Establish connection:} \texttt{Connection con = DriverManager.getConnection(...);}
+    \item \textbf{Create statement:} \texttt{Statement stmt = con.createStatement();}
+    \item \textbf{Execute query:} \texttt{ResultSet rs = stmt.executeQuery(...);}
+    \item \textbf{Process results:} Use \texttt{while(rs.next())} to read data.
+    \item \textbf{Close connection:} \texttt{con.close();}
+\end{enumerate}
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+\newpage
+\subsection*{Example: Connecting to MySQL and Fetching Data}
+\begin{lstlisting}[language=Java,caption=Java JDBC Program to Connect to MySQL,label=lst:jdbcExample]
+import java.sql.*;
+
+public class JDBCExample {
+    public static void main(String[] args) {
+        try {
+            // Step 1: Load Driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // Step 2: Establish connection
+            Connection con = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/mydatabase", "root", "password");
+
+            // Step 3: Create statement
+            Statement stmt = con.createStatement();
+
+            // Step 4: Execute query
+            ResultSet rs = stmt.executeQuery("SELECT * FROM students");
+
+            // Step 5: Process results
+            while (rs.next()) {
+                System.out.println("ID: " + rs.getInt("id") +
+                                   ", Name: " + rs.getString("name"));
+            }
+
+            // Step 6: Close connection
+            con.close();
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+\end{lstlisting}
+
+\noindent\textbf{Note:}
+\begin{itemize}[leftmargin=2em]
+    \item Make sure to include the MySQL JDBC driver (e.g., \texttt{mysql-connector-
+    java.jar}) in your project classpath.
+    \item Replace database name, username, password, and table name with actual values.
+\end{itemize}
+
+%problem statement 1
+\newpage
+\LARGE{\prbst{1}}
+\questionbox{{\qone}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objone}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/one}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/one}}
+    
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/one.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 1}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conone}
+\end{itemize}
+
+%problem statement 2
+\newpage
+\LARGE{\prbst{2}}
+\questionbox{{\qtwo}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objtwo}
+
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/two}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/two}}
+    
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.6\textwidth]{assets/two.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 2}}
+        \end{figure}
+    }
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\contwo}
+\end{itemize}
+
+%problem statement 3
+\newpage
+\LARGE{\prbst{3}}
+\questionbox{{\qthree}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objthree}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/three}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/three}}
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/three.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 3}}
+        \label{fig:fig1_1}
+        \end{figure}
+    }  
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conthree}
+\end{itemize}
+
+%problem statement 4
+\newpage
+\LARGE{\prbst{4}}
+\questionbox{{\qfour}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfour}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/four}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/four}}
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.6\textwidth]{assets/four.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 4}}
+        \label{fig:fig}
+        \end{figure}
+    }  
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confour}
+\end{itemize}
+
+%problem statement 5
+\newpage
+\LARGE{\prbst{5}}
+\questionbox{{\qfive}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfive}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/five}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/five}}
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/five.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 5}}
+        \label{fig:fig}
+        \end{figure}
+    }  
+    \item{\underline{\textbf{Conclusion:-} }}
+    \LARGE{\confive}
+\end{itemize}
+
+%problem statement 6
+\newpage
+\LARGE{\prbst{6}}
+\questionbox{{\qsix}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objsix}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/six}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/six}}
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.6\textwidth]{assets/six.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 6}}
+        \label{fig:fig}
+        \end{figure}
+    }  
+    \item{\underline{\textbf{Conclusion:-} }}
+    \LARGE{\consix}
+\end{itemize}
+
+%problem statement 7
+\newpage
+\LARGE{\prbst{7}}
+\questionbox{{\qseven}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objseven}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/seven}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/seven}}
+    \newpage
+    \item{\underline{Output:- }} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.6\textwidth]{assets/seven.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 7}}
+        \label{fig:fig}
+        \end{figure}
+    }  
+    \item{\underline{\textbf{Conclusion:-} }}
+    \LARGE{\conseven}
+\end{itemize}
+
+%problem statement 8
+\newpage
+\LARGE{\prbst{8}}
+\questionbox{{\qeight}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objeight}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/eight}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/eight}}
+    \item{\underline{\textbf{Output:-} }} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.6\textwidth]{assets/eight.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 8}}
+        \label{fig:fig}
+        \end{figure}
+    }  
+    \item{\underline{\textbf{Conclusion:-} }}
+    \LARGE{\coneight}
+\end{itemize}
+
+%problem statement 9
+\newpage
+\LARGE{\prbst{9}}
+\questionbox{{\qnine}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objnine}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/nine}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/nine}}
+    \item{\underline{\textbf{Output:-} }} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.6\textwidth]{assets/nine.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 9}}
+        \label{fig:fig}
+        \end{figure}
+    }  
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\connine}
+\end{itemize}
+
+%problem statement 10
+\newpage
+\LARGE{\prbst{10}}
+\questionbox{{\qten}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objten}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/ten}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/ten}}
+    \newpage
+    \item{\underline{\textbf{Output:-} }} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.6\textwidth]{assets/ten.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 10}}
+        \label{fig:fig}
+        \end{figure}
+    }  
+    \item{\underline{\textbf{Conclusion:-} }}
+    \LARGE{\conten}
+\end{itemize}
+
+%problem statement 11
+\newpage
+\LARGE{\prbst{11}}
+\questionbox{{\qeleven}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objeleven}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/eleven}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/eleven}}
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.6\textwidth]{assets/eleven.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 11}}
+        \label{fig:fig}
+        \end{figure}
+    }  
+    \newpage
+    \item{\underline{\textbf{Conclusion:-} }}
+    \LARGE{\coneleven}
+\end{itemize}
+
+%problem statement 12
+\newpage
+\LARGE{\prbst{12}}
+\questionbox{{\qtwelve}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objtwelve}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/twelve}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/twelve}}
+    \item{\underline{\textbf{Output:-} }} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.6\textwidth]{assets/twelve.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 12}}
+        \label{fig:fig}
+        \end{figure}
+    }  
+    
+    \item{\underline{\textbf{Conclusion:-} }}
+    \LARGE{\contwelve}
+\end{itemize}
+
+%problem statement 13
+\newpage
+\LARGE{\prbst{13}}
+\questionbox{{\qthirteen}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objthirteen}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/thirteen}}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/thirteen}}
+    \item{\underline{\textbf{Output:-} }} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.6\textwidth]{assets/thirteen.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 13}}
+        \label{fig:fig}
+        \end{figure}
+    }  
+    \item{\underline{\textbf{Conclusion:-} }}
+    \LARGE{\conthirteen}
+\end{itemize}
+
+%problem statement 14
+\newpage
+\LARGE{\prbst{14}}
+\questionbox{{\qfourteen}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfourteen}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fourteen}}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fourteen}}
+    \item{\underline{\textbf{Output:-} }} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.6\textwidth]{assets/fourteen.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 14}}
+        \label{fig:fig}
+        \end{figure}
+    }  
+    \item{\underline{\textbf{Conclusion:-} }}
+    \LARGE{\confourteen}
+\end{itemize}
+
+%problem statement 15
+\newpage
+\LARGE{\prbst{15}}
+\questionbox{{\qfifteen}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfifteen}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fifteen}}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fifteen}}
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.6\textwidth]{assets/fifteen.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 15}}
+        \label{fig:fig}
+        \end{figure}
+    }  
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confifteen}
+\end{itemize}
+
+%problem statement 16
+\newpage
+\LARGE{\prbst{16}}
+\questionbox{{\qsixteen}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objsixteen}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/sixteen}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/sixteen}}
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.6\textwidth]{assets/sixteen.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 16}}
+        \label{fig:fig}
+        \end{figure}
+    }  
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\consixteen}
+\end{itemize}
+
+%problem statement 17
+\newpage
+\LARGE{\prbst{17}}
+\questionbox{{\qseventeen}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objseventeen}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/seventeen}}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/seventeen}}
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.6\textwidth]{assets/seventeen.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 17}}
+        \label{fig:fig}
+        \end{figure}
+    }  
+    \item{\underline{\textbf{Conclusion:-} }}
+    \LARGE{\conseventeen}
+\end{itemize}
+
+%problem statement 18
+\newpage
+\LARGE{\prbst{18}}
+\questionbox{{\qeighteen}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objeighteen}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/eighteen}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/eighteen}}
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=1.0\textwidth]{assets/eighteen.png}};
+        \end{tikzpicture}
+       \caption*{\textbf{Figure 18}}
+\label{fig:fig}
+        \end{figure}
+    }  
+    \item{\underline{\textbf{Conclusion:-} }}
+    \LARGE{\coneighteen}
+\end{itemize}
+
+%problem statement 19
+\newpage
+\LARGE{\prbst{19}}
+\questionbox{{\qnineteen}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objnineteen}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/nineteen}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/nineteen}}
+    \item{\underline{\textbf{Output:-} }} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/nineteen.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 19}}
+\label{fig:fig}
+        \end{figure}
+    }  
+    \item{\underline{\textbf{Conclusion:-} }}
+    \LARGE{\connineteen}
+\end{itemize}
+
+%problem statement 20
+\newpage
+\LARGE{\prbst{20}}
+\questionbox{{\qtwenty}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objtwenty}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/twenty}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/twenty}}
+    \item{\underline{\textbf{Output:-} }} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.6\textwidth]{assets/twenty.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 20}}
+\label{fig:fig}
+        \end{figure}
+    }  
+    \item{\underline{\textbf{Conclusion:-} }}
+    \LARGE{\contwenty}
+\end{itemize}
+
+%problem statement 21
+\newpage
+\LARGE{\prbst{21}}
+\questionbox{{\qtwentyone}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objtwentyone}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/twentyone}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/twentyone}}
+    \item{\underline{\textbf{Output:-} }} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=1.0\textwidth]{assets/twentyone.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 21}}
+\label{fig:fig}
+        \end{figure}
+    }  
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\contwentyone}
+\end{itemize}
+
+%problem statement 22
+\newpage
+\LARGE{\prbst{22}}
+\questionbox{{\qtwentytwo}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objtwentytwo}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/twentytwo}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/twentytwo}}
+    \item{\underline{\textbf{Output:-} }} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.6\textwidth]{assets/twentytwo.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 22}}
+\label{fig:fig}
+        \end{figure}
+    }  
+    \item{\underline{\textbf{Conclusion:-} }}
+    \LARGE{\contwentytwo}
+\end{itemize}
+
+%problem statement 23
+\newpage
+\LARGE{\prbst{23}}
+\questionbox{{\qtwentythree}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objtwentythree}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/twentythree}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/twentythree}}
+    \item{\underline{\textbf{Output:-} }} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.6\textwidth]{assets/twentythree.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 23}}
+\label{fig:fig}
+        \end{figure}
+    }  
+    \newpage
+    \item{\underline{\textbf{Conclusion:-} }}
+    \LARGE{\contwentythree}
+\end{itemize}
+
+%Acknowledgment
+\newpage
+\begin{center}
+    \underline{\textbf{\huge{Acknowledgment}}}
+\end{center}
+\begin{flushleft}
+\input{Acknowledgment}
+\end{flushleft}
+{\raggedleft Thank you,\\[3ex]
+\begin{tikzpicture}
+\draw [thick,dash dot] (0,1) -- (7,1);
+\end{tikzpicture}\\[1ex]
+[sign. of the mentor]
+\par
+}
+
+\end{document}
