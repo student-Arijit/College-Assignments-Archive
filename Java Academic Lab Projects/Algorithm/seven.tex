@@ -1,0 +1,33 @@
+\begin{algorithm}[H]
+\caption{Interface \texttt{Engine} and Class \texttt{VehicleEngine}}
+\begin{algorithmic}[1]
+\STATE \textbf{Interface} Engine
+\STATE \quad Declare method \texttt{speedUp(value)}
+\STATE \quad Declare method \texttt{changeGear(value)}
+
+\STATE \textbf{Class} VehicleEngine \textbf{implements} Engine
+\STATE \quad Declare private variables: \texttt{speed}, \texttt{gear}
+\STATE \quad \textbf{Constructor}(speed, gear): Initialize values
+\STATE \quad \textbf{Method} speedUp(value):
+\STATE \quad \quad Add \texttt{value} to \texttt{speed}
+\STATE \quad \quad Print updated speed
+\STATE \quad \textbf{Method} changeGear(value):
+\STATE \quad \quad Set \texttt{gear = value}
+\STATE \quad \quad Print updated gear
+\STATE \quad \textbf{Method} showStatus():
+\STATE \quad \quad Print current speed and gear
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[H]
+\caption{Testing Engine Functionality in \texttt{TestVehicleEngine}}
+\begin{algorithmic}[1]
+\STATE Create object \texttt{car} of class \texttt{VehicleEngine} with speed = 0, gear = 1
+\STATE Call \texttt{car.showStatus()}
+\STATE Call \texttt{car.speedUp(20)}
+\STATE Call \texttt{car.changeGear(2)}
+\STATE Call \texttt{car.speedUp(30)}
+\STATE Call \texttt{car.changeGear(3)}
+\STATE Call \texttt{car.showStatus()}
+\end{algorithmic}
+\end{algorithm}

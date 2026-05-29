@@ -1,0 +1,31 @@
+\begin{algorithm}[H]
+\caption{Class \texttt{Square} and \texttt{Cylinder} Definition}
+\begin{algorithmic}[1]
+\STATE \textbf{Class} Square
+\STATE \quad Declare \texttt{protected double side}
+\STATE \quad \textbf{Constructor}(side): set \texttt{this.side = side}
+\STATE \quad \textbf{Method} getVolume():
+\STATE \quad \quad Compute \texttt{volume = side × side × side}
+\STATE \quad \quad Print and return \texttt{volume} (treat as cube)
+
+\STATE \textbf{Class} Cylinder \textbf{extends} Square
+\STATE \quad Declare \texttt{private double height}
+\STATE \quad \textbf{Constructor}(radius, height):
+\STATE \quad \quad Call \texttt{super(radius)}
+\STATE \quad \quad Set \texttt{this.height = height}
+\STATE \quad \textbf{Override Method} getVolume():
+\STATE \quad \quad Compute \texttt{volume = pi × side² × height}
+\STATE \quad \quad Print and return \texttt{volume} (as cylinder)
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[H]
+\caption{Testing Shapes in \texttt{TestShape}}
+\begin{algorithmic}[1]
+\STATE Create \texttt{Square} object \texttt{cube} with side = 3
+\STATE Call \texttt{cube.getVolume()} $\Rightarrow$ Output: 27.0
+
+\STATE Create \texttt{Cylinder} object \texttt{cyl} with radius = 3, height = 5
+\STATE Call \texttt{cyl.getVolume()} $\Rightarrow$ Output: $\pi \times 3^2 \times 5 = 141.37\ldots$
+\end{algorithmic}
+\end{algorithm}

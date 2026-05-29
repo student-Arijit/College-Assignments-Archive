@@ -1,0 +1,24 @@
+\begin{algorithm}[H]
+\caption{Custom Exception for Negative Array Size}
+\begin{algorithmic}[1]
+
+\STATE \textbf{Class} \texttt{NegativeSizeException} \textbf{extends} \texttt{Exception}
+\STATE \hspace{1em} \textbf{Constructor} \texttt{NegativeSizeException(message)}
+\STATE \hspace{2em} Call superclass constructor with \texttt{message}
+
+\STATE
+
+\STATE \textbf{Function} \texttt{main()}
+\STATE \hspace{1em} \texttt{size} $\gets$ -5  \COMMENT{Change this to test}
+
+\STATE \hspace{1em} \textbf{try}
+\STATE \hspace{2em} \textbf{if} \texttt{size < 0} \textbf{then}
+\STATE \hspace{3em} \textbf{throw} \texttt{NegativeSizeException("Array size cannot be negative: " + size)}
+\STATE \hspace{2em} \texttt{arr} $\gets$ new array of size \texttt{size}
+\STATE \hspace{2em} Print "Array of size \texttt{size} created successfully."
+
+\STATE \hspace{1em} \textbf{catch} \texttt{NegativeSizeException e}
+\STATE \hspace{2em} Print "Caught Exception: " + \texttt{e.getMessage()}
+
+\end{algorithmic}
+\end{algorithm}

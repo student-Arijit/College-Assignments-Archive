@@ -1,0 +1,21 @@
+\begin{algorithm}[H]
+\caption{Remove Duplicates from Array}
+\begin{algorithmic}[1]
+\STATE Prompt user to enter array size $n$
+\STATE Declare integer array $arr[0 \ldots n-1]$
+\STATE Prompt user to input $n$ integers into $arr$
+\STATE Initialize empty LinkedHashSet $uniqueSet$
+\FOR{each element $num$ in $arr$}
+    \STATE Add $num$ to $uniqueSet$ (automatically ignores duplicates)
+\ENDFOR
+\STATE Create array $uniqueArray$ of size $|uniqueSet|$
+\STATE Set index $i \gets 0$
+\FOR{each $num$ in $uniqueSet$}
+    \STATE $uniqueArray[i] \gets num$
+    \STATE $i \gets i + 1$
+\ENDFOR
+\STATE Print "Array after removing duplicates:"
+\STATE Print all elements of $uniqueArray$
+\STATE Print "New length of array: $|uniqueArray|$"
+\end{algorithmic}
+\end{algorithm}

@@ -1,0 +1,21 @@
+\begin{algorithm}[H]
+\caption{Find Pairs in Array with Given Sum}
+\begin{algorithmic}[1]
+\STATE Prompt user to enter array size $n$
+\STATE Declare integer array $arr[n]$
+\STATE Prompt user to enter $n$ elements into $arr[0 \ldots n-1]$
+\STATE Prompt user to enter target sum $T$
+\STATE Set flag $found \gets false$
+\FOR{$i \gets 0$ to $n - 2$}
+    \FOR{$j \gets i + 1$ to $n - 1$}
+        \IF{$arr[i] + arr[j] = T$}
+            \STATE Print "$arr[i]$ + $arr[j]$ = $T$"
+            \STATE $found \gets true$
+        \ENDIF
+    \ENDFOR
+\ENDFOR
+\IF{not $found$}
+    \STATE Print "No pairs found"
+\ENDIF
+\end{algorithmic}
+\end{algorithm}

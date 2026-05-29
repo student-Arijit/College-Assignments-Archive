@@ -1,0 +1,21 @@
+\begin{algorithm}[H]
+\caption{Exception Handling Demonstration}
+\begin{algorithmic}[1]
+\STATE Declare integer array \texttt{numbers = \{10, 20, 30\}}
+\STATE Declare integer \texttt{result = 0}
+
+\TRY
+    \STATE Access \texttt{numbers[5]} (Invalid index)
+    \STATE Assign to variable \texttt{value}
+    \STATE Divide \texttt{value / 0} (division by zero)
+    \STATE Assign result to \texttt{result}
+    \STATE Print \texttt{"Result: "} + \texttt{result}
+\CATCH {ArrayIndexOutOfBoundsException}
+    \STATE Print \texttt{"Error: Tried to access an invalid index in the array."}
+\CATCH {ArithmeticException}
+    \STATE Print \texttt{"Error: Division by zero is not allowed."}
+\ENDTRY
+
+\STATE Print \texttt{"Program continues normally after exception handling."}
+\end{algorithmic}
+\end{algorithm}

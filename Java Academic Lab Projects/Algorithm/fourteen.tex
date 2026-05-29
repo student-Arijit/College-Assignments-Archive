@@ -1,0 +1,31 @@
+\begin{algorithm}[H]
+\caption{Find Length of Longest Consecutive Sequence}
+\begin{algorithmic}[1]
+\STATE Given array $arr$ of integers
+\STATE Call function \texttt{findLongestConsecutiveSequence(arr)}
+
+\FUNCTION{findLongestConsecutiveSequence(nums)}
+    \IF{$nums.length == 0$}
+        \RETURN 0
+    \ENDIF
+    \STATE Initialize empty HashSet $numSet$
+    \FOR{each number $num$ in $nums$}
+        \STATE Add $num$ to $numSet$
+    \ENDFOR
+    \STATE Initialize $longestStreak \gets 0$
+    \FOR{each $num$ in $numSet$}
+        \IF{$numSet$ does not contain $num - 1$}
+            \STATE $currentNum \gets num$
+            \STATE $currentStreak \gets 1$
+            \WHILE{$numSet$ contains $currentNum + 1$}
+                \STATE $currentNum \gets currentNum + 1$
+                \STATE $currentStreak \gets currentStreak + 1$
+            \ENDWHILE
+            \STATE $longestStreak \gets \max(longestStreak, currentStreak)$
+        \ENDIF
+    \ENDFOR
+    \RETURN $longestStreak$
+\ENDFUNCTION
+
+\end{algorithmic}
+\end{algorithm}

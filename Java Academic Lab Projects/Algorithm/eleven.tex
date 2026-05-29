@@ -1,0 +1,23 @@
+\begin{algorithm}[H]
+\caption{Insert Element into an Array at Given Position}
+\begin{algorithmic}[1]
+\STATE Prompt user to input array size $n$
+\STATE Declare integer array $arr[n+1]$
+\STATE Prompt user to input $n$ elements into $arr[0 \ldots n-1]$
+\STATE Prompt user to input $element$ and $position$ to insert
+
+\IF{$position < 0$ or $position > n$}
+    \STATE Print "Invalid position! Must be between 0 and $n$"
+\ELSE
+    \FOR{$i = n$ to $position + 1$ step $-1$}
+        \STATE $arr[i] \gets arr[i - 1]$
+    \ENDFOR
+    \STATE $arr[position] \gets element$
+    \STATE Print "Array after insertion:"
+    \FOR{$i = 0$ to $n$}
+        \STATE Print $arr[i]$
+    \ENDFOR
+\ENDIF
+
+\end{algorithmic}
+\end{algorithm}

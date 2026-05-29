@@ -1,0 +1,49 @@
+
+\begin{algorithm}[H]
+\caption{Employee Salary Calculation Using Abstract Class}
+\begin{algorithmic}[1]
+
+\STATE \textbf{Abstract Class} \texttt{Employee}
+\STATE \hspace{1em} \textbf{Variables:} \texttt{name, id, basicSalary}
+\STATE \hspace{1em} \textbf{Constructor} \texttt{Employee(name, id, basicSalary)}
+\STATE \hspace{2em} Initialize instance variables
+\STATE \hspace{1em} \textbf{Abstract Method:} \texttt{calculateNetSalary()}
+\STATE \hspace{1em} \textbf{Method:} \texttt{display()}
+\STATE \hspace{2em} Print employee ID, name, and basic salary
+
+\STATE
+
+\STATE \textbf{Class} \texttt{Manager extends Employee}
+\STATE \hspace{1em} \textbf{Constructor:} calls superclass constructor
+\STATE \hspace{1em} \textbf{Method:} \texttt{calculateNetSalary()}
+\STATE \hspace{2em} allowance $\gets$ 20\% of \texttt{basicSalary}
+\STATE \hspace{2em} deduction $\gets$ 10\% of \texttt{basicSalary}
+\STATE \hspace{2em} \textbf{return} \texttt{basicSalary + allowance - deduction}
+\STATE \hspace{1em} \textbf{Method:} \texttt{display()}
+\STATE \hspace{2em} Call \texttt{super.display()}
+\STATE \hspace{2em} Print position and net salary
+
+\STATE
+
+\STATE \textbf{Class} \texttt{Clerk extends Employee}
+\STATE \hspace{1em} \textbf{Constructor:} calls superclass constructor
+\STATE \hspace{1em} \textbf{Method:} \texttt{calculateNetSalary()}
+\STATE \hspace{2em} allowance $\gets$ 10\% of \texttt{basicSalary}
+\STATE \hspace{2em} deduction $\gets$ 5\% of \texttt{basicSalary}
+\STATE \hspace{2em} \textbf{return} \texttt{basicSalary + allowance - deduction}
+\STATE \hspace{1em} \textbf{Method:} \texttt{display()}
+\STATE \hspace{2em} Call \texttt{super.display()}
+\STATE \hspace{2em} Print position and net salary
+
+\STATE
+
+\STATE \textbf{Function:} \texttt{main()}
+\STATE \hspace{1em} \texttt{emp1} $\gets$ new \texttt{Manager("Alice", 101, 50000)}
+\STATE \hspace{1em} \texttt{emp2} $\gets$ new \texttt{Clerk("Bob", 102, 30000)}
+\STATE \hspace{1em} Print "=== Manager Details ==="
+\STATE \hspace{1em} \texttt{emp1.display()}
+\STATE \hspace{1em} Print "=== Clerk Details ==="
+\STATE \hspace{1em} \texttt{emp2.display()}
+
+\end{algorithmic}
+\end{algorithm}

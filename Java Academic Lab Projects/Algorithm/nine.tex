@@ -1,0 +1,39 @@
+\begin{algorithm}[H]
+\caption{JDBC Student Database Insertion and Retrieval}
+\begin{algorithmic}[1]
+\STATE Define database URL, username, and password
+\STATE Initialize \texttt{Scanner sc} to read user input
+
+\TRY
+    \STATE Load MySQL JDBC Driver using \texttt{Class.forName()}
+    \STATE Establish connection to database using \texttt{DriverManager.getConnection()}
+    
+    \STATE Prompt and read student details:
+    \STATE \quad Read \texttt{regno}, \texttt{sname}, \texttt{city}, \texttt{contactno}
+    
+    \STATE Prepare SQL insert query with placeholders:
+    \STATE \quad \texttt{INSERT INTO Student\_info (regno, sname, city, contactno) VALUES (?, ?, ?, ?)}
+    
+    \STATE Set parameters in the \texttt{PreparedStatement}
+    \STATE Execute the insert using \texttt{pstmt.executeUpdate()}
+    \STATE Print "Student data inserted successfully!"
+
+    \STATE Create \texttt{Statement} object
+    \STATE Execute \texttt{SELECT * FROM Student\_info}
+    \STATE Print table header for output
+    \WHILE{ResultSet has more records}
+        \STATE Print \texttt{regno, sname, city, contactno}
+    \ENDWHILE
+
+    \STATE Close \texttt{ResultSet, Statement, PreparedStatement, Connection}
+
+    \CATCH{ClassNotFoundException}
+        \STATE Print "JDBC Driver not found."
+
+    \CATCH{SQLException}
+        \STATE Print "Database error: " + error message
+
+    \FINALLY
+        \STATE Close \texttt{Scanner}
+\end{algorithmic}
+\end{algorithm}

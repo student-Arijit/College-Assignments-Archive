@@ -1,0 +1,44 @@
+\begin{algorithm}[H]
+\caption{Class \texttt{Person}, \texttt{Student}, and \texttt{Staff} Structure}
+\begin{algorithmic}[1]
+\STATE \textbf{Class} Person
+\STATE \quad Declare private variables: \texttt{name}, \texttt{address}
+\STATE \quad \textbf{Constructor}(name, address): Initialize fields
+\STATE \quad \textbf{Method} setPerson(name, address): Set new values
+\STATE \quad \textbf{Method} toString(): Return "Person[name=..., address=...]"
+
+\STATE \textbf{Class} Student \textbf{extends} Person
+\STATE \quad Declare private variables: \texttt{program}, \texttt{year}, \texttt{fees}
+\STATE \quad \textbf{Constructor}(name, address, program, year, fees): 
+\STATE \quad \quad Call \texttt{super(name, address)}, set remaining fields
+\STATE \quad \textbf{Method} setStudent(...): Update inherited and own fields
+\STATE \quad \textbf{Override toString()}: Return full student details
+
+\STATE \textbf{Class} Staff \textbf{extends} Person
+\STATE \quad Declare private variables: \texttt{school}, \texttt{pay}
+\STATE \quad \textbf{Constructor}(name, address, school, pay): 
+\STATE \quad \quad Call \texttt{super(name, address)}, set remaining fields
+\STATE \quad \textbf{Method} setStaff(...): Update inherited and own fields
+\STATE \quad \textbf{Override toString()}: Return full staff details
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[H]
+\caption{Test Program for \texttt{Person}, \texttt{Student}, and \texttt{Staff}}
+\begin{algorithmic}[1]
+\STATE Create \texttt{Person} object \texttt{p} with name "John Doe", address "123 Main St"
+\STATE Print \texttt{p}
+\STATE Call \texttt{p.setPerson("Jane Doe", "456 Oak Ave")}
+\STATE Print updated \texttt{p}
+
+\STATE Create \texttt{Student} object \texttt{s} with ("Alice", "789 Park Blvd", "Computer Science", "2025", 45000.50)
+\STATE Print \texttt{s}
+\STATE Call \texttt{s.setStudent("Alice Smith", "321 Elm St", "AI \& ML", "2026", 50000.75)}
+\STATE Print updated \texttt{s}
+
+\STATE Create \texttt{Staff} object \texttt{st} with ("Bob", "654 Maple Rd", "Greenwood High", 30000)
+\STATE Print \texttt{st}
+\STATE Call \texttt{st.setStaff("Bob Johnson", "999 Pine St", "Sunshine School", 35000)}
+\STATE Print updated \texttt{st}
+\end{algorithmic}
+\end{algorithm}

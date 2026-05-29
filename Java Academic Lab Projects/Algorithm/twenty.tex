@@ -1,0 +1,37 @@
+\begin{algorithm}[H]
+\caption{Employee Salary Calculation with Copy Constructor}
+\begin{algorithmic}[1]
+
+\STATE \textbf{Class} \texttt{Employee}
+\STATE \hspace{1em} \textbf{Variables:} \texttt{name, salary, pf, allowance, totalSalary}
+
+\STATE \hspace{1em} \textbf{Constructor} \texttt{Employee()}
+\STATE \hspace{2em} \texttt{name} $\gets$ "Unknown"
+\STATE \hspace{2em} \texttt{salary, pf, allowance, totalSalary} $\gets$ 0
+
+\STATE \hspace{1em} \textbf{Constructor} \texttt{Employee(Employee e)}
+\STATE \hspace{2em} Copy all fields from \texttt{e} to \texttt{this}
+
+\STATE \hspace{1em} \textbf{Constructor} \texttt{Employee(name, salary)}
+\STATE \hspace{2em} \texttt{this.name} $\gets$ \texttt{name}
+\STATE \hspace{2em} \texttt{this.salary} $\gets$ \texttt{salary}
+
+\STATE \hspace{1em} \textbf{Method} \texttt{calculate()}
+\STATE \hspace{2em} \texttt{result} $\gets$ new \texttt{Employee(this)}
+\STATE \hspace{2em} \texttt{result.pf} $\gets$ 0.12 $\times$ \texttt{salary}
+\STATE \hspace{2em} \texttt{result.allowance} $\gets$ 0.20 $\times$ \texttt{salary}
+\STATE \hspace{2em} \texttt{result.totalSalary} $\gets$ \texttt{salary + allowance - pf}
+\STATE \hspace{2em} \textbf{return} \texttt{result}
+
+\STATE \hspace{1em} \textbf{Method} \texttt{display()}
+\STATE \hspace{2em} Print all employee details
+
+\STATE
+
+\STATE \textbf{Function} \texttt{main()}
+\STATE \hspace{1em} \texttt{e1} $\gets$ new \texttt{Employee("John Doe", 50000)}
+\STATE \hspace{1em} \texttt{result} $\gets$ \texttt{e1.calculate()}
+\STATE \hspace{1em} \texttt{result.display()}
+
+\end{algorithmic}
+\end{algorithm}

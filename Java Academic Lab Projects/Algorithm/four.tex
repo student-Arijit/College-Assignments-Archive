@@ -1,0 +1,47 @@
+\begin{algorithm}[H]
+\caption{Class \texttt{MyPoint} Functionality}
+\begin{algorithmic}[1]
+\STATE \textbf{Class} MyPoint
+\STATE Declare private integer variables \texttt{x}, \texttt{y}
+
+\STATE \textbf{Constructor} MyPoint()
+\STATE \quad Set \texttt{x = 0}, \texttt{y = 0}
+
+\STATE \textbf{Constructor} MyPoint(x, y)
+\STATE \quad Set \texttt{this.x = x}, \texttt{this.y = y}
+
+\STATE \textbf{Method} setXY(x, y)
+\STATE \quad Set \texttt{this.x = x}, \texttt{this.y = y}
+
+\STATE \textbf{Method} getXY()
+\STATE \quad Return array \texttt{\{x, y\}}
+
+\STATE \textbf{Method} toString()
+\STATE \quad Return string \texttt{"(x, y)"}
+
+\STATE \textbf{Method} distance(x, y)
+\STATE \quad Compute \texttt{dx = this.x - x}
+\STATE \quad Compute \texttt{dy = this.y - y}
+\STATE \quad Return \texttt{sqrt(dx * dx + dy * dy)}
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[H]
+\caption{Testing Class \texttt{MyPoint} in \texttt{TestMyPoint}}
+\begin{algorithmic}[1]
+\STATE Create object \texttt{p1} using default constructor
+\STATE Print \texttt{p1} $\Rightarrow$ (0, 0)
+
+\STATE Create object \texttt{p2} using constructor with parameters (3, 4)
+\STATE Print \texttt{p2} $\Rightarrow$ (3, 4)
+
+\STATE Call \texttt{p1.setXY(1, 2)}
+\STATE Print updated \texttt{p1} $\Rightarrow$ (1, 2)
+
+\STATE Call \texttt{p1.getXY()} and store in \texttt{coords}
+\STATE Print \texttt{coords[0], coords[1]} $\Rightarrow$ (1, 2)
+
+\STATE Call \texttt{p1.distance(3, 4)} and store in \texttt{dist}
+\STATE Print \texttt{dist} $\Rightarrow$ Expected output: 2.828...
+\end{algorithmic}
+\end{algorithm}

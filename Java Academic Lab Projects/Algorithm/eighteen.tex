@@ -1,0 +1,18 @@
+\begin{algorithm}[H]
+\caption{Count Number of Words in a String}
+\begin{algorithmic}[1]
+\STATE \textbf{Function} \texttt{main()}
+\STATE \hspace{1em} Read \texttt{input} from user
+\STATE \hspace{1em} \texttt{wordCount} $\gets$ \texttt{countWords(input)}
+\STATE \hspace{1em} Print "Number of words in the string: " + \texttt{wordCount}
+
+\STATE
+
+\STATE \textbf{Function} \texttt{countWords(str)}
+\IF {\texttt{str} is null OR trimmed \texttt{str} is empty}
+    \STATE \textbf{return} 0
+\ENDIF
+\STATE \texttt{words[]} $\gets$ split \texttt{str.trim()} by one or more spaces
+\STATE \textbf{return} length of \texttt{words[]}
+\end{algorithmic}
+\end{algorithm}

@@ -1,0 +1,16 @@
+\begin{algorithm}[H]
+\caption{Compare Two Strings Lexicographically}
+\begin{algorithmic}[1]
+\STATE Input: Two strings \texttt{str1} and \texttt{str2}
+\STATE Read \texttt{str1} from user
+\STATE Read \texttt{str2} from user
+\STATE Set \texttt{result} $\gets$ \texttt{str1.compareTo(str2)}
+\IF{\texttt{result} == 0}
+    \STATE Print "Both strings are equal."
+\ELSIF{\texttt{result} < 0}
+    \STATE Print \texttt{str1} is lexicographically less than \texttt{str2}
+\ELSE
+    \STATE Print \texttt{str1} is lexicographically greater than \texttt{str2}
+\ENDIF
+\end{algorithmic}
+\end{algorithm}

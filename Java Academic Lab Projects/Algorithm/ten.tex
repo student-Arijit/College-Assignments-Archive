@@ -1,0 +1,32 @@
+\begin{algorithm}[H]
+\caption{Remove First Occurrence of Element from Array}
+\begin{algorithmic}[1]
+\STATE Prompt user to input array size $n$
+\STATE Declare integer array $arr[n]$
+\STATE Prompt user to input $n$ elements into $arr$
+\STATE Prompt user to input target element to remove
+
+\STATE Declare $newArr[n-1]$
+\STATE Initialize $found \gets \text{false}$, $j \gets 0$
+
+\FOR{$i = 0$ to $n - 1$}
+    \IF{$arr[i] = target$ \AND $found = \text{false}$}
+        \STATE Set $found \gets \text{true}$ \COMMENT{Skip first match}
+        \STATE \textbf{continue}
+    \ENDIF
+    \IF{$j < \text{length of } newArr$}
+        \STATE $newArr[j] \gets arr[i]$
+        \STATE $j \gets j + 1$
+    \ENDIF
+\ENDFOR
+
+\IF{found = false}
+    \STATE Print "Element not found in the array."
+\ELSE
+    \STATE Print "Array after removing target:"
+    \FOR{$i = 0$ to $newArr.length - 1$}
+        \STATE Print $newArr[i]$
+    \ENDFOR
+\ENDIF
+\end{algorithmic}
+\end{algorithm}

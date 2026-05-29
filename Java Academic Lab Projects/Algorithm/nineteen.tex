@@ -1,0 +1,30 @@
+\begin{algorithm}[H]
+\caption{Box Volume Using Constructor Overloading}
+\begin{algorithmic}[1]
+
+\STATE \textbf{Class} \texttt{Box}
+\STATE \hspace{1em} \textbf{Private Variables:} \texttt{length, breadth, height}
+
+\STATE \hspace{1em} \textbf{Constructor} \texttt{Box(Box other)}
+\STATE \hspace{2em} \texttt{length} $\gets$ \texttt{other.length}
+\STATE \hspace{2em} \texttt{breadth} $\gets$ \texttt{other.breadth}
+\STATE \hspace{2em} \texttt{height} $\gets$ \texttt{other.height}
+
+\STATE \hspace{1em} \textbf{Constructor} \texttt{Box(length, breadth, height)}
+\STATE \hspace{2em} \texttt{this.length} $\gets$ \texttt{length}
+\STATE \hspace{2em} \texttt{this.breadth} $\gets$ \texttt{breadth}
+\STATE \hspace{2em} \texttt{this.height} $\gets$ \texttt{height}
+
+\STATE \hspace{1em} \textbf{Method} \texttt{volume()}
+\STATE \hspace{2em} \textbf{return} \texttt{length × breadth × height}
+
+\STATE
+
+\STATE \textbf{Function} \texttt{main()}
+\STATE \hspace{1em} \texttt{originalBox} $\gets$ new \texttt{Box(3.0, 4.0, 5.0)}
+\STATE \hspace{1em} \texttt{copiedBox} $\gets$ new \texttt{Box(originalBox)}
+\STATE \hspace{1em} Print "Volume of original box: " + \texttt{originalBox.volume()}
+\STATE \hspace{1em} Print "Volume of copied box: " + \texttt{copiedBox.volume()}
+
+\end{algorithmic}
+\end{algorithm}

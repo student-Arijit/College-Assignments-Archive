@@ -1,0 +1,22 @@
+\begin{algorithm}[H]
+\caption{Generate Permutations with Repetition}
+\begin{algorithmic}[1]
+\STATE \textbf{Function} \texttt{main()}
+\STATE \hspace{1em} \texttt{input} $\gets$ "PQR"
+\STATE \hspace{1em} \texttt{length} $\gets$ length of \texttt{input}
+\STATE \hspace{1em} Print "The given string is: " + \texttt{input}
+\STATE \hspace{1em} Print "The permuted strings are:"
+\STATE \hspace{1em} \texttt{generatePermutations(input, "", length)}
+
+\STATE
+
+\STATE \textbf{Function} \texttt{generatePermutations(input, result, length)}
+\IF {length of \texttt{result} == \texttt{length}}
+    \STATE Print \texttt{result}
+    \STATE \textbf{return}
+\ENDIF
+\FOR {each \texttt{character} in \texttt{input}}
+    \STATE \texttt{generatePermutations(input, result + character, length)}
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}

@@ -1,0 +1,13 @@
+\begin{algorithm}[H]
+\caption{Compare Substrings Using \texttt{regionMatches()}}
+\begin{algorithmic}[1]
+\STATE \texttt{str1} $\gets$ "Welcome to Java Programming"
+\STATE \texttt{str2} $\gets$ "Let's start Java Programming now"
+
+\STATE \texttt{match1} $\gets$ \texttt{str1.regionMatches(0, str2, 28, 8)}
+\STATE \texttt{match2} $\gets$ \texttt{str1.regionMatches(9, str2, 9, 7)}
+
+\STATE Print "str1[0 - 7] == str2[28 - 35]? " + \texttt{match1}
+\STATE Print "str1[9 - 15] == str2[9 - 15]? " + \texttt{match2}
+\end{algorithmic}
+\end{algorithm}

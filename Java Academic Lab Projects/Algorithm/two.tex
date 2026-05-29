@@ -1,0 +1,33 @@
+\begin{algorithm}[H]
+\caption{Find Row and Column Minimums in a Matrix}
+\begin{algorithmic}[1]
+\STATE START
+\STATE INPUT NUMBER OF ROWS $\textbf{ROWS}$
+\STATE INPUT NUMBER OF COLUMNS $\textbf{COLS}$
+\STATE DECLARE A 2D INTEGER ARRAY $\textbf{MATRIX[ROWS][COLS]}$
+\STATE INPUT MATRIX ELEMENTS INTO $\textbf{MATRIX}$
+\STATE DECLARE INTEGER ARRAY $\textbf{ROWMIN[ROWS]}$
+\STATE DECLARE INTEGER ARRAY $\textbf{COLMIN[COLS]}$
+\FOR{$I = 0$ TO $ROWS - 1$}
+    \STATE SET $\textbf{MIN} \gets MATRIX[I][0]$
+    \FOR{$J = 1$ TO $COLS - 1$}
+        \IF{$MATRIX[I][J] < MIN$}
+            \STATE $\textbf{MIN} \gets MATRIX[I][J]$
+        \ENDIF
+    \ENDFOR
+    \STATE $ROWMIN[I] \gets MIN$
+\ENDFOR
+\FOR{$J = 0$ TO $COLS - 1$}
+    \STATE SET $\textbf{MIN} \gets MATRIX[0][J]$
+    \FOR{$I = 1$ TO $ROWS - 1$}
+        \IF{$MATRIX[I][J] < MIN$}
+            \STATE $\textbf{MIN} \gets MATRIX[I][J]$
+        \ENDIF
+    \ENDFOR
+    \STATE $COLMIN[J] \gets MIN$
+\ENDFOR
+\STATE PRINT MATRIX WITH EACH ROW FOLLOWED BY ITS ROW MINIMUM
+\STATE PRINT COLUMN MINIMUMS IN A SINGLE LINE
+\STATE STOP
+\end{algorithmic}
+\end{algorithm}

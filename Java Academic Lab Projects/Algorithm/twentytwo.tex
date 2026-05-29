@@ -1,0 +1,28 @@
+\begin{algorithm}[H]
+\caption{Check Equality of Two Student Objects}
+\begin{algorithmic}[1]
+
+\STATE \textbf{Class} \texttt{Student}
+\STATE \hspace{1em} \texttt{rollNo: int}
+\STATE \hspace{1em} \texttt{name: String}
+\STATE
+\STATE \textbf{Constructor} \texttt{Student(rollNo, name)}
+\STATE \hspace{1em} \texttt{this.rollNo} $\gets$ \texttt{rollNo}
+\STATE \hspace{1em} \texttt{this.name} $\gets$ \texttt{name}
+\STATE
+\STATE \textbf{Static Method} \texttt{isEqual(s1, s2)}
+\STATE \hspace{1em} \textbf{return} \texttt{(s1.rollNo == s2.rollNo) AND (s1.name equals s2.name)}
+
+\STATE
+
+\STATE \textbf{Function} \texttt{main()}
+\STATE \hspace{1em} \texttt{student1} $\gets$ new \texttt{Student(101, "Alice")}
+\STATE \hspace{1em} \texttt{student2} $\gets$ new \texttt{Student(101, "Alice")}
+
+\STATE \hspace{1em} \textbf{if} \texttt{Student.isEqual(student1, student2)} \textbf{then}
+\STATE \hspace{2em} Print "Both student objects are equal."
+\STATE \hspace{1em} \textbf{else}
+\STATE \hspace{2em} Print "Student objects are not equal."
+
+\end{algorithmic}
+\end{algorithm}
