@@ -137,21 +137,8 @@ Linus Automation Labs: Shell Scripting/
 
 ---
 
-<table>
-<tr>
-<td>
-
 ## Author
 
 **Arijit Chowdhury**  
-Course: OS / Shell Scripting — 2025  
-Institution: University of Calcutta
+Course: OS / Shell Scripting — 2025 ● Institution: University of Calcutta
 
-</td>
-<td align="right">
-
-<img src="https://drive.google.com/uc?export=view&id=1-7qUwyzp-jHOv7cHwXfg-b2a3KupdfZ_" width="500">
-
-</td>
-</tr>
-</table>
