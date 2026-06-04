@@ -1,0 +1,3237 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[margin=1in, left=1in, right=1in]{geometry}
+\usepackage[most, shadows]{tcolorbox}
+\usetikzlibrary{shadows}
+\usepackage[utf8]{inputenc}
+\usepackage{catchfile}
+\usepackage{xstring}
+\usepackage{etoolbox}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{pifont}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{caption}
+\usepackage{amsmath}
+\input{questions}
+\input{conclusion}
+\input{flowchart}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage[pages=all]{background}
+\usetikzlibrary{calc}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[R]{Python Assignment}
+\renewcommand{\headrulewidth}{0pt}
+\input{objective}
+\backgroundsetup{
+  scale=1,
+  color= black,
+  opacity=1,
+  angle=0,
+  contents={
+    \begin{tikzpicture}[remember picture,overlay]
+      \draw[line width=1pt]
+        ($(current page.north west)+(1cm,-1cm)$) 
+        rectangle 
+        ($(current page.south east)+(-1cm,1cm)$);
+    \end{tikzpicture}
+  }
+}
+
+% Problem Statement heading
+\newcommand{\prbst}[1]{
+    \underline{\textbf{Problem Statement-{#1}:-}}
+}
+
+% Define a custom box with shadow
+\newtcolorbox{searchbox}{
+  colback=white,
+  colframe=black,
+  sharp corners,
+  boxrule=0.5pt,
+  width=\textwidth,
+  enhanced,
+  drop shadow,
+}
+
+% question block
+\newcommand{\questionbox}[1]{
+  \begin{searchbox}
+    \textbf{#1}
+  \end{searchbox}
+}
+
+\begin{document}
+
+% Introduction Page
+\begin{center}
+    {\LARGE\underline{\textbf{Introduction}}}
+\end{center}
+\Large{\input{introduction}}
+
+%problem statement 1
+\newpage
+\LARGE{\prbst{1}}
+\questionbox{{\qone}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objone}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowone}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/one}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/one}}
+    \newpage
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/one.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 1}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conone}
+\end{itemize}
+
+%problem statement 2
+\newpage
+\LARGE{\prbst{2}}
+\questionbox{{\qtwo}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objtwo}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowtwo}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/two}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/two}}
+ 
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/two.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 2}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \newpage
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\contwo}
+\end{itemize}
+
+%problem statement 3
+\newpage
+\LARGE{\prbst{3}}
+\questionbox{{\qthree}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objthree}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowthree}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/three}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/three}}
+ 
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/three.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 3}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conthree}
+\end{itemize}
+
+%problem statement 4
+\newpage
+\LARGE{\prbst{4}}
+\questionbox{{\qfour}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfour}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfour}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/four}}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/four}}
+
+    \newpage
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/four.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 4}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confour}
+\end{itemize}
+
+%problem statement 5
+\newpage
+\LARGE{\prbst{5}}
+\questionbox{{\qfive}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfive}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/five}}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfive}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/five}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/five.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 5}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confive}
+\end{itemize}
+
+%problem statement 6
+\newpage
+\LARGE{\prbst{6}}
+\questionbox{{\qsix}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objsix}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowsix}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/six}}
+    \newpage
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/six}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/six.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 6}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\consix}
+\end{itemize}
+
+%problem statement 7
+\newpage
+\LARGE{\prbst{7}}
+\questionbox{{\qseven}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objseven}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowseven}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/seven}} 
+    \newpage
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/seven}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/seven.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 7}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conseven}
+\end{itemize}
+
+%problem statement 8
+\newpage
+\LARGE{\prbst{8}}
+\questionbox{{\qeight}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objeight}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\floweight}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/eight}} 
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/eight}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/eight.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 8}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \newpage
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\coneight}
+\end{itemize}
+
+%problem statement 9
+\newpage
+\LARGE{\prbst{9}}
+\questionbox{{\qnine}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objnine}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flownine}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/nine}} 
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/nine}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/nine.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 9}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\connine}
+\end{itemize}
+
+%problem statement 10
+\newpage
+\LARGE{\prbst{10}}
+\questionbox{{\qten}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objten}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowten}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/ten}} 
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/ten}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/ten.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 10}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \newpage
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conten}
+\end{itemize}
+
+%problem statement 11
+\newpage
+\LARGE{\prbst{11}}
+\questionbox{{\qeleven}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objeleven}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\floweleven}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/eleven}}  
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/eleven}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/eleven.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 11}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\coneleven}
+\end{itemize}
+
+%problem statement 12
+\newpage
+\LARGE{\prbst{12}}
+\questionbox{{\qtwelve}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objtwelve}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowtwelve}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/twelve}} 
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/twelve}}
+    \newpage
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/twelve.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 12}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\contwelve}
+\end{itemize}
+
+%problem statement 13
+\newpage
+\LARGE{\prbst{13}}
+\questionbox{{\qthirteen}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objthirteen}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/thirteen}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowthirteen}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/thirteen}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/thirteen.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 13}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conthirteen}
+\end{itemize}
+
+%problem statement 14
+\newpage
+\LARGE{\prbst{14}}
+\questionbox{{\qfourteen}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfourteen}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fourteen}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfourteen}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fourteen}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fourteen.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 14}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confourteen}
+\end{itemize}
+
+%problem statement 15
+\newpage
+\LARGE{\prbst{15}}
+\questionbox{{\qfifteen}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfifteen}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfifteen}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fifteen}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fifteen}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fifteen.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 15}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \newpage
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confifteen}
+\end{itemize}
+
+%problem statement 16
+\newpage
+\LARGE{\prbst{16}}
+\questionbox{{\qsixteen}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objsixteen}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowsixteen}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/sixteen}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/sixteen}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/sixteen.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 16}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \newpage
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\consixteen}
+\end{itemize}
+
+%problem statement 17
+\newpage
+\LARGE{\prbst{17}}
+\questionbox{{\qseventeen}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objseventeen}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/seventeen}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowseventeen}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/seventeen}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/seventeen.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 17}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \newpage
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conseventeen}
+\end{itemize}
+
+%problem statement 18
+\newpage
+\LARGE{\prbst{18}}
+\questionbox{{\qeighteen}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objeighteen}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/eighteen}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\floweighteen}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/eighteen}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/eighteen.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 18}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\coneighteen}
+\end{itemize}
+
+%problem statement 19
+\newpage
+\LARGE{\prbst{19}}
+\questionbox{{\qnineteen}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objnineteen}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/nineteen}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flownineteen}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/nineteen}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/nineteen.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 19}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\connineteen}
+\end{itemize}
+
+%problem statement 20
+\newpage
+\LARGE{\prbst{20}}
+\questionbox{{\qtwenty}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objtwenty}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowtwenty}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/twenty}} 
+
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/twenty}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/twenty.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 20}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\contwenty}
+\end{itemize}
+
+%problem statement 21
+\newpage
+\LARGE{\prbst{21}}
+\questionbox{{\qtwentyone}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objtwentyone}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/twentyone}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowtwentyone}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/twentyone}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/twentyone.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 21}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\contwentyone}
+\end{itemize}
+
+%problem statement 22
+\newpage
+\LARGE{\prbst{22}}
+\questionbox{{\qtwentytwo}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objtwentytwo}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/twentytwo}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \flowtwentytwo
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/twentytwo}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/twentytwo.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 22}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\contwentytwo}
+\end{itemize}
+
+%problem statement 23
+\newpage
+\LARGE{\prbst{23}}
+\questionbox{{\qtwentythree}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objtwentythree}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/twentythree}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowtwentythree}
+    \newpage
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/twentythree}}
+    \newpage
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/twentythree.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 23}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\contwentythree}
+\end{itemize}
+
+%problem statement 24
+\newpage
+\LARGE{\prbst{24}}
+\questionbox{{\qtwentyfour}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objtwentyfour}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/twentyfour}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowtwentyfour}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/twentyfour}}
+    \newpage
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/twentyfour.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 24}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\contwentyfour}
+\end{itemize}
+
+%problem statement 25
+\newpage
+\LARGE{\prbst{25}}
+\questionbox{{\qtwentyfive}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objtwentyfive}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/twentyfive}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowtwentyfive}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/twentyfive}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/twentytwo.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 25}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\contwentyfive}
+\end{itemize}
+
+%problem statement 26
+\newpage
+\LARGE{\prbst{26}}
+\questionbox{{\qtwentysix}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objtwentysix}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowtwentysix}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/twentysix}} 
+  
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/twentysix}}
+    \newpage
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/twentysix.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 26}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\contwentysix}
+\end{itemize}
+
+%problem statement 27
+\newpage
+\LARGE{\prbst{27}}
+\questionbox{{\qtwentyseven}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objtwentyseven}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowtwentyseven}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/twentyseven}} 
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/twentyseven}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/twentyseven.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 27}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\contwentyseven}
+\end{itemize}
+
+%problem statement 28
+\newpage
+\LARGE{\prbst{28}}
+\questionbox{{\qtwentyeight}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objtwentyeight}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/twentyeight}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowtwentyeight}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/twentyeight}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/twentyeight.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 28}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\contwentyeight}
+\end{itemize}
+
+%problem statement 29
+\newpage
+\LARGE{\prbst{29}}
+\questionbox{{\qtwentynine}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objtwentynine}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/twentynine}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowtwentynine}
+    
+    \newpage
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/twentynine}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/twentynine.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 29}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \newpage
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\contwentynine}
+\end{itemize}
+
+%problem statement 30
+\newpage
+\LARGE{\prbst{30}}
+\questionbox{{\qthirty}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objthirty}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/thirty}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowthirty}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/thirty}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/thirty.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 30}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conthirty}
+\end{itemize}
+
+%problem statement 31
+\newpage
+\LARGE{\prbst{31}}
+\questionbox{{\qthirtyone}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objthirtyone}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/thirtyone}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowthirtyone}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/thirtyone}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/thirtyone.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 31}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conthirtyone}
+\end{itemize}
+
+%problem statement 32
+\newpage
+\LARGE{\prbst{32}}
+\questionbox{{\qthirtytwo}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objthirtytwo}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/thirtytwo}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowthirtytwo}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/thirtytwo}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/thirtytwo.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 32}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conthirtytwo}
+\end{itemize}
+
+%problem statement 33
+\newpage
+\LARGE{\prbst{33}}
+\questionbox{{\qthirtythree}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objthirtythree}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/thirythree}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowthirtythree}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/thirtythree}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/thirtythree.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 33}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conthirtythree}
+\end{itemize}
+
+%problem statement 34
+\newpage
+\LARGE{\prbst{34}}
+\questionbox{{\qthirtyfour}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objthirtyfour}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowthirtyfour}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/thirtyfour}} 
+
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/thirtyfour}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/thirtyfour.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 34}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conthirtyfour}
+\end{itemize}
+
+%problem statement 35
+\newpage
+\LARGE{\prbst{35}}
+\questionbox{{\qthirtyfive}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objthirtyfive}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowthirtyfive}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/thirtyfive}} 
+    \newpage
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/thirtyfive}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/thirtyfive.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 35}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conthirtyfive}
+\end{itemize}
+
+%problem statement 36
+\newpage
+\LARGE{\prbst{36}}
+\questionbox{{\qthirtysix}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objthirtysix}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowthirtysix}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/thirtysix}} 
+    
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/thirtysix}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/thirtysix.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 36}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conthirtysix}
+\end{itemize}
+
+%problem statement 37
+\newpage
+\LARGE{\prbst{37}}
+\questionbox{{\qthirtyseven}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objthirtyseven}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowthirtyseven}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/thirtyseven}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/thirtyseven}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/thirtyseven.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 37}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \newpage
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conthirtyseven}
+\end{itemize}
+
+%problem statement 38
+\newpage
+\LARGE{\prbst{38}}
+\questionbox{{\qthirtyeight}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objthirtyeight}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowthirtyeight}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/thirtyeight}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/thirtyeight}}
+    \newpage
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/thirtyeight.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 38}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conthirtyeight}
+\end{itemize}
+
+%problem statement 39
+\newpage
+\LARGE{\prbst{39}}
+\questionbox{{\qthirtynine}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objthirtynine}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/thirtynine}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowthirtynine}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/thirtynine}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/thirtynine.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 39}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conthirtynine}
+\end{itemize}
+
+%problem statement 40
+\newpage
+\LARGE{\prbst{40}}
+\questionbox{{\qforty}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objforty}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fourty}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowforty}
+    
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fourty}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fourty.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 40}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conforty}
+\end{itemize}
+
+%problem statement 41
+\newpage
+\LARGE{\prbst{41}}
+\questionbox{{\qfortyone}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfortyone}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fourtyone}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfortyone}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fourtyone}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fourtyone.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 41}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confortyone}
+\end{itemize}
+
+%problem statement 42
+\newpage
+\LARGE{\prbst{42}}
+\questionbox{{\qfortytwo}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfortytwo}
+        \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfortytwo}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fourtytwo}} 
+    \newpage
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fourtytwo}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fourtytwo.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 42}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confortytwo}
+\end{itemize}
+
+%problem statement 43
+\newpage
+\LARGE{\prbst{43}}
+\questionbox{{\qfortythree}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfortythree}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfortythree}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fourtythree}} 
+    \newpage
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fourtythree}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fourtythree.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 43}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confortythree}
+\end{itemize}
+
+%problem statement 44
+\newpage
+\LARGE{\prbst{44}}
+\questionbox{{\qfortyfour}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfortyfour}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fourtyfour}} 
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfortyfour}
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fourtyfour}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fourtyfour.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 44}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confortyfour}
+\end{itemize}
+
+%problem statement 45
+\newpage
+\LARGE{\prbst{45}}
+\questionbox{{\qfortyfive}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfortyfive}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fourtyfive}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfortyfive}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fourtyfive}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fourtyfive.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 45}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confortyfive}
+\end{itemize}
+
+%problem statement 46
+\newpage
+\LARGE{\prbst{46}}
+\questionbox{{\qfortysix}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfortysix}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfortysix}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fourtysix}} 
+    \newpage
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fourtysix}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fourtysix.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 46}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confortysix}
+\end{itemize}
+
+%problem statement 47
+\newpage
+\LARGE{\prbst{47}}
+\questionbox{{\qfortyseven}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfortyseven}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fourtyseven}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfortyseven}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fourtyseven}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fourtyseven.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 47}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confortyseven}
+\end{itemize}
+
+%problem statement 48
+\newpage
+\LARGE{\prbst{48}}
+\questionbox{{\qfortyeight}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfortyeight}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fourtyeight}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfortyeight}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fourtyeight}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fourtyeight.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 48}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confortyeight}
+\end{itemize}
+
+%problem statement 49
+\newpage
+\LARGE{\prbst{49}}
+\questionbox{{\qfortynine}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfortynine}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fourtynine}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfortynine}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fourtynine}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fourtynine.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 49}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \newpage
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confortynine}
+\end{itemize}
+
+%problem statement 50
+\newpage
+\LARGE{\prbst{50}}
+\questionbox{{\qfifty}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfifty}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fifty}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfifty}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fifty}}
+    \newpage
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fifty.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 50}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confifty}
+\end{itemize}
+
+%problem statement 51
+\newpage
+\LARGE{\prbst{51}}
+\questionbox{{\qfiftyone}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfiftyone}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fiftyone}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfiftyone}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fiftyone}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fiftyone.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 51}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confiftyone}
+\end{itemize}
+
+%problem statement 52
+\newpage
+\LARGE{\prbst{52}}
+\questionbox{{\qfiftytwo}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfiftytwo}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fiftytwo}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfiftytwo}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fiftytwo}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fiftytwo.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 52}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confiftytwo}
+\end{itemize}
+
+%problem statement 53
+\newpage
+\LARGE{\prbst{53}}
+\questionbox{{\qfiftythree}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfiftythree}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfiftythree}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fiftythree}} 
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fiftythree}}
+    \newpage
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fiftythree.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 53}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confiftythree}
+\end{itemize}
+
+%problem statement 54
+\newpage
+\LARGE{\prbst{54}}
+\questionbox{{\qfiftyfour}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfiftyfour}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fiftyfour}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfiftyfour}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fiftyfour}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fiftyfour.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 54}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confiftyfour}
+\end{itemize}
+
+%problem statement 55
+\newpage
+\LARGE{\prbst{55}}
+\questionbox{{\qfiftyfive}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfiftyfive}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fiftyfive}} 
+    \newpage
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfiftyfive}
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fiftyfive}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fiftyfive.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 55}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confiftyfive}
+\end{itemize}
+
+%problem statement 56
+\newpage
+\LARGE{\prbst{56}}
+\questionbox{{\qfiftysix}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfiftysix}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfiftysix} 
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fiftysix}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fiftysix}}
+    \newpage
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fiftysix.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 56}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confiftysix}
+\end{itemize}
+
+%problem statement 57
+\newpage
+\LARGE{\prbst{57}}
+\questionbox{{\qfiftyseven}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfiftyseven}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfiftyseven}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fiftyseven}} 
+    \newpage
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fiftyseven}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fiftyseven.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 57}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confiftyseven}
+\end{itemize}
+
+%problem statement 58
+\newpage
+\LARGE{\prbst{58}}
+\questionbox{{\qfiftyeight}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfiftyeight}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfiftyeight} 
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fiftyeight}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fiftyeight}}
+
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fiftyeight.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 58}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confiftyeight}
+\end{itemize}
+
+%problem statement 59
+\newpage
+\LARGE{\prbst{59}}
+\questionbox{{\qfiftynine}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objfiftynine}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowfiftynine}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/fiftynine}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/fiftynine}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/fiftynine.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 59}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\confiftynine}
+\end{itemize}
+
+%problem statement 60
+\newpage
+\LARGE{\prbst{60}}
+\questionbox{{\qsixty}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objsixty}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowsixty}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/sixty}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/sixty}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/sixty.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 60}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\consixty}
+\end{itemize}
+
+%problem statement 61
+\newpage
+\LARGE{\prbst{61}}
+\questionbox{{\qsixtyone}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objsixtyone}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowsixtyone}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/sixtyone}} 
+    \newpage
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/sixtyone}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/sixtyone.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 61}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\consixtyone}
+\end{itemize}
+
+%problem statement 62
+\newpage
+\LARGE{\prbst{62}}
+\questionbox{{\qsixtytwo}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objsixtytwo}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowsixtytwo}
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/sixtytwo}} 
+    \newpage
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/sixtytwo}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/sixtytwo.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 62}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\consixtytwo}
+\end{itemize}
+
+%problem statement 63
+\newpage
+\LARGE{\prbst{63}}
+\questionbox{{\qsixtythree}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objsixtythree}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowsixtythree}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/sixtythree}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/sixtythree}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/sixtythree.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 63}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\consixtythree}
+\end{itemize}
+
+%problem statement 64
+\newpage
+\LARGE{\prbst{64}}
+\questionbox{{\qsixtyfour}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objsixtyfour}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowsixtyfour}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/sixtyfour}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/sixtyfour}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/sixtyfour.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 64}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \newpage
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\consixtyfour}
+\end{itemize}
+
+%problem statement 65
+\newpage
+\LARGE{\prbst{65}}
+\questionbox{{\qsixtyfive}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objsixtyfive}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowsixtyfive}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/sixtyfive}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/sixtyfive}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/sixtyfive.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 65}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\consixtyfive}
+\end{itemize}
+
+%problem statement 66
+\newpage
+\LARGE{\prbst{66}}
+\questionbox{{\qsixtysix}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objsixtysix}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowsixtysix}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/sixtysix}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/sixtysix}}
+
+    \newpage
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/sixtysix.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 66}}
+        \label{fig:fig}
+        \end{figure}
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\consixtysix}
+\end{itemize}
+
+%problem statement 67
+\newpage
+\LARGE{\prbst{67}}
+\questionbox{{\qsixtyseven}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objsixtyseven}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowsixtyseven}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/sixtyseven}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/sixtyseven}}
+    \newpage
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/sixtyseven.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 67}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\consixtyseven}
+\end{itemize}
+
+%problem statement 68
+\newpage
+\LARGE{\prbst{68}}
+\questionbox{{\qsixtyeight}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objsixtyeight}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowsixtyeight}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/sixtyeight}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/sixtyeight}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/sixtyeight.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 68}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\consixtyeight}
+\end{itemize}
+
+%problem statement 69
+\newpage
+\LARGE{\prbst{69}}
+\questionbox{{\qsixtynine}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Theory:-}}} {\\
+        \textbf{Difference Between XML and JSON}
+
+        XML (eXtensible Markup Language) and JSON (JavaScript Object Notation) are two popular formats used for storing and exchanging data between systems. Both are platform-independent and human-readable, but they differ in structure, syntax, and usage.
+
+        \textbf{XML (eXtensible Markup Language)}
+
+        XML is a markup language designed to store and transport data. It uses custom tags to define data elements and supports attributes, namespaces, and document validation through DTD or XML Schema.
+
+        Example:
+
+        \begin{verbatim}
+        <student>
+            <name>Arijit</name>
+            <age>21</age>
+        </student>
+        \end{verbatim}
+
+        \textbf{JSON (JavaScript Object Notation)}
+
+        JSON is a lightweight data-interchange format based on key-value pairs. It is easy for humans to read and write and simple for machines to parse and generate.
+        \newpage
+        Example:
+
+        \begin{verbatim}
+        {
+            "name": "Arijit",
+            "age": 21
+        }
+        \end{verbatim}
+
+        \textbf{Comparison Between XML and JSON}
+
+        \begin{table}[h]
+        \centering
+        \renewcommand{\arraystretch}{1.3}
+        \begin{tabular}{|p{4cm}|p{5cm}|p{5cm}|}
+        \hline
+        \textbf{Feature} & \textbf{XML} & \textbf{JSON} \\
+        \hline
+        Full Form & eXtensible Markup Language & JavaScript Object Notation \\
+        \hline
+        Data Representation & Uses tags and attributes & Uses key-value pairs \\
+        \hline
+        Readability & More verbose and complex & Simpler and easier to read \\
+        \hline
+        File Size & Larger due to opening and closing tags & Smaller and compact \\
+        \hline
+        Parsing Speed & Slower & Faster \\
+        \hline
+        Data Types & Stores data as text; type conversion needed & Supports strings, numbers, arrays, booleans, objects, and null \\
+        \hline
+        Support for Comments & Supports comments & Does not officially support comments \\
+        \hline
+        Schema Validation & Supports DTD and XML Schema & Uses JSON Schema (optional) \\
+        \hline
+        Namespace Support & Supported & Not supported \\
+        \hline
+        Array Representation & More complex & Native array support \\
+        \hline
+        Human Readability & Less readable for large documents & More readable and concise \\
+        \hline
+        Web API Usage & Less common in modern APIs & Widely used in REST APIs \\
+        \hline
+        Processing Overhead & Higher & Lower \\
+        \hline
+        Popularity & Common in legacy systems & Preferred in modern web applications \\
+        \hline
+        \end{tabular}
+        \caption{Comparison of XML and JSON}
+        \label{tab:xmljson}
+        \end{table}
+
+        \textbf{Advantages of XML}
+
+        \begin{itemize}
+            \item Supports namespaces and document validation.
+            \item Suitable for complex document structures.
+            \item Platform and language independent.
+            \item Extensible and self-descriptive.
+        \end{itemize}
+
+        \newpage
+        \textbf{Advantages of JSON}
+
+        \begin{itemize}
+            \item Lightweight and compact.
+            \item Faster parsing and processing.
+            \item Easy to understand and write.
+            \item Widely supported by modern programming languages and web APIs.
+        \end{itemize}
+
+        Both XML and JSON are widely used for data exchange. XML is suitable for complex documents requiring validation and namespaces, while JSON is preferred for modern web applications because of its simplicity, compact size, and faster processing. In contemporary software development, JSON has become the dominant format for web services and APIs.
+    }
+
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\consixtynine}
+\end{itemize}
+
+%problem statement 70
+\newpage
+\LARGE{\prbst{70}}
+\questionbox{{\qseventy}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objseventy}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowseventy}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/seventy}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/seventy}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/seventy.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 70}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conseventy}
+\end{itemize}
+
+%problem statement 71
+\newpage
+\LARGE{\prbst{71}}
+\questionbox{{\qseventyone}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objseventyone}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowseventyone}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/seventyone}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/seventyone}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/seventyone.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 71}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conseventyone}
+\end{itemize}
+
+%problem statement 72
+\newpage
+\LARGE{\prbst{72}}
+\questionbox{{\qseventytwo}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objseventytwo}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowseventytwo}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/seventytwo}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/seventytwo}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/seventytwo.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 72}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conseventytwo}
+\end{itemize}
+
+%problem statement 73
+\newpage
+\LARGE{\prbst{73}}
+\questionbox{{\qseventythree}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objseventythree}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowseventythree}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/seventythree}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/seventythree}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/seventythree.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 73}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conseventythree}
+\end{itemize}
+
+%problem statement 74
+\newpage
+\LARGE{\prbst{74}}
+\questionbox{{\qseventyfour}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objseventyfour}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowseventyfour}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/seventyfour}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/seventyfour}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.6\textwidth]{assets/seventyfour.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 74}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conseventyfour}
+\end{itemize}
+
+%problem statement 75
+\newpage
+\LARGE{\prbst{75}}
+\questionbox{{\qseventyfive}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objseventyfive}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowseventyfive}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/seventyfive}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/seventyfive}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/seventyfive.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 75}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \newpage
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conseventyfive}
+\end{itemize}
+
+%problem statement 76
+\newpage
+\LARGE{\prbst{76}}
+\questionbox{{\qseventysix}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objseventysix}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowseventysix}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/seventysix}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/seventysix}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/seventysix.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 76}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conseventysix}
+\end{itemize}
+
+%problem statement 77
+\newpage
+\LARGE{\prbst{77}}
+\questionbox{{\qseventyseven}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objseventyseven}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowseventyseven}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/seventyseven}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/seventyseven}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/seventyseven.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 77}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \newpage
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conseventyseven}
+\end{itemize}
+
+%problem statement 78
+\newpage
+\LARGE{\prbst{78}}
+\questionbox{{\qseventyeight}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objseventyeight}
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowseventyeight}
+    \newpage
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/seventyeight}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/seventyeight}}
+    \newpage
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/seventyeight.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 78}}
+        \label{fig:fig}
+        \end{figure}
+    }
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conseventyeight}
+\end{itemize}
+
+%problem statement 79
+\newpage
+\LARGE{\prbst{79}}
+\questionbox{{\qseventynine}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objseventynine}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowseventynine}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/seventynine}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/seventynine}}
+    \newpage
+    
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/seventynine.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 79}}
+        \label{fig:fig79}
+        \end{figure}
+    }
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conseventynine}
+\end{itemize}
+
+%problem statement 80
+\newpage
+\LARGE{\prbst{80}}
+\questionbox{{\qeighty}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objeighty}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\floweighty}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/eighty}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/eighty}}
+    
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/eighty.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 80}}
+        \label{fig:fig80}
+        \end{figure}
+    }
+    \newpage
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\coneighty}
+\end{itemize}
+
+%problem statement 81
+\newpage
+\LARGE{\prbst{81}}
+\questionbox{{\qeightyone}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objeightyone}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\floweightyone}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/eightyone}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/eightyone}}
+    \newpage
+    
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/eightyone.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 81}}
+        \label{fig:fig81}
+        \end{figure}
+    }
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\coneightyone}
+\end{itemize}
+
+%problem statement 82
+\newpage
+\LARGE{\prbst{82}}
+\questionbox{{\qeightytwo}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objeightytwo}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\floweightytwo}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/eightytwo}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/eightytwo}}
+    \newpage
+    
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/eightytwo.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 82}}
+        \label{fig:fig82}
+        \end{figure}
+    }
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\coneightytwo}
+\end{itemize}
+
+%problem statement 83
+\newpage
+\LARGE{\prbst{83}}
+\questionbox{{\qeightythree}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objeightythree}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\floweightythree}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/eightythree}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/eightythree}}
+    \newpage
+    
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/eightythree.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 83}}
+        \label{fig:fig83}
+        \end{figure}
+    }
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\coneightythree}
+\end{itemize}
+
+%problem statement 84
+\newpage
+\LARGE{\prbst{84}}
+\questionbox{{\qeightyfour}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objeightyfour}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\floweightyfour}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/eightyfour}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/eightyfour}}
+    \newpage
+    
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/eightyfour.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 84}}
+        \label{fig:fig84}
+        \end{figure}
+    }
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\coneightyfour}
+\end{itemize}
+
+%problem statement 85
+\newpage
+\LARGE{\prbst{85}}
+\questionbox{{\qeightyfive}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objeightyfive}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\floweightyfive}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/eightyfive}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/eightyfive}}
+    
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/eightyfive.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 85}}
+        \label{fig:fig85}
+        \end{figure}
+    }
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\coneightyfive}
+\end{itemize}
+
+%problem statement 86
+\newpage
+\LARGE{\prbst{86}}
+\questionbox{{\qeightysix}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objeightysix}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\floweightysix}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/eightysix}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/eightysix}}
+    \newpage
+    
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/eightysix.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 86}}
+        \label{fig:fig86}
+        \end{figure}
+    }
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\coneightysix}
+\end{itemize}
+
+%problem statement 87
+\newpage
+\LARGE{\prbst{87}}
+\questionbox{{\qeightyseven}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objeightyseven}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\floweightyseven}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/eightyseven}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/eightyseven}}
+    
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/eightyseven.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 87}}
+        \label{fig:fig87}
+        \end{figure}
+    }
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\coneightyseven}
+\end{itemize}
+
+%problem statement 88
+\newpage
+\LARGE{\prbst{88}}
+\questionbox{{\qeightyeight}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objeightyeight}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\floweightyeight}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/eightyeight}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/eightyeight}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/eightyeight.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 88}}
+        \label{fig:fig88}
+        \end{figure}
+    }
+    \newpage
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\coneightyeight}
+\end{itemize}
+
+%problem statement 89
+\newpage
+\LARGE{\prbst{89}}
+\questionbox{{\qeightynine}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objeightynine}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\floweightynine}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/eightynine}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/eightynine}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/eightynine.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 89}}
+        \label{fig:fig89}
+        \end{figure}
+    }
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\coneightynine}
+\end{itemize}
+
+%problem statement 90
+\newpage
+\LARGE{\prbst{90}}
+\questionbox{{\qninety}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objninety}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowninety}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/ninety}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/ninety}}
+    \newpage
+    
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/ninety.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 90}}
+        \label{fig:fig90}
+        \end{figure}
+    }
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conninety}
+\end{itemize}
+
+%problem statement 91
+\newpage
+\LARGE{\prbst{91}}
+\questionbox{{\qninetyone}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objninetyone}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowninetyone}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/ninetyone}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/ninetyone}}
+    
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/ninetyone.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 91}}
+        \label{fig:fig91}
+        \end{figure}
+    }
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conninetyone}
+\end{itemize}
+
+%problem statement 92
+\newpage
+\LARGE{\prbst{92}}
+\questionbox{{\qninetytwo}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objninetytwo}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowninetytwo}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/ninetytwo}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/ninetytwo}}
+    \newpage
+    
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/ninetytwo.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 92}}
+        \label{fig:fig92}
+        \end{figure}
+    }
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conninetytwo}
+\end{itemize}
+
+%problem statement 93
+\newpage
+\LARGE{\prbst{93}}
+\questionbox{{\qninetythree}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objninetythree}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowninetythree}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/ninetythree}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/ninetythree}}
+    \newpage
+    
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/ninetythree.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 93}}
+        \label{fig:fig93}
+        \end{figure}
+    }
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conninetythree}
+\end{itemize}
+
+%problem statement 94
+\newpage
+\LARGE{\prbst{94}}
+\questionbox{{\qninetyfour}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objninetyfour}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowninetyfour}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/ninetyfour}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/ninetyfour}}
+    
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/ninetyfour.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 94}}
+        \label{fig:fig94}
+        \end{figure}
+    }
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conninetyfour}
+\end{itemize}
+
+%problem statement 95
+\newpage
+\LARGE{\prbst{95}}
+\questionbox{{\qninetyfive}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objninetyfive}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowninetyfive}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/ninetyfive}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/ninetyfive}}
+    \newpage
+    
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/ninetyfive.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 95}}
+        \label{fig:fig95}
+        \end{figure}
+    }
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conninetyfive}
+\end{itemize}
+
+%problem statement 96
+\newpage
+\LARGE{\prbst{96}}
+\questionbox{{\qninetysix}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objninetysix}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowninetysix}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/ninetysix}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/ninetysix}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.6\textwidth]{assets/ninetysix.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 96}}
+        \label{fig:fig96}
+        \end{figure}
+    }
+    \newpage
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conninetysix}
+\end{itemize}
+
+%problem statement 97
+\newpage
+\LARGE{\prbst{97}}
+\questionbox{{\qninetyseven}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objninetyseven}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowninetyseven}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/ninetyseven}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/ninetyseven}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/ninetyseven.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 97}}
+        \label{fig:fig97}
+        \end{figure}
+    }
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conninetyseven}
+\end{itemize}
+
+%problem statement 98
+\newpage
+\LARGE{\prbst{98}}
+\questionbox{{\qninetyeight}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objninetyeight}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowninetyeight}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/ninetyeight}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/ninetyeight}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/ninetyeight.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 98}}
+        \label{fig:fig98}
+        \end{figure}
+    }
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conninetyeight}
+\end{itemize}
+
+%problem statement 99
+\newpage
+\LARGE{\prbst{99}}
+\questionbox{{\qninetynine}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objninetynine}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowninetynine}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/ninetynine}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/ninetynine}}
+
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.9\textwidth]{assets/ninetynine.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 99}}
+        \label{fig:fig99}
+        \end{figure}
+    }
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\conninetynine}
+\end{itemize}
+
+%problem statement 100
+\newpage
+\LARGE{\prbst{100}}
+\questionbox{{\qonehundred}}
+\begin{itemize}[label=\ding{112}]
+    \item{\underline{\textbf{Objective:-}}} 
+    \LARGE{\objonehundred}
+    
+    \item{\underline{\textbf{Flowchart:-}}}
+    \LARGE{\flowonehundred}
+    \newpage
+    
+    \item{\underline{\textbf{Algorithm:-}}}
+    \LARGE{\input{Algorithm/onehundred}} 
+    
+    \item{\underline{\textbf{Code:-}}} 
+    \Large{\input{codes/onehundred}}
+    \newpage
+    \item{\underline{\textbf{Output:- }}} {
+        \begin{figure}[h]
+        \centering
+        \begin{tikzpicture}
+            \node[inner sep=0pt, drop shadow] (img) {\includegraphics[width=0.6\textwidth]{assets/onehundred.png}};
+        \end{tikzpicture}
+        \caption*{\textbf{Figure 100}}
+        \label{fig:fig100}
+        \end{figure}
+    }
+    
+    \item{\underline{\textbf{Conclusion:- }}}
+    \LARGE{\cononehundred}
+\end{itemize}
+
+%Acknowledgment
+\newpage
+\begin{center}
+    \underline{\textbf{\huge{Acknowledgment}}}
+\end{center}
+\begin{flushleft}
+\input{Acknowledgment}
+\end{flushleft}
+{\raggedleft Thank you,\\[3ex]
+\begin{tikzpicture}
+\draw [thick,dash dot] (0,1) -- (7,1);
+\end{tikzpicture}\\[1ex]
+[sign. of the mentor]
+\par
+}
+
+\end{document}
