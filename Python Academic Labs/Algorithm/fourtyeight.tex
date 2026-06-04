@@ -1,0 +1,22 @@
+\begin{algorithm}
+\caption{Read and Display the First N Lines of a File}
+\begin{algorithmic}[1]
+
+\STATE Input file name:
+\STATE $filename \gets$ user input
+
+\STATE Input number of lines to read:
+\STATE $n \gets$ user input
+
+\STATE Open the file in read mode
+
+\FOR{each line with index $i$ in the file}
+    \IF{$i < n$}
+        \STATE Display the current line
+    \ELSE
+        \STATE Exit the loop
+    \ENDIF
+\ENDFOR
+
+\end{algorithmic}
+\end{algorithm}

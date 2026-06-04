@@ -1,0 +1,27 @@
+\begin{algorithm}
+\caption{Create Tuples Containing Numbers and Their Squares}
+\begin{algorithmic}[1]
+
+\STATE Input starting value:
+\STATE $start \gets$ user input
+
+\STATE Input ending value:
+\STATE $end \gets$ user input
+
+\STATE Initialize an empty list:
+\STATE $result \gets [\ ]$
+
+\FOR{$i \gets start$ to $end$}
+    \STATE Compute square of $i$:
+    \STATE $square \gets i^2$
+    
+    \STATE Create tuple:
+    \STATE $tuple \gets (i, square)$
+    
+    \STATE Append $tuple$ to $result$
+\ENDFOR
+
+\STATE Output $result$
+
+\end{algorithmic}
+\end{algorithm}

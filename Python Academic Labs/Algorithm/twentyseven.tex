@@ -1,0 +1,18 @@
+\begin{algorithm}
+\caption{Create List of Numbers Divisible by 5 or 6}
+\begin{algorithmic}[1]
+
+\STATE $numbers \gets$ empty list
+
+\FOR{$i \gets 1$ to $100$}
+
+    \IF{$i \bmod 5 = 0$ OR $i \bmod 6 = 0$}
+        \STATE Add $i$ to $numbers$
+    \ENDIF
+
+\ENDFOR
+
+\STATE Output $numbers$
+
+\end{algorithmic}
+\end{algorithm}

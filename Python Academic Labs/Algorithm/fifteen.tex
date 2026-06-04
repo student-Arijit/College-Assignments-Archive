@@ -1,0 +1,20 @@
+\begin{algorithm}
+\caption{Insert One String into the Middle of Another String}
+\begin{algorithmic}[1]
+
+\STATE Input main string:
+\STATE $str1 \gets$ user input
+
+\STATE Input string to insert:
+\STATE $str2 \gets$ user input
+
+\STATE Compute middle position:
+\STATE $mid \gets \lfloor length(str1) / 2 \rfloor$
+
+\STATE Form the new string:
+\STATE $result \gets str1[0:mid] + str2 + str1[mid:]$
+
+\STATE Output ``Result: '' $result$
+
+\end{algorithmic}
+\end{algorithm}

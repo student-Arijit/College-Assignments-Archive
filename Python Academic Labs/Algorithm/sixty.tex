@@ -1,0 +1,30 @@
+\begin{algorithm}
+\caption{Convert Date Format from YYYY-MM-DD to DD-MM-YYYY in a File}
+\begin{algorithmic}[1]
+
+\STATE Input file name:
+\STATE $filename \gets$ user input
+
+\STATE Open the file in read mode
+
+\STATE Read the entire file content:
+\STATE $content \gets$ contents of file
+
+\STATE Define pattern for date format YYYY-MM-DD
+
+\STATE Define replacement rule:
+\STATE For each matched date:
+\STATE Swap order from $(year, month, day)$ to $(day, month, year)$
+
+\STATE Replace all matching dates in the content:
+\STATE $updated\_content \gets$ modified content
+
+\STATE Open the file in write mode
+
+\STATE Write updated content back to file
+
+\STATE Display message:
+\STATE Output ``Dates converted successfully.''
+
+\end{algorithmic}
+\end{algorithm}

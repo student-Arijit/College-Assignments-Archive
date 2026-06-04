@@ -1,0 +1,34 @@
+\begin{algorithm}
+\caption{Count Vowels and Consonants in a File}
+\begin{algorithmic}[1]
+
+\STATE Input file name:
+\STATE $filename \gets$ user input
+
+\STATE Initialize vowel characters:
+\STATE $vowels \gets$ ``aeiouAEIOU''
+
+\STATE Initialize counters:
+\STATE $vowel\_count \gets 0$
+\STATE $consonant\_count \gets 0$
+
+\STATE Open the file in read mode
+
+\FOR{each character $char$ in the file}
+    \IF{$char$ is an alphabet}
+        \IF{$char \in vowels$}
+            \STATE $vowel\_count \gets vowel\_count + 1$
+        \ELSE
+            \STATE $consonant\_count \gets consonant\_count + 1$
+        \ENDIF
+    \ENDIF
+\ENDFOR
+
+\STATE Display number of vowels:
+\STATE Output ``Vowels: '' $vowel\_count$
+
+\STATE Display number of consonants:
+\STATE Output ``Consonants: '' $consonant\_count$
+
+\end{algorithmic}
+\end{algorithm}

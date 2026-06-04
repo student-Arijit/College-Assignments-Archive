@@ -1,0 +1,23 @@
+\begin{algorithm}
+\caption{Group DataFrame by Two Columns and Compute Aggregate Statistics}
+\begin{algorithmic}[1]
+
+\STATE Import Pandas library
+
+\STATE Create DataFrame with columns Department, Gender, and Salary
+
+\STATE Group data by:
+\STATE $Group \gets groupby(Department, Gender)$
+
+\STATE Compute aggregate statistics on Salary:
+\STATE Calculate $mean$, $sum$, and $count$
+
+\STATE Store result in $result$
+
+\STATE Display message:
+\STATE Output ``Grouped Data with Aggregates:''
+
+\STATE Display grouped result
+
+\end{algorithmic}
+\end{algorithm}

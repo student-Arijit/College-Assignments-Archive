@@ -1,0 +1,31 @@
+\begin{algorithm}
+\caption{Add Fruits and Prices to a Dictionary}
+\begin{algorithmic}[1]
+
+\STATE Create empty dictionary:
+\STATE $fruits \gets \{\}$
+
+\STATE Input number of fruits:
+\STATE $n \gets$ user input
+
+\FOR{$i \gets 1$ to $n$}
+
+    \STATE Input fruit name:
+    \STATE $name \gets$ user input
+
+    \STATE Input fruit price:
+    \STATE $price \gets$ user input
+
+    \IF{$name$ exists in $fruits$}
+        \STATE Output ``Fruit already present''
+        \STATE Stop
+    \ELSE
+        \STATE $fruits[name] \gets price$
+    \ENDIF
+
+    \STATE Output $fruits$
+
+\ENDFOR
+
+\end{algorithmic}
+\end{algorithm}

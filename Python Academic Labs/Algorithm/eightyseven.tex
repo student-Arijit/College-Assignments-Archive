@@ -1,0 +1,25 @@
+\begin{algorithm}
+\caption{Merge Three DataFrames on a Common Key using Pandas}
+\begin{algorithmic}[1]
+
+\STATE Import Pandas library
+
+\STATE Create first DataFrame $df_1$ with columns ID and Name
+
+\STATE Create second DataFrame $df_2$ with columns ID and Marks
+
+\STATE Create third DataFrame $df_3$ with columns ID and City
+
+\STATE Merge $df_1$ and $df_2$ on key ``ID'':
+\STATE $temp \gets merge(df_1, df_2, on=ID)$
+
+\STATE Merge result with $df_3$ on key ``ID'':
+\STATE $merged\_df \gets merge(temp, df_3, on=ID)$
+
+\STATE Display message:
+\STATE Output ``Merged DataFrame:''
+
+\STATE Display final merged DataFrame
+
+\end{algorithmic}
+\end{algorithm}

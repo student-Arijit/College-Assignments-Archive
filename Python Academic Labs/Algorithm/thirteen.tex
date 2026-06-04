@@ -1,0 +1,23 @@
+\begin{algorithm}
+\caption{Calculate Depreciated Value of an Asset}
+\begin{algorithmic}[1]
+
+\STATE Input purchase value:
+\STATE $amt \gets$ user input
+
+\STATE Input years of service:
+\STATE $year \gets$ user input
+
+\STATE Input depreciation rate:
+\STATE $rate \gets$ user input
+
+\STATE $value \gets amt$
+
+\FOR{$i \gets 1$ to $year$}
+    \STATE $value \gets value - \left(\dfrac{value \times rate}{100}\right)$
+\ENDFOR
+
+\STATE Output ``Depreciated value = '' $value$
+
+\end{algorithmic}
+\end{algorithm}

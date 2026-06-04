@@ -1,0 +1,33 @@
+\begin{algorithm}
+\caption{Remove Specified Characters from a String}
+\begin{algorithmic}[1]
+
+\STATE Input string:
+\STATE $text \gets$ user input
+
+\STATE Input characters to remove:
+\STATE $chars \gets$ user input
+
+\STATE $result \gets$ empty string
+
+\FOR{each character $ch$ in $text$}
+
+    \STATE $found \gets False$
+
+    \FOR{each character $c$ in $chars$}
+        \IF{$ch = c$}
+            \STATE $found \gets True$
+            \STATE Exit loop
+        \ENDIF
+    \ENDFOR
+
+    \IF{$found = False$}
+        \STATE Append $ch$ to $result$
+    \ENDIF
+
+\ENDFOR
+
+\STATE Output ``Result: '' $result$
+
+\end{algorithmic}
+\end{algorithm}

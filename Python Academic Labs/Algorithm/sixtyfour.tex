@@ -1,0 +1,34 @@
+\begin{algorithm}
+\caption{Display Top 5 Students Based on Marks}
+\begin{algorithmic}[1]
+
+\STATE Define a Student with attributes:
+\STATE $name, marks$
+
+\STATE Input number of students:
+\STATE $n \gets$ user input
+
+\STATE Initialize empty list:
+\STATE $students \gets [\ ]$
+
+\FOR{$i \gets 1$ to $n$}
+    \STATE Input student name:
+    \STATE $name \gets$ user input
+    
+    \STATE Input student marks:
+    \STATE $marks \gets$ user input
+    
+    \STATE Create a Student object and add to list
+\ENDFOR
+
+\STATE Sort students in descending order of marks:
+\STATE $sorted\_students \gets sorted(students, key = marks, descending)$
+
+\STATE Display top 5 students:
+
+\FOR{$i \gets 1$ to $5$}
+    \STATE Output student name and marks
+\ENDFOR
+
+\end{algorithmic}
+\end{algorithm}

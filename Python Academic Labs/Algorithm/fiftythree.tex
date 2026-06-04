@@ -1,0 +1,24 @@
+\begin{algorithm}
+\caption{Read a Random Line from a File}
+\begin{algorithmic}[1]
+
+\STATE Input file name:
+\STATE $filename \gets$ user input
+
+\STATE Open the file in read mode
+
+\STATE Read all lines from the file:
+\STATE $lines \gets$ all lines in the file
+
+\IF{$lines$ is empty}
+    \STATE Return \texttt{None}
+\ELSE
+    \STATE Select a random line from $lines$
+    \STATE Remove leading and trailing whitespace
+    \STATE Store the result in $random\_line$
+\ENDIF
+
+\STATE Output ``Random line: '' $random\_line$
+
+\end{algorithmic}
+\end{algorithm}

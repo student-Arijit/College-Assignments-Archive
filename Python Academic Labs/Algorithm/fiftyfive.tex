@@ -1,0 +1,25 @@
+\begin{algorithm}
+\caption{Find Words Containing the Letter 'z'}
+\begin{algorithmic}[1]
+
+\STATE Input text:
+\STATE $text \gets$ user input
+
+\STATE Split the text into words:
+\STATE $words \gets text.split()$
+
+\STATE Create a pattern to search for the letter ``z'' (case-insensitive)
+
+\STATE Initialize an empty list:
+\STATE $result \gets [\ ]$
+
+\FOR{each $word$ in $words$}
+    \IF{$word$ contains the letter ``z''}
+        \STATE Append $word$ to $result$
+    \ENDIF
+\ENDFOR
+
+\STATE Output ``Words containing 'z': '' $result$
+
+\end{algorithmic}
+\end{algorithm}

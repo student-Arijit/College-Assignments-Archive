@@ -1,0 +1,27 @@
+\begin{algorithm}
+\caption{Parse XML Data and Display Book Information}
+\begin{algorithmic}[1]
+
+\STATE Input XML data string
+
+\STATE Parse XML string into a tree structure:
+\STATE $root \gets parse(xml\_data)$
+
+\STATE Traverse all ``book'' nodes in the XML tree
+
+\FOR{each $book$ in $root$}
+    \STATE Extract title:
+    \STATE $title \gets book.find("title").text$
+    
+    \STATE Extract author:
+    \STATE $author \gets book.find("author").text$
+    
+    \STATE Extract price:
+    \STATE $price \gets book.find("price").text$
+    
+    \STATE Display title, author, and price
+    \STATE Print separator line
+\ENDFOR
+
+\end{algorithmic}
+\end{algorithm}

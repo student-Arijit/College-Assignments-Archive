@@ -1,0 +1,29 @@
+\begin{algorithm}
+\caption{Separate Odd and Even Numbers from a List}
+\begin{algorithmic}[1]
+
+\STATE Generate a list of 10 random numbers between 1 and 100:
+\STATE $numbers \gets$ random list
+
+\STATE $odd\_list \gets$ empty list
+
+\STATE $even\_list \gets$ empty list
+
+\FOR{each number $num$ in $numbers$}
+
+    \IF{$num \bmod 2 = 0$}
+        \STATE Add $num$ to $even\_list$
+    \ELSE
+        \STATE Add $num$ to $odd\_list$
+    \ENDIF
+
+\ENDFOR
+
+\STATE Output ``Original List: '' $numbers$
+
+\STATE Output ``Odd List: '' $odd\_list$
+
+\STATE Output ``Even List: '' $even\_list$
+
+\end{algorithmic}
+\end{algorithm}

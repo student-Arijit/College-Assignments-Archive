@@ -1,0 +1,25 @@
+\begin{algorithm}
+\caption{Display Calendar and Clock Information using Multiple Inheritance}
+\begin{algorithmic}[1]
+
+\STATE Define class \texttt{Clock}
+\STATE Create method \texttt{display\_time()}
+\STATE Output example time
+
+\STATE Define class \texttt{Calendar}
+\STATE Create method \texttt{display\_month()}
+\STATE Output example month
+\STATE Output example date
+
+\STATE Define class \texttt{CalendarClock} inheriting from \texttt{Clock} and \texttt{Calendar}
+
+\STATE Create method \texttt{display\_all()}
+\STATE Call \texttt{display\_month()}
+\STATE Call \texttt{display\_time()}
+
+\STATE Create object of \texttt{CalendarClock}
+
+\STATE Call \texttt{display\_all()}
+
+\end{algorithmic}
+\end{algorithm}

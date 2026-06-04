@@ -1,0 +1,26 @@
+\begin{algorithm}
+\caption{Remove Leading Zeros from an IP Address}
+\begin{algorithmic}[1]
+
+\STATE Input IP address:
+\STATE $ip \gets$ user input
+
+\STATE Split the IP address into parts using ``.'' as delimiter:
+\STATE $parts \gets ip.split(".")$
+
+\STATE Initialize an empty list:
+\STATE $cleaned \gets [\ ]$
+
+\FOR{each $part$ in $parts$}
+    \STATE Convert $part$ to an integer to remove leading zeros
+    \STATE Convert the integer back to a string
+    \STATE Append the result to $cleaned$
+\ENDFOR
+
+\STATE Join all elements of $cleaned$ using ``.'':
+\STATE $updated\_ip \gets ".".join(cleaned)$
+
+\STATE Output ``Updated IP address: '' $updated\_ip$
+
+\end{algorithmic}
+\end{algorithm}

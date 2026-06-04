@@ -1,0 +1,23 @@
+\begin{algorithm}
+\caption{Extract Date (YYYY-MM-DD) from a URL}
+\begin{algorithmic}[1]
+
+\STATE Input URL:
+\STATE $url \gets$ user input
+
+\STATE Define pattern for date format YYYY-MM-DD
+
+\STATE Search for the pattern in the URL:
+\STATE $match \gets$ pattern match in $url$
+
+\IF{$match$ is found}
+    \STATE Extract year, month, and day:
+    \STATE $(year, month, day) \gets match$
+    
+    \STATE Display year, month, and day
+\ELSE
+    \STATE Display ``No date found in URL''
+\ENDIF
+
+\end{algorithmic}
+\end{algorithm}

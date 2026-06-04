@@ -1,0 +1,30 @@
+\begin{algorithm}
+\caption{Plot Multiple Layered Charts in Altair with Shared Axes}
+\begin{algorithmic}[1]
+
+\STATE Import Pandas, NumPy, and Altair libraries
+
+\STATE Generate input data:
+\STATE $X \gets [1,2,3,\dots,10]$
+
+\STATE Create DataFrame with:
+\STATE $Y_1 = X^2,\quad Y_2 = X^{1.5}$
+
+\STATE Define base chart with shared x-axis:
+\STATE $base \gets Chart(df).encode(x = X)$
+
+\STATE Create first line chart:
+\STATE $line_1 \gets base.mark\_line(color = blue).encode(y = Y_1)$
+
+\STATE Create second line chart:
+\STATE $line_2 \gets base.mark\_line(color = red).encode(y = Y_2)$
+
+\STATE Layer both charts:
+\STATE $chart \gets layer(line_1, line_2)$
+
+\STATE Set title: ``Layered Charts with Shared Axes''
+
+\STATE Display final chart
+
+\end{algorithmic}
+\end{algorithm}

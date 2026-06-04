@@ -1,0 +1,26 @@
+\begin{algorithm}
+\caption{Perform Inner, Left, Right, and Outer Joins on Two DataFrames}
+\begin{algorithmic}[1]
+
+\STATE Import Pandas library
+
+\STATE Create first DataFrame $df_1$ with columns ID and Name
+
+\STATE Create second DataFrame $df_2$ with columns ID and Marks
+
+\STATE Perform Inner Join:
+\STATE $inner \gets merge(df_1, df_2,\ on=ID,\ how=inner)$
+
+\STATE Perform Left Join:
+\STATE $left \gets merge(df_1, df_2,\ on=ID,\ how=left)$
+
+\STATE Perform Right Join:
+\STATE $right \gets merge(df_1, df_2,\ on=ID,\ how=right)$
+
+\STATE Perform Outer Join:
+\STATE $outer \gets merge(df_1, df_2,\ on=ID,\ how=outer)$
+
+\STATE Display all joined DataFrames
+
+\end{algorithmic}
+\end{algorithm}

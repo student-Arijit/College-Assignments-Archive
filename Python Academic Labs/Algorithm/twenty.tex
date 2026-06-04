@@ -1,0 +1,20 @@
+\begin{algorithm}
+\caption{Extract First N Characters from a String}
+\begin{algorithmic}[1]
+
+\STATE Input string:
+\STATE $text \gets$ user input
+
+\STATE Input value of $n$:
+\STATE $n \gets$ user input
+
+\STATE $result \gets$ empty string
+
+\FOR{$i \gets 0$ to $\min(n,\;length(text))-1$}
+    \STATE Append $text[i]$ to $result$
+\ENDFOR
+
+\STATE Output ``First '' $n$ `` characters: '' $result$
+
+\end{algorithmic}
+\end{algorithm}

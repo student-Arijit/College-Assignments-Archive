@@ -1,0 +1,39 @@
+\begin{algorithm}
+\caption{Demonstrate Dictionary Methods}
+\begin{algorithmic}[1]
+
+\STATE Create dictionary:
+\STATE $users \gets$
+\{
+$arijit$: pass123,
+$rahul$: rahul@123,
+$sneha$: sneha456,
+$amit$: amit789,
+$priya$: priya321
+\}
+
+\STATE Output ``Original Dictionary:''
+
+\STATE Output $users$
+
+\STATE Create list of usernames:
+\STATE $usernames \gets [user1,\ user2,\ user3,\ user4,\ user5]$
+
+\STATE Create new dictionary using \texttt{fromkeys()}:
+\STATE $new\_dict \gets fromkeys(usernames,\ "default123")$
+
+\STATE Output ``Dictionary created using fromkeys():''
+
+\STATE Output $new\_dict$
+
+\STATE Create a copy of the original dictionary:
+\STATE $temp \gets copy(users)$
+
+\STATE Clear all elements from $temp$
+
+\STATE Output ``Dictionary after clear():''
+
+\STATE Output $temp$
+
+\end{algorithmic}
+\end{algorithm}

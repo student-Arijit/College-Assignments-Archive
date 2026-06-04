@@ -1,0 +1,24 @@
+\begin{algorithm}
+\caption{Generate Random Normal Data and Plot Histogram using Altair}
+\begin{algorithmic}[1]
+
+\STATE Import NumPy, Pandas, and Altair libraries
+
+\STATE Set random seed for reproducibility
+
+\STATE Generate 1000 random values from normal distribution:
+\STATE $data \gets Normal(\mu=0, \sigma=1, n=1000)$
+
+\STATE Convert data into DataFrame:
+\STATE $df \gets DataFrame(values)$
+
+\STATE Create histogram using binning (maxbins = 30)
+
+\STATE Count frequency of values in each bin
+
+\STATE Set chart title: ``Histogram of Normally Distributed Data (n=1000)''
+
+\STATE Display histogram chart
+
+\end{algorithmic}
+\end{algorithm}

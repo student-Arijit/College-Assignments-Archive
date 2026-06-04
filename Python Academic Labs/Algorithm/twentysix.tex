@@ -1,0 +1,25 @@
+\begin{algorithm}
+\caption{Find Maximum Value in the Second Half of a List}
+\begin{algorithmic}[1]
+
+\STATE Input list of elements:
+\STATE $numbers \gets$ user input list
+
+\STATE Compute middle index:
+\STATE $mid \gets \lfloor length(numbers)/2 \rfloor$
+
+\STATE Extract second half of the list:
+\STATE $second\_half \gets numbers[mid:]$
+
+\STATE $maximum \gets second\_half[0]$
+
+\FOR{each element $num$ in $second\_half$}
+    \IF{$num > maximum$}
+        \STATE $maximum \gets num$
+    \ENDIF
+\ENDFOR
+
+\STATE Output ``Maximum value in second half: '' $maximum$
+
+\end{algorithmic}
+\end{algorithm}

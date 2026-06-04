@@ -1,0 +1,22 @@
+\begin{algorithm}
+\caption{Create a 10×10 Checkerboard Matrix using NumPy}
+\begin{algorithmic}[1]
+
+\STATE Import NumPy library
+
+\STATE Create a 10×10 matrix filled with zeros:
+\STATE $checkerboard \gets zeros(10 \times 10)$
+
+\STATE Assign 1 to alternate positions in odd rows:
+\STATE $checkerboard[1::2,\ ::2] \gets 1$
+
+\STATE Assign 1 to alternate positions in even rows:
+\STATE $checkerboard[::2,\ 1::2] \gets 1$
+
+\STATE Display message:
+\STATE Output ``10×10 Checkerboard Matrix:''
+
+\STATE Display the final matrix
+
+\end{algorithmic}
+\end{algorithm}

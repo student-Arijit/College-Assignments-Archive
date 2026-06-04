@@ -1,0 +1,47 @@
+\begin{algorithm}
+\caption{Replace a Substring in a String}
+\begin{algorithmic}[1]
+
+\STATE Input main string:
+\STATE $text \gets$ user input
+
+\STATE Input string to replace:
+\STATE $old \gets$ user input
+
+\STATE Input new string:
+\STATE $new \gets$ user input
+
+\STATE $result \gets$ empty string
+\STATE $i \gets 0$
+
+\WHILE{$i < length(text)$}
+
+    \STATE $match \gets True$
+
+    \IF{$i + length(old) \leq length(text)$}
+
+        \FOR{$j \gets 0$ to $length(old)-1$}
+            \IF{$text[i+j] \neq old[j]$}
+                \STATE $match \gets False$
+                \STATE Exit loop
+            \ENDIF
+        \ENDFOR
+
+    \ELSE
+        \STATE $match \gets False$
+    \ENDIF
+
+    \IF{$match = True$}
+        \STATE Append $new$ to $result$
+        \STATE $i \gets i + length(old)$
+    \ELSE
+        \STATE Append $text[i]$ to $result$
+        \STATE $i \gets i + 1$
+    \ENDIF
+
+\ENDWHILE
+
+\STATE Output ``Result: '' $result$
+
+\end{algorithmic}
+\end{algorithm}

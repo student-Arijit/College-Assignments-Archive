@@ -1,0 +1,24 @@
+\begin{algorithm}
+\caption{Remove Newline Characters from a File}
+\begin{algorithmic}[1]
+
+\STATE Input file name:
+\STATE $filename \gets$ user input
+
+\STATE Open the file in read mode
+
+\STATE Read the entire file content:
+\STATE $content \gets$ contents of the file
+
+\STATE Replace all newline characters with spaces:
+\STATE $content \gets content.\text{replace}("\backslash n",\ " ")$
+
+\STATE Open the file in write mode
+
+\STATE Write the modified content back to the file
+
+\STATE Display message:
+\STATE Output ``Newline characters removed successfully.''
+
+\end{algorithmic}
+\end{algorithm}

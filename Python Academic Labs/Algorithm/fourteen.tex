@@ -1,0 +1,21 @@
+\begin{algorithm}
+\caption{Remove Vowels from a String}
+\begin{algorithmic}[1]
+
+\STATE Input string:
+\STATE $text \gets$ user input
+
+\STATE $vowels \gets$ ``aeiouAEIOU''
+
+\STATE $result \gets$ empty string
+
+\FOR{each character $ch$ in $text$}
+    \IF{$ch$ is not in $vowels$}
+        \STATE Append $ch$ to $result$
+    \ENDIF
+\ENDFOR
+
+\STATE Output ``String after removing vowels: '' $result$
+
+\end{algorithmic}
+\end{algorithm}

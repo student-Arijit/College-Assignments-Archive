@@ -1,0 +1,27 @@
+\begin{algorithm}
+\caption{Combine Corresponding Lines from Two Files}
+\begin{algorithmic}[1]
+
+\STATE Input first file name:
+\STATE $file1 \gets$ user input
+
+\STATE Input second file name:
+\STATE $file2 \gets$ user input
+
+\STATE Open the first file and read all lines:
+\STATE $lines1 \gets$ contents of $file1$
+
+\STATE Open the second file and read all lines:
+\STATE $lines2 \gets$ contents of $file2$
+
+\STATE Determine the minimum number of lines:
+\STATE $min\_len \gets \min(\text{length}(lines1),\ \text{length}(lines2))$
+
+\FOR{$i \gets 0$ to $min\_len - 1$}
+    \STATE Remove leading and trailing spaces from $lines1[i]$
+    \STATE Remove leading and trailing spaces from $lines2[i]$
+    \STATE Display $lines1[i]$ and $lines2[i]$ together
+\ENDFOR
+
+\end{algorithmic}
+\end{algorithm}

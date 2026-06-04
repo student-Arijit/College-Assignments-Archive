@@ -1,0 +1,32 @@
+\begin{algorithm}
+\caption{Standardize a NumPy Array (Mean = 0, Variance = 1)}
+\begin{algorithmic}[1]
+
+\STATE Import NumPy library
+
+\STATE Define function \texttt{standardize\_array(arr)}
+
+\STATE Compute mean of array:
+\STATE $mean \gets \text{mean}(arr)$
+
+\STATE Compute standard deviation of array:
+\STATE $std \gets \text{std}(arr)$
+
+\STATE Standardize each element:
+\STATE $standardized \gets \frac{arr - mean}{std}$
+
+\STATE Return standardized array
+
+\STATE Input data array:
+\STATE $data \gets [10, 20, 30, 40, 50]$
+
+\STATE Apply standardization function:
+\STATE $result \gets standardize\_array(data)$
+
+\STATE Display original and standardized arrays
+
+\STATE Verify results:
+\STATE Compute mean and variance of $result$
+
+\end{algorithmic}
+\end{algorithm}

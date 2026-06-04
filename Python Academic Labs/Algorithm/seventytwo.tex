@@ -1,0 +1,47 @@
+\begin{algorithm}
+\caption{NumPy Array Indexing and Slicing Operations}
+\begin{algorithmic}[1]
+
+\STATE Import NumPy library
+
+\STATE Create 1D array:
+\STATE $arr \gets [10, 20, 30, 40, 50]$
+
+\STATE Integer indexing:
+\STATE $a \gets arr[0]$
+\STATE $b \gets arr[3]$
+
+\STATE Fancy (array) indexing:
+\STATE $indices \gets [0, 2, 4]$
+\STATE $result_1 \gets arr[indices]$
+
+\STATE Boolean indexing:
+\STATE $bool\_index \gets (arr > 25)$
+\STATE $result_2 \gets arr[bool\_index]$
+
+\STATE Slicing operations:
+\STATE $result_3 \gets arr[1:4]$
+\STATE $result_4 \gets arr[:3]$
+\STATE $result_5 \gets arr[::2]$
+
+\STATE Create 2D array:
+\STATE $arr2d \gets \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}$
+
+\STATE 2D integer indexing:
+\STATE $x \gets arr2d[1,2]$
+
+\STATE 2D array indexing:
+\STATE $rows \gets [0,2]$
+\STATE $cols \gets [1,2]$
+\STATE $result_6 \gets arr2d[rows, cols]$
+
+\STATE 2D boolean indexing:
+\STATE $result_7 \gets arr2d[arr2d > 5]$
+
+\STATE 2D slicing:
+\STATE $result_8 \gets arr2d[0:2,\ 1:3]$
+
+\STATE Output all computed results
+
+\end{algorithmic}
+\end{algorithm}

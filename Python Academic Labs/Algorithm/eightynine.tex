@@ -1,0 +1,33 @@
+\begin{algorithm}
+\caption{Detect and Remove Outliers using Z-Score Method in Pandas}
+\begin{algorithmic}[1]
+
+\STATE Import Pandas and NumPy libraries
+
+\STATE Create DataFrame with column ``Values''
+
+\STATE Compute mean of values:
+\STATE $mean \gets \text{mean}(Values)$
+
+\STATE Compute standard deviation:
+\STATE $std \gets \text{std}(Values)$
+
+\STATE Compute Z-score for each value:
+\STATE $Z \gets \frac{Values - mean}{std}$
+
+\STATE Add Z-score column to DataFrame
+
+\STATE Detect outliers where:
+\STATE $|Z| > 3$
+
+\STATE Remove outliers from DataFrame:
+\STATE $df_{filtered} \gets$ rows where $|Z| \leq 3$
+
+\STATE Remove Z-score column from filtered data
+
+\STATE Display original DataFrame
+
+\STATE Display cleaned DataFrame without outliers
+
+\end{algorithmic}
+\end{algorithm}

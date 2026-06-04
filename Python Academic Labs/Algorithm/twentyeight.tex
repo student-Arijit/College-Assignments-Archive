@@ -1,0 +1,32 @@
+\begin{algorithm}
+\caption{Find GCD of Five Numbers}
+\begin{algorithmic}[1]
+
+\STATE $numbers \gets$ empty list
+
+\FOR{$i \gets 1$ to $5$}
+    \STATE Input number
+    \STATE Add number to $numbers$
+\ENDFOR
+
+\STATE $result \gets numbers[0]$
+
+\FOR{each number $num$ from the second element to the last element}
+
+    \STATE $a \gets result$
+    \STATE $b \gets num$
+
+    \WHILE{$b \neq 0$}
+        \STATE $temp \gets b$
+        \STATE $b \gets a \bmod b$
+        \STATE $a \gets temp$
+    \ENDWHILE
+
+    \STATE $result \gets a$
+
+\ENDFOR
+
+\STATE Output ``GCD of the five numbers is: '' $result$
+
+\end{algorithmic}
+\end{algorithm}

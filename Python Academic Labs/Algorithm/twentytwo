@@ -1,0 +1,26 @@
+\begin{algorithm}
+\caption{Sort a List Using Insertion Sort}
+\begin{algorithmic}[1]
+
+\STATE Input list of elements:
+\STATE $arr \gets$ user input list
+
+\FOR{$i \gets 1$ to $length(arr)-1$}
+
+    \STATE $key \gets arr[i]$
+
+    \STATE $j \gets i-1$
+
+    \WHILE{$j \geq 0$ and $arr[j] > key$}
+        \STATE $arr[j+1] \gets arr[j]$
+        \STATE $j \gets j-1$
+    \ENDWHILE
+
+    \STATE $arr[j+1] \gets key$
+
+\ENDFOR
+
+\STATE Output ``Sorted List: '' $arr$
+
+\end{algorithmic}
+\end{algorithm}

@@ -1,0 +1,21 @@
+\begin{algorithm}
+\caption{Sum of Even Numbers from 100 to 200}
+\begin{algorithmic}[1]
+
+\STATE $total \gets 0$
+\STATE $num \gets 100$
+
+\WHILE{$num \leq 200$}
+
+    \IF{$num \bmod 2 = 0$}
+        \STATE $total \gets total + num$
+    \ENDIF
+
+    \STATE $num \gets num + 1$
+
+\ENDWHILE
+
+\STATE Output ``Sum of even numbers from 100 to 200 = '' $total$
+
+\end{algorithmic}
+\end{algorithm}

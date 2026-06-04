@@ -1,0 +1,27 @@
+\begin{algorithm}
+\caption{Sort a List Using Selection Sort}
+\begin{algorithmic}[1]
+
+\STATE Input list of elements:
+\STATE $arr \gets$ user input list
+
+\STATE $n \gets length(arr)$
+
+\FOR{$i \gets 0$ to $n-1$}
+
+    \STATE $min\_index \gets i$
+
+    \FOR{$j \gets i+1$ to $n-1$}
+        \IF{$arr[j] < arr[min\_index]$}
+            \STATE $min\_index \gets j$
+        \ENDIF
+    \ENDFOR
+
+    \STATE Swap $arr[i]$ and $arr[min\_index]$
+
+\ENDFOR
+
+\STATE Output ``Sorted List: '' $arr$
+
+\end{algorithmic}
+\end{algorithm}

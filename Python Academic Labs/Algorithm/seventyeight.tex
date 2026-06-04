@@ -1,0 +1,18 @@
+\begin{algorithm}
+\caption{Remove Duplicate Rows Based on a Specific Column in a DataFrame}
+\begin{algorithmic}[1]
+
+\STATE Import Pandas library
+
+\STATE Create DataFrame using given data:
+\STATE $df \gets DataFrame(ID, Name, Marks)$
+
+\STATE Remove duplicate rows based on column ``Name'':
+\STATE $df\_unique \gets drop\_duplicates(df,\ subset = Name)$
+
+\STATE Display original DataFrame
+
+\STATE Display DataFrame after removing duplicates based on Name
+
+\end{algorithmic}
+\end{algorithm}

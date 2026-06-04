@@ -1,0 +1,48 @@
+\begin{algorithm}
+\caption{Search and Update a Friend Directory}
+\begin{algorithmic}[1]
+
+\STATE Create dictionary of friends and phone numbers:
+\STATE $friends \gets$
+\{
+Arijit: 9876543210,
+Rahul: 9123456780,
+Sneha: 9988776655,
+Amit: 9871234567,
+Priya: 9012345678
+\}
+
+\STATE Output ``Friend Directory (Sorted):''
+
+\FOR{each $name$ in sorted keys of $friends$}
+    \STATE Output $name$, ``:'', $friends[name]$
+\ENDFOR
+
+\STATE Input friend's name:
+\STATE $name \gets$ user input
+
+\IF{$name$ exists in $friends$}
+
+    \STATE Output ``Phone Number: '' $friends[name]$
+
+\ELSE
+
+    \STATE Output ``Name not found''
+
+    \STATE Input phone number:
+    \STATE $phone \gets$ user input
+
+    \STATE $friends[name] \gets phone$
+
+    \STATE Output ``Details added successfully''
+
+    \STATE Output ``Updated Directory:''
+
+    \FOR{each $name$ in sorted keys of $friends$}
+        \STATE Output $name$, ``:'', $friends[name]$
+    \ENDFOR
+
+\ENDIF
+
+\end{algorithmic}
+\end{algorithm}

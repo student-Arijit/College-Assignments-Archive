@@ -1,0 +1,36 @@
+\begin{algorithm}
+\caption{Search an Element Using Binary Search}
+\begin{algorithmic}[1]
+
+\STATE Input list of elements:
+\STATE $arr \gets$ user input list
+
+\STATE Sort the list:
+\STATE $arr \gets sorted(arr)$
+
+\STATE Input key element:
+\STATE $key \gets$ user input
+
+\STATE $low \gets 0$
+
+\STATE $high \gets length(arr)-1$
+
+\WHILE{$low \leq high$}
+
+    \STATE $mid \gets \lfloor (low+high)/2 \rfloor$
+
+    \IF{$arr[mid] = key$}
+        \STATE Output ``Element found at index '' $mid$
+        \STATE Stop
+    \ELSIF{$arr[mid] < key$}
+        \STATE $low \gets mid+1$
+    \ELSE
+        \STATE $high \gets mid-1$
+    \ENDIF
+
+\ENDWHILE
+
+\STATE Output ``Element not found''
+
+\end{algorithmic}
+\end{algorithm}

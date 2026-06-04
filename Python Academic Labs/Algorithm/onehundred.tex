@@ -1,0 +1,37 @@
+\begin{algorithm}
+\caption{Load CSV, Clean Data, Compute Statistics, and Visualize using Altair}
+\begin{algorithmic}[1]
+
+\STATE Import Pandas, NumPy, and Altair libraries
+
+\STATE Load dataset from CSV file:
+\STATE $df \gets read\_csv(data.csv)$
+
+\STATE Remove missing values:
+\STATE $df_{clean} \gets dropna(df)$
+
+\STATE Extract numeric column:
+\STATE $values \gets df_{clean}[Value]$
+
+\STATE Compute summary statistics:
+\STATE $mean \gets mean(values)$
+\STATE $median \gets median(values)$
+\STATE $std \gets std(values)$
+
+\STATE Display computed statistics
+
+\STATE Create summary DataFrame:
+\STATE $summary \gets \{Mean, Median, Std\ Dev\}$
+
+\STATE Create bar chart using Altair:
+\STATE Map Statistic $\rightarrow$ x-axis
+\STATE Map Value $\rightarrow$ y-axis
+
+\STATE Add tooltips for interactivity
+
+\STATE Set chart title: ``Summary Statistics Visualization''
+
+\STATE Display chart
+
+\end{algorithmic}
+\end{algorithm}

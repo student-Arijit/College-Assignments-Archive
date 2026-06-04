@@ -1,0 +1,20 @@
+\begin{algorithm}
+\caption{Surface Area of a Prism}
+\begin{algorithmic}[1]
+
+\REQUIRE Three integers $a, b, c$
+\ENSURE Surface area of prism
+
+\STATE Read $a, b, c$
+
+\IF{$a \le 0$ OR $b \le 0$ OR $c \le 0$}
+    \STATE Print ``Error: All sides must be positive integers''
+    \STATE Stop
+\ENDIF
+
+\STATE $surface \gets 2 \times (a \times b + b \times c + a \times c)$
+
+\STATE Print ``Surface Area = '' $surface$
+
+\end{algorithmic}
+\end{algorithm}

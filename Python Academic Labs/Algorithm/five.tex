@@ -1,0 +1,34 @@
+\begin{algorithm}
+\caption{Calculate Time Required to Empty a Pool}
+\begin{algorithmic}[1]
+
+\STATE Input pool dimensions:
+\STATE $a \gets 12$
+\STATE $b \gets 7$
+\STATE $c \gets 2$
+
+\STATE Input pump flow rate:
+\STATE $flow\_rate \gets 17$
+
+\STATE Compute pool volume:
+\STATE $volume \gets a \times b \times c$
+
+\STATE Compute time to empty pool:
+\STATE $time \gets \dfrac{volume}{flow\_rate}$
+
+\STATE Convert time into hours, minutes and seconds:
+\STATE $hours \gets \lfloor time \rfloor$
+
+\STATE $remainder \gets time - hours$
+
+\STATE $minutes \gets \lfloor remainder \times 60 \rfloor$
+
+\STATE $remainder \gets (remainder \times 60) - minutes$
+
+\STATE $seconds \gets remainder \times 60$
+
+\STATE Output ``Time Required: ''
+\STATE Output $hours$ `` hr '' $minutes$ `` min '' $seconds$ `` sec''
+
+\end{algorithmic}
+\end{algorithm}

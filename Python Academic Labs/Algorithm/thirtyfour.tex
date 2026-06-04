@@ -1,0 +1,39 @@
+\begin{algorithm}
+\caption{Demonstrate Dictionary Methods with Authors and ISBN Numbers}
+\begin{algorithmic}[1]
+
+\STATE Create dictionary:
+\STATE $books \gets$
+\{
+J.K. Rowling : 9780747532743,\\
+George Orwell : 9780451524935,\\
+Dan Brown : 9780307474278,\\
+Paulo Coelho : 9780061122415,\\
+Chetan Bhagat : 9788129135513
+\}
+
+\STATE Output ``Original Dictionary:''
+
+\STATE Output $books$
+
+\STATE Create list of author names:
+\STATE $authors \gets [Author1,\ Author2,\ Author3,\ Author4,\ Author5]$
+
+\STATE Create dictionary using \texttt{fromkeys()}:
+\STATE $new\_dict \gets fromkeys(authors,\ "0000000000")$
+
+\STATE Output ``Dictionary using fromkeys():''
+
+\STATE Output $new\_dict$
+
+\STATE Create a copy of the original dictionary:
+\STATE $temp \gets copy(books)$
+
+\STATE Clear all elements from $temp$
+
+\STATE Output ``Dictionary after clear():''
+
+\STATE Output $temp$
+
+\end{algorithmic}
+\end{algorithm}

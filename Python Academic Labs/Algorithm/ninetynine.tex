@@ -1,0 +1,24 @@
+\begin{algorithm}
+\caption{Split a DataFrame into Training and Testing Sets using Random Sampling}
+\begin{algorithmic}[1]
+
+\STATE Import Pandas library
+
+\STATE Create DataFrame with ID, Feature, and Label
+
+\STATE Shuffle dataset randomly:
+\STATE $df_{shuffled} \gets sample(df,\ frac=1)$
+
+\STATE Define split ratio:
+\STATE $train\_size \gets 0.8 \times length(df)$
+
+\STATE Split dataset:
+\STATE $train \gets df_{shuffled}[0:train\_size]$
+\STATE $test \gets df_{shuffled}[train\_size:]$
+
+\STATE Display training set
+
+\STATE Display testing set
+
+\end{algorithmic}
+\end{algorithm}

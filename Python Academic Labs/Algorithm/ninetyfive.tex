@@ -1,0 +1,20 @@
+\begin{algorithm}
+\caption{Create a Rolling Window Standard Deviation Column in Pandas}
+\begin{algorithmic}[1]
+
+\STATE Import Pandas library
+
+\STATE Create DataFrame with column ``Values''
+
+\STATE Define rolling window size:
+\STATE $window \gets 3$
+
+\STATE Compute rolling standard deviation:
+\STATE $Rolling\_STD \gets rolling(Values,\ window=3).std()$
+
+\STATE Add result as new column in DataFrame
+
+\STATE Display updated DataFrame
+
+\end{algorithmic}
+\end{algorithm}

@@ -1,0 +1,30 @@
+\begin{algorithm}
+\caption{Generate All Possible Substrings of a String}
+\begin{algorithmic}[1]
+
+\STATE Input a string:
+\STATE $text \gets$ user input
+
+\STATE Initialize an empty list:
+\STATE $substrings \gets [\ ]$
+
+\STATE Determine the length of the string:
+\STATE $n \gets \text{length}(text)$
+
+\FOR{$i \gets 0$ to $n-1$}
+    \FOR{$j \gets i+1$ to $n$}
+        \STATE Extract substring:
+        \STATE $substring \gets text[i:j]$
+        
+        \STATE Append $substring$ to $substrings$
+    \ENDFOR
+\ENDFOR
+
+\STATE Output ``Substrings:''
+
+\FOR{each $s$ in $substrings$}
+    \STATE Output $s$
+\ENDFOR
+
+\end{algorithmic}
+\end{algorithm}

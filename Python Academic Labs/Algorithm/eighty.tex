@@ -1,0 +1,28 @@
+\begin{algorithm}
+\caption{Scatter Plot with Regression Line using Altair}
+\begin{algorithmic}[1]
+
+\STATE Import required libraries (Pandas, NumPy, Altair)
+
+\STATE Set random seed for reproducibility
+
+\STATE Generate independent variable:
+\STATE $x \gets [1, 2, \dots, 20]$
+
+\STATE Generate dependent variable with noise:
+\STATE $y \gets 2x + noise$
+
+\STATE Create DataFrame:
+\STATE $df \gets DataFrame(x, y)$
+
+\STATE Create scatter plot:
+\STATE Plot points $(x, y)$ as circles
+
+\STATE Compute regression line using linear regression transformation
+
+\STATE Overlay regression line on scatter plot
+
+\STATE Display combined chart
+
+\end{algorithmic}
+\end{algorithm}

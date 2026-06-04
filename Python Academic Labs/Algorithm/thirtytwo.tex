@@ -1,0 +1,32 @@
+\begin{algorithm}
+\caption{Store and Display Countries with Capitals in Sorted Order}
+\begin{algorithmic}[1]
+
+\STATE Create empty dictionary:
+\STATE $data \gets \{\}$
+
+\STATE Input number of countries:
+\STATE $n \gets$ user input
+
+\FOR{$i \gets 1$ to $n$}
+
+    \STATE Input country name:
+    \STATE $country \gets$ user input
+
+    \STATE Input capital city:
+    \STATE $capital \gets$ user input
+
+    \STATE $data[country] \gets capital$
+
+\ENDFOR
+
+\STATE Sort dictionary keys in ascending order
+
+\STATE Output ``Countries and Capitals in Sorted Order:''
+
+\FOR{each $country$ in sorted keys of $data$}
+    \STATE Output $country$, ``:'', $data[country]$
+\ENDFOR
+
+\end{algorithmic}
+\end{algorithm}

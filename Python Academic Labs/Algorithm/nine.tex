@@ -1,0 +1,20 @@
+\begin{algorithm}
+\caption{Display Pascal's Triangle}
+\begin{algorithmic}[1]
+
+\STATE Input number of rows:
+\STATE $n \gets$ user input
+
+\FOR{$i \gets 0$ to $n-1$}
+    \STATE $num \gets 1$
+    
+    \FOR{$j \gets 0$ to $i$}
+        \STATE Output $num$
+        \STATE $num \gets \dfrac{num \times (i-j)}{j+1}$
+    \ENDFOR
+    
+    \STATE Move to next line
+\ENDFOR
+
+\end{algorithmic}
+\end{algorithm}

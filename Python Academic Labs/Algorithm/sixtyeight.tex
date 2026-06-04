@@ -1,0 +1,20 @@
+\begin{algorithm}
+\caption{Parse JSON String and Access Values}
+\begin{algorithmic}[1]
+
+\STATE Input JSON string:
+\STATE $json\_data \gets$ given JSON text
+
+\STATE Convert JSON string into dictionary format:
+\STATE $data \gets parse(json\_data)$
+
+\STATE Display parsed JSON data
+
+\STATE Access and display specific fields:
+\STATE Output ``Name: '' $data["name"]$
+
+\STATE Access nested field and display:
+\STATE Output ``Math Marks: '' $data["marks"]["math"]$
+
+\end{algorithmic}
+\end{algorithm}
