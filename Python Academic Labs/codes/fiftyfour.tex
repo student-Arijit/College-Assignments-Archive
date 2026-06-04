@@ -1,0 +1,27 @@
+\begin{verbatim}
+import csv
+
+class CSVCopy:
+    def __init__(self, source_file, destination_file):
+        self.source_file = source_file
+        self.destination_file = destination_file
+
+    def copy_csv(self):
+        with open(self.source_file, "r", newline="") as src:
+            reader = csv.reader(src)
+            rows = list(reader)
+
+        with open(self.destination_file, "w", newline="") as 
+        dest:
+            writer = csv.writer(dest)
+            writer.writerows(rows)
+
+
+src_file = input("Enter source CSV file name: ")
+dest_file = input("Enter destination CSV file name: ")
+
+obj = CSVCopy(src_file, dest_file)
+obj.copy_csv()
+
+print("CSV file copied successfully.")
+\end{verbatim}

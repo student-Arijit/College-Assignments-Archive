@@ -1,0 +1,19 @@
+\begin{verbatim}
+import re
+
+class FiveLetterWords:
+    def __init__(self, text):
+        self.text = text
+
+    def find_words(self):
+        pattern = r"\b\w{5}\b"
+        return re.findall(pattern, self.text)
+
+
+text = input("Enter a string: ")
+
+obj = FiveLetterWords(text)
+result = obj.find_words()
+
+print("Five-letter words:", result)
+\end{verbatim}

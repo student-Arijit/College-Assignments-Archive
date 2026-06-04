@@ -1,0 +1,27 @@
+\begin{verbatim}
+import re
+
+class MatchWordZ:
+    def __init__(self, text):
+        self.text = text
+
+    def find_words_with_z(self):
+        words = self.text.split()
+        pattern = re.compile(r"z", re.IGNORECASE)
+
+        result = []
+
+        for word in words:
+            if pattern.search(word):
+                result.append(word)
+
+        return result
+
+
+text = input("Enter text: ")
+
+obj = MatchWordZ(text)
+matches = obj.find_words_with_z()
+
+print("Words containing 'z':", matches)
+\end{verbatim}

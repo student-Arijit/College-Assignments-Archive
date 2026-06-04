@@ -1,0 +1,21 @@
+\begin{verbatim}
+class SecondHalfMax:
+    def __init__(self, numbers):
+        self.numbers = numbers
+
+    def find_max(self):
+        mid = len(self.numbers) // 2
+        second_half = self.numbers[mid:]
+
+        maximum = second_half[0]
+        for num in second_half:
+            if num > maximum:
+                maximum = num
+
+        return maximum
+
+nums = list(map(int, input("Enter list elements: ").split()))
+
+obj = SecondHalfMax(nums)
+print("Maximum value in second half:", obj.find_max())
+\end{verbatim}

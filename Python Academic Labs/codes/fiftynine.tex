@@ -1,0 +1,30 @@
+\begin{verbatim}
+import re
+
+class URLDateExtractor:
+    def __init__(self, url):
+        self.url = url
+
+    def extract_date(self):
+        pattern = r'(\d{4})-(\d{2})-(\d{2})'
+        match = re.search(pattern, self.url)
+
+        if match:
+            year, month, day = match.groups()
+            return year, month, day
+        else:
+            return None
+
+
+url = input("Enter URL: ")
+
+obj = URLDateExtractor(url)
+result = obj.extract_date()
+
+if result:
+    print("Year:", result[0])
+    print("Month:", result[1])
+    print("Date:", result[2])
+else:
+    print("No date found in URL")
+\end{verbatim}

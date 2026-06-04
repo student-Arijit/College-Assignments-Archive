@@ -1,0 +1,18 @@
+\begin{verbatim}
+    class StringExtractor:
+        def __init__(self, text, n):
+            self.text = text
+            self.n = n
+    
+        def extract(self):
+            result = ""
+            for i in range(min(self.n, len(self.text))):
+                result += self.text[i]
+            return result
+    
+    text = input("Enter a string: ")
+    n = int(input("Enter n: "))
+    
+    obj = StringExtractor(text, n)
+    print("First", n, "characters:", obj.extract())
+\end{verbatim}

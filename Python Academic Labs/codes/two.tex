@@ -1,0 +1,14 @@
+\begin{verbatim}
+from dataclasses import dataclass
+
+@dataclass
+class Weight:
+    kg: float
+    
+    @property
+    def pound(self):
+        return self.kg*2.20462
+
+w = Weight(int(input("Enter the weight in kg: ")))
+print(w.pound)
+\end{verbatim}

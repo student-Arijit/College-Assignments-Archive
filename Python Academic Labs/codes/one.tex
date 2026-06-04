@@ -1,0 +1,21 @@
+\begin{verbatim}
+class Student:
+	def __init__(student, name, *marks):
+		student.name = name
+		student.marks = list(marks)
+	
+	def avg(student):
+		try:
+			return sum(student.marks)/len(student.marks)
+		except ZeroDivisionError:
+			raise ValueError("At Least one value needed")
+	
+	def __repr__(student):
+		return f"Student : {student.name}\nAverage : {student.avg()}"
+
+s1 = Student(input("Enter Student name: "), 
+int(input("Enter marks in maths: ")), 
+int(input("Enter marks in Computer Science: ")), 
+int(input("Enter marks in Electronics: ")))
+print(s1)
+\end{verbatim}

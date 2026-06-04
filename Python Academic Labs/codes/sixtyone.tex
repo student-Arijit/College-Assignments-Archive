@@ -1,0 +1,16 @@
+\begin{verbatim}
+import re
+
+class StreetAbbreviator:
+    def __init__(self, text):
+            self.text = text
+
+                def abbreviate(self):
+                        return re.sub(r"\bStreet\b", "St.", 
+                        self.text)
+
+                        text = input("Enter a string: ")
+
+                        obj = StreetAbbreviator(text)
+                        print("Result:", obj.abbreviate())
+\end{verbatim}

@@ -1,0 +1,20 @@
+\begin{verbatim}
+import pandas as pd
+
+data = {
+    "Department": ["IT", "IT", "HR", "HR", 
+    "Finance", "Finance", "IT", "HR"],
+    "Gender": ["M", "F", "F", "M", "M", "F", "M", "F"],
+    "Salary": [50000, 60000, 45000, 47000, 70000, 72000, 52000, 
+    48000]
+}
+
+df = pd.DataFrame(data)
+
+# Group by two columns and compute aggregate statistics
+result = df.groupby(["Department", "Gender"])["Salary"]
+.agg(["mean", "sum", "count"])
+
+print("Grouped Data with Aggregates:")
+print(result)
+\end{verbatim}

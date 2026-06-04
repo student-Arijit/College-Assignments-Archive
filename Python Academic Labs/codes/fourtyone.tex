@@ -1,0 +1,20 @@
+\begin{verbatim}
+class NumberSquares:
+    def __init__(self, start, end):
+        self.start = start
+        self.end = end
+
+    def create_tuples(self):
+        result = []
+
+        for i in range(self.start, self.end + 1):
+            result.append((i, i ** 2))
+
+        return result
+
+start = int(input("Enter start of range: "))
+end = int(input("Enter end of range: "))
+
+obj = NumberSquares(start, end)
+print(obj.create_tuples())
+\end{verbatim}

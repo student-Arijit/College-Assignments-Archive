@@ -1,0 +1,36 @@
+\begin{verbatim}
+class FriendDirectory:
+    def __init__(self):
+        self.friends = {
+            "Arijit": "9876543210",
+            "Rahul": "9123456780",
+            "Sneha": "9988776655",
+            "Amit": "9871234567",
+            "Priya": "9012345678"
+        }
+
+    def display_sorted(self):
+        print("Friend Directory (Sorted):")
+        for name in sorted(self.friends):
+            print(name, ":", self.friends[name])
+
+    def search_friend(self):
+        name = input("\nEnter friend's name: ")
+
+        if name in self.friends:
+            print("Phone Number:", self.friends[name])
+        else:
+            print("Name not found.")
+            phone = input("Enter phone number: ")
+            self.friends[name] = phone
+            print("Details added successfully.")
+
+            print("\nUpdated Directory:")
+            for name in sorted(self.friends):
+                print(name, ":", self.friends[name])
+
+
+obj = FriendDirectory()
+obj.display_sorted()
+obj.search_friend()
+\end{verbatim}

@@ -1,0 +1,29 @@
+\begin{verbatim}
+    class StringStrip:
+        def __init__(self, text, chars):
+            self.text = text
+            self.chars = chars
+    
+        def strip_characters(self):
+            result = ""
+    
+            for ch in self.text:
+                found = False
+    
+                for c in self.chars:
+                    if ch == c:
+                        found = True
+                        break
+    
+                if not found:
+                    result += ch
+    
+            return result
+    
+    
+    text = input("Enter a string: ")
+    chars = input("Enter characters to remove: ")
+    
+    obj = StringStrip(text, chars)
+    print("Result:", obj.strip_characters())
+\end{verbatim}

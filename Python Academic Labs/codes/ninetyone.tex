@@ -1,0 +1,25 @@
+\begin{verbatim}
+# Heatmap visualization using Altair
+
+import pandas as pd
+import numpy as np
+import altair as alt
+
+# Sample data
+data = pd.DataFrame({
+    "X": np.tile(["A", "B", "C", "D"], 4),
+    "Y": np.repeat(["W", "X", "Y", "Z"], 4),
+    "Value": np.random.randint(1, 100, 16)
+})
+
+# Create heatmap
+heatmap = alt.Chart(data).mark_rect().encode(
+    x="X:N",
+    y="Y:N",
+    color=alt.Color("Value:Q", scale=alt.Scale(scheme="viridis"))
+).properties(
+    title="Altair Heatmap Visualization"
+)
+
+heatmap
+\end{verbatim}

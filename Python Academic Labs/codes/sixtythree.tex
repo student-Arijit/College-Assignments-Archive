@@ -1,0 +1,28 @@
+\begin{verbatim}
+import cmath
+
+class Quadratic:
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+
+    def roots(self):
+        d = (self.b ** 2) - (4 * self.a * self.c)
+
+        root1 = (-self.b + cmath.sqrt(d)) / (2 * self.a)
+        root2 = (-self.b - cmath.sqrt(d)) / (2 * self.a)
+
+        return root1, root2
+
+
+a = float(input("Enter a: "))
+b = float(input("Enter b: "))
+c = float(input("Enter c: "))
+
+obj = Quadratic(a, b, c)
+r1, r2 = obj.roots()
+
+print("Root 1:", r1)
+print("Root 2:", r2)
+\end{verbatim}

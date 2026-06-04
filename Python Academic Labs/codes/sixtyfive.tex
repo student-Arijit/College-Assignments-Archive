@@ -1,0 +1,24 @@
+\begin{verbatim}
+class Library:
+    def __init__(self):
+        self.acc_number = 0
+        self.title = ""
+        self.author = ""
+        self.publisher = ""
+
+    def read(self):
+        self.acc_number = input("Enter acc number: ")
+        self.title = input("Enter title: ")
+        self.author = input("Enter author: ")
+        self.publisher = input("Enter publisher: ")
+
+    def compute(self):
+        days_late = int(input("Enter number of days late: "))
+        fine = days_late * 1.50
+        print("Fine charged: $", fine)
+
+
+obj = Library()
+obj.read()
+obj.compute()
+\end{verbatim}

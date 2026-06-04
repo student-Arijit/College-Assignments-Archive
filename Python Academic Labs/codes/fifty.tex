@@ -1,0 +1,19 @@
+\begin{verbatim}
+class ReadLastNLines:
+    def __init__(self, filename, n):
+        self.filename = filename
+        self.n = n
+
+    def display_last_lines(self):
+        with open(self.filename, "r") as file:
+            lines = file.readlines()
+
+        for line in lines[-self.n:]:
+            print(line, end="")
+
+filename = input("Enter filename: ")
+n = int(input("Enter number of lines: "))
+
+obj = ReadLastNLines(filename, n)
+obj.display_last_lines()
+\end{verbatim}

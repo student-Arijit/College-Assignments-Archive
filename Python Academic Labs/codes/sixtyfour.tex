@@ -1,0 +1,32 @@
+\begin{verbatim}
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+
+class TopStudents(Student):
+    def __init__(self, students):
+        self.students = students
+
+    def display_top_five(self):
+        sorted_students = sorted(self.students, key=lambda x: 
+        x.marks, reverse=True)
+
+        print("Top 5 Students:")
+        for i, student in enumerate(sorted_students[:5], 
+        start=1):
+            print(i, student.name, "-", student.marks)
+
+
+n = int(input("Enter number of students: "))
+students = []
+
+for _ in range(n):
+    name = input("Enter name: ")
+    marks = float(input("Enter marks: "))
+    students.append(Student(name, marks))
+
+obj = TopStudents(students)
+obj.display_top_five()
+\end{verbatim}

@@ -1,0 +1,34 @@
+\begin{verbatim}
+class AuthorISBN:
+    def __init__(self):
+        self.books = {
+            "J.K. Rowling": "9780747532743",
+            "George Orwell": "9780451524935",
+            "Dan Brown": "9780307474278",
+            "Paulo Coelho": "9780061122415",
+            "Chetan Bhagat": "9788129135513"
+        }
+
+    def show_dictionary(self):
+        print("Original Dictionary:")
+        print(self.books)
+
+    def demonstrate_fromkeys(self):
+        authors = ["Author1", "Author2", "Author3", "Author4", 
+        "Author5"]
+        new_dict = dict.fromkeys(authors, "0000000000")
+        print("\nDictionary using fromkeys():")
+        print(new_dict)
+
+    def demonstrate_clear(self):
+        temp = self.books.copy()
+        temp.clear()
+        print("\nDictionary after clear():")
+        print(temp)
+
+obj = AuthorISBN()
+
+obj.show_dictionary()
+obj.demonstrate_fromkeys()
+obj.demonstrate_clear()
+\end{verbatim}

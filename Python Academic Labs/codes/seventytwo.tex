@@ -1,0 +1,54 @@
+\begin{verbatim}
+
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50])
+
+# 1. Integer Indexing (Access single elements by position)
+a = arr[0]      # 10
+b = arr[3]      # 40
+
+
+# 2. Array (Fancy) Indexing
+indices = np.array([0, 2, 4])
+result1 = arr[indices]   # [10, 30, 50]
+print(result1)
+
+
+# 3. Boolean Array Indexing
+bool_index = arr > 25
+result2 = arr[bool_index]   # [30, 40, 50]
+print(result2)
+
+
+# 4. Slicing
+result3 = arr[1:4]    # [20, 30, 40]
+result4 = arr[:3]     # [10, 20, 30]
+result5 = arr[::2]    # [10, 30, 50]
+print(result3)
+print(result4)
+print(result5)
+
+
+# 2D Array Examples
+arr2d = np.array([[1, 2, 3],
+                  [4, 5, 6],
+                  [7, 8, 9]])
+
+# Integer Indexing (2D)
+x = arr2d[1, 2]       # 6
+
+# Array Indexing (2D)
+rows = np.array([0, 2])
+cols = np.array([1, 2])
+result6 = arr2d[rows, cols]   # [2, 9]
+print(result6)
+
+# Boolean Indexing (2D)
+result7 = arr2d[arr2d > 5]    # [6, 7, 8, 9]
+print(result7)
+
+# Slicing (2D)
+result8 = arr2d[0:2, 1:3]     # [[2,3],[5,6]]
+print(result8)
+\end{verbatim}

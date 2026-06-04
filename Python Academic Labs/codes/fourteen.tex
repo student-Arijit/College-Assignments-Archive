@@ -1,0 +1,18 @@
+\begin{verbatim}
+    class RemoveVowels:
+        def __init__(self, text):
+            self.text = text
+    
+        def remove(self):
+            vowels = "aeiouAEIOU"
+            result = ""
+            for ch in self.text:
+                if ch not in vowels:
+                    result += ch
+            return result
+    
+    s = input("Enter a string: ")
+    
+    obj = RemoveVowels(s)
+    print("String after removing vowels:", obj.remove())
+\end{verbatim}

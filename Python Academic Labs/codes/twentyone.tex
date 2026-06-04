@@ -1,0 +1,29 @@
+\begin{verbatim}
+    import random
+    
+    class NumberList:
+        def __init__(self):
+            self.numbers = [random.randint(1, 100) for _ in 
+            range(10)]
+    
+        def separate(self):
+            odd_list = []
+            even_list = []
+    
+            for num in self.numbers:
+                if num % 2 == 0:
+                    even_list.append(num)
+                else:
+                    odd_list.append(num)
+    
+            return odd_list, even_list
+    
+    obj = NumberList()
+    
+    print("Original List:", obj.numbers)
+    
+    odd_list, even_list = obj.separate()
+    
+    print("Odd List:", odd_list)
+    print("Even List:", even_list)
+\end{verbatim}

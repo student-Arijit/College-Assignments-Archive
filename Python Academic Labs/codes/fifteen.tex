@@ -1,0 +1,16 @@
+\begin{verbatim}
+    class StringInserter:
+        def __init__(self, str1, str2):
+            self.str1 = str1
+            self.str2 = str2
+    
+        def insert_middle(self):
+            mid = len(self.str1) // 2
+            return self.str1[:mid] + self.str2 + self.str1[mid:]
+    
+    s1 = input("Enter main string: ")
+    s2 = input("Enter string to insert: ")
+    
+    obj = StringInserter(s1, s2)
+    print("Result:", obj.insert_middle())
+\end{verbatim}

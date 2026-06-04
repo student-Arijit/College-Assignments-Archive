@@ -1,0 +1,16 @@
+\begin{verbatim}
+import os
+
+class FileSize:
+    def __init__(self, filename):
+        self.filename = filename
+
+    def get_size(self):
+        size = os.path.getsize(self.filename)
+        return size
+
+filename = input("Enter file name: ")
+
+obj = FileSize(filename)
+print("File size (bytes):", obj.get_size())
+\end{verbatim}

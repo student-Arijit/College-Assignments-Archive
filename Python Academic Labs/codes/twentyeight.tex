@@ -1,0 +1,27 @@
+\begin{verbatim}
+class GCDCalculator:
+    def __init__(self):
+        self.numbers = []
+
+    def get_numbers(self):
+        for i in range(5):
+            num = int(input(f"Enter number {i + 1}: "))
+            self.numbers.append(num)
+
+    def gcd(self, a, b):
+        while b:
+            a, b = b, a % b
+        return a
+
+    def find_gcd(self):
+        result = self.numbers[0]
+
+        for num in self.numbers[1:]:
+            result = self.gcd(result, num)
+
+        return result
+
+obj = GCDCalculator()
+obj.get_numbers()
+print("GCD of the five numbers is:", obj.find_gcd())
+\end{verbatim}

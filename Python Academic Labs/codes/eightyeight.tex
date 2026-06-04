@@ -1,0 +1,34 @@
+\begin{verbatim}
+# Interactive Altair chart with dropdown selection filter
+
+import pandas as pd
+import altair as alt
+
+# Sample dataset
+data = pd.DataFrame({
+    "Category": ["A", "A", "B", "B", "C", "C"] * 10,
+    "X": list(range(60)),
+    "Y": [i * 2 for i in range(60)]
+})
+
+# Dropdown selection
+dropdown = alt.binding_select(options=["A", "B", "C"], 
+name="Category ")
+selection = alt.selection_point(fields=["Category"], 
+bind=dropdown)
+
+# Create chart
+chart = alt.Chart(data).mark_circle(size=80).encode(
+    x="X",
+    y="Y",
+    color="Category"
+).add_params(
+    selection
+).transform_filter(
+    selection
+).properties(
+    title="Interactive Altair Chart with Dropdown Filter"
+)
+
+chart
+\end{verbatim}

@@ -1,0 +1,25 @@
+\begin{verbatim}
+class CountryCapital:
+    def __init__(self):
+        self.data = {}
+
+    def add_country(self, country, capital):
+        self.data[country] = capital
+
+    def display_sorted(self):
+        for country in sorted(self.data):
+            print(country, ":", self.data[country])
+
+
+obj = CountryCapital()
+
+n = int(input("Enter number of countries: "))
+
+for _ in range(n):
+    country = input("Enter country name: ")
+    capital = input("Enter capital city: ")
+    obj.add_country(country, capital)
+
+print("\nCountries and Capitals in Sorted Order:")
+obj.display_sorted()
+\end{verbatim}

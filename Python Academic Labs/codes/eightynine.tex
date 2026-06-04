@@ -1,0 +1,29 @@
+\begin{verbatim}
+# Detect and remove outliers using Z-score method in Pandas
+
+import pandas as pd
+import numpy as np
+
+# Sample DataFrame
+data = {
+    "Values": [10, 12, 12, 13, 12, 11, 10, 200, 12, 13, 11, 300]
+}
+
+df = pd.DataFrame(data)
+
+# Calculate Z-scores
+mean = df["Values"].mean()
+std = df["Values"].std()
+
+df["Z_score"] = (df["Values"] - mean) / std
+
+# Detect outliers (|Z| > 3)
+df_filtered = df[np.abs(df["Z_score"]) <= 3]
+
+# Display results
+print("Original DataFrame:")
+print(df)
+
+print("\nDataFrame after removing outliers:")
+print(df_filtered.drop(columns=["Z_score"]))
+\end{verbatim}

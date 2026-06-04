@@ -1,0 +1,30 @@
+\begin{verbatim}
+# Merge three DataFrames on a common key using Pandas
+
+import pandas as pd
+
+# First DataFrame
+df1 = pd.DataFrame({
+    "ID": [1, 2, 3],
+    "Name": ["Amit", "Rahul", "Sita"]
+})
+
+# Second DataFrame
+df2 = pd.DataFrame({
+    "ID": [1, 2, 3],
+    "Marks": [85, 90, 88]
+})
+
+# Third DataFrame
+df3 = pd.DataFrame({
+    "ID": [1, 2, 3],
+    "City": ["Kolkata", "Delhi", "Mumbai"]
+})
+
+# Merge step by step on common key 'ID'
+merged_df = df1.merge(df2, on="ID").merge(df3, on="ID")
+
+# Display result
+print("Merged DataFrame:")
+print(merged_df)
+\end{verbatim}

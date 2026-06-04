@@ -1,0 +1,23 @@
+\begin{verbatim}
+# Convert a categorical column into one-hot encoding using Pandas
+
+import pandas as pd
+
+# Sample DataFrame
+data = {
+    "Name": ["Amit", "Rahul", "Sita", "John"],
+    "City": ["Kolkata", "Delhi", "Mumbai", "Delhi"]
+}
+
+df = pd.DataFrame(data)
+
+# One-hot encoding of categorical column 'City'
+one_hot_encoded_df = pd.get_dummies(df, columns=["City"])
+
+# Display result
+print("Original DataFrame:")
+print(df)
+
+print("\nOne-Hot Encoded DataFrame:")
+print(one_hot_encoded_df)
+\end{verbatim}

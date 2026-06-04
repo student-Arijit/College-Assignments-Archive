@@ -1,0 +1,24 @@
+\begin{verbatim}
+import random
+
+class RandomLineReader:
+    def __init__(self, filename):
+        self.filename = filename
+
+    def get_random_line(self):
+        with open(self.filename, "r") as file:
+            lines = file.readlines()
+
+        if not lines:
+            return None
+
+        return random.choice(lines).strip()
+
+
+filename = input("Enter filename: ")
+
+obj = RandomLineReader(filename)
+line = obj.get_random_line()
+
+print("Random line:", line)
+\end{verbatim}

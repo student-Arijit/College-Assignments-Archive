@@ -1,0 +1,21 @@
+\begin{verbatim}
+    class Depreciation:
+        def __init__(self, amt, year, rate):
+            self.amt = amt
+            self.year = year
+            self.rate = rate
+    
+        def calculate(self):
+            value = self.amt
+            for _ in range(self.year):
+                value -= value * self.rate / 100
+            return value
+    
+    amt = float(input("Enter purchase value: "))
+    year = int(input("Enter years of service: "))
+    rate = float(input("Enter depreciation rate (%): "))
+    
+    asset = Depreciation(amt, year, rate)
+    
+    print("Depreciated value =", asset.calculate())
+\end{verbatim}

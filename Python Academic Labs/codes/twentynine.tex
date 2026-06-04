@@ -1,0 +1,21 @@
+\begin{verbatim}
+class FruitStore:
+    def __init__(self):
+        self.fruits = {}
+    def addfruit(self, name, price):
+        if name in self.fruits:
+            raise ValueError("Fruit already present")
+        
+        self.fruits[name] = price
+        return self.fruits
+store = FruitStore()
+try:
+    n = int(input("Enter number of fruits: "))
+
+    for _ in range(n):
+        name = input("Enter fruit name: ")
+        price = float(input("Enter price: "))
+        print(store.addfruit(name, price))
+except ValueError as e:
+    print("Error:", e)
+\end{verbatim}

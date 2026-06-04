@@ -1,0 +1,15 @@
+\begin{verbatim}
+    class StringSorter:
+        def __init__(self, text):
+            self.text = text
+    
+        def sort_string(self):
+            chars = list(self.text)
+            chars.sort()
+            return "".join(chars)
+    
+    s = input("Enter a string: ")
+    
+    obj = StringSorter(s)
+    print("Lexicographically sorted string:", obj.sort_string())
+\end{verbatim}

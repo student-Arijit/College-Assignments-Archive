@@ -1,0 +1,16 @@
+\begin{verbatim}
+class IPAddress:
+    def __init__(self, ip):
+        self.ip = ip
+
+    def remove_leading_zeros(self):
+        parts = self.ip.split(".")
+        cleaned = [str(int(part)) for part in parts]
+        return ".".join(cleaned)
+
+
+ip = input("Enter IP address: ")
+
+obj = IPAddress(ip)
+print("Updated IP address:", obj.remove_leading_zeros())
+\end{verbatim}

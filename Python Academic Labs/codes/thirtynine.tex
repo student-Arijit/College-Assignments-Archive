@@ -1,0 +1,19 @@
+\begin{verbatim}
+class SetOperations:
+    def __init__(self):
+        self.set1 = {1, 2, 3, 4, 5}
+        self.set2 = {4, 5, 6, 7, 8}
+
+    def perform_operations(self):
+        print("Set 1:", self.set1)
+        print("Set 2:", self.set2)
+
+        print("Intersection:", self.set1 & self.set2)
+        print("Union:", self.set1 | self.set2)
+        print("Set Difference (Set1 - Set2):", self.set1 - 
+        self.set2)
+        print("Symmetric Difference:", self.set1 ^ self.set2)
+
+obj = SetOperations()
+obj.perform_operations()
+\end{verbatim}

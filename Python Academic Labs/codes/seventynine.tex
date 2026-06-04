@@ -1,0 +1,14 @@
+\begin{verbatim}
+# NumPy program to create a 10×10 checkerboard matrix
+
+import numpy as np
+
+# Method 1: Using slicing
+checkerboard = np.zeros((10, 10), dtype=int)
+
+checkerboard[1::2, ::2] = 1
+checkerboard[::2, 1::2] = 1
+
+print("10×10 Checkerboard Matrix:")
+print(checkerboard)
+\end{verbatim}

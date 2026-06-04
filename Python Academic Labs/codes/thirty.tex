@@ -1,0 +1,24 @@
+\begin{verbatim}
+class AirQuality:
+    def __init__(self):
+        self.aqi_data = {}
+
+    def add_aqi(self, date, aqi):
+        self.aqi_data[date] = aqi
+
+    def get_data(self):
+        return self.aqi_data
+
+
+obj = AirQuality()
+
+n = int(input("Enter number of records: "))
+
+for i in range(n):
+    date = input("Enter date (DD-MM-YYYY): ")
+    aqi = int(input("Enter AQI: "))
+    obj.add_aqi(date, aqi)
+
+print("Air Quality Dictionary:")
+print(obj.get_data())
+\end{verbatim}

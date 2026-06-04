@@ -1,0 +1,39 @@
+\begin{verbatim}
+    class StringReplace:
+        def __init__(self, text, old, new):
+            self.text = text
+            self.old = old
+            self.new = new
+    
+        def replace_string(self):
+            result = ""
+            i = 0
+    
+            while i < len(self.text):
+                match = True
+    
+                if i + len(self.old) <= len(self.text):
+                    for j in range(len(self.old)):
+                        if self.text[i + j] != self.old[j]:
+                            match = False
+                            break
+                else:
+                    match = False
+    
+                if match:
+                    result += self.new
+                    i += len(self.old)
+                else:
+                    result += self.text[i]
+                    i += 1
+    
+            return result
+    
+    
+    text = input("Enter the main string: ")
+    old = input("Enter the string to replace: ")
+    new = input("Enter the new string: ")
+    
+    obj = StringReplace(text, old, new)
+    print("Result:", obj.replace_string())
+\end{verbatim}

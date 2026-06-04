@@ -1,0 +1,16 @@
+\begin{verbatim}
+class TupleUnpack:
+    def __init__(self):
+        self.data = (10, 20, 30)
+
+    def unpack(self):
+        a, b, c = self.data
+
+        print("Tuple:", self.data)
+        print("a =", a)
+        print("b =", b)
+        print("c =", c)
+
+obj = TupleUnpack()
+obj.unpack()
+\end{verbatim}

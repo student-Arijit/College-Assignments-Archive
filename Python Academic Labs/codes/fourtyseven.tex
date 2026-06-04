@@ -1,0 +1,29 @@
+\begin{verbatim}
+class VowelConsonantCounter:
+    def __init__(self, filename):
+        self.filename = filename
+
+    def count(self):
+        vowels = "aeiouAEIOU"
+        vowel_count = 0
+        consonant_count = 0
+
+        with open(self.filename, "r") as file:
+            for char in file.read():
+                if char.isalpha():
+                    if char in vowels:
+                        vowel_count += 1
+                    else:
+                        consonant_count += 1
+
+        return vowel_count, consonant_count
+
+
+filename = input("Enter filename: ")
+
+obj = VowelConsonantCounter(filename)
+v, c = obj.count()
+
+print("Vowels:", v)
+print("Consonants:", c)
+\end{verbatim}

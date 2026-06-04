@@ -1,0 +1,22 @@
+\begin{verbatim}
+class RemoveNewLines:
+    def __init__(self, filename):
+        self.filename = filename
+
+    def remove_newlines(self):
+        with open(self.filename, "r") as file:
+            content = file.read()
+
+        content = content.replace("\n", " ")
+
+        with open(self.filename, "w") as file:
+            file.write(content)
+
+
+filename = input("Enter filename: ")
+
+obj = RemoveNewLines(filename)
+obj.remove_newlines()
+
+print("Newline characters removed successfully.")
+\end{verbatim}

@@ -1,0 +1,30 @@
+\begin{verbatim}
+import re
+
+class DateConverter:
+    def __init__(self, filename):
+        self.filename = filename
+
+    def convert_dates(self):
+        with open(self.filename, "r") as file:
+            content = file.read()
+
+        pattern = r"(\d{4})-(\d{2})-(\d{2})"
+
+        def repl(match):
+            year, month, day = match.groups()
+            return f"{day}-{month}-{year}"
+
+        updated_content = re.sub(pattern, repl, content)
+
+        with open(self.filename, "w") as file:
+            file.write(updated_content)
+
+
+filename = input("Enter filename: ")
+
+obj = DateConverter(filename)
+obj.convert_dates()
+
+print("Dates converted successfully.")
+\end{verbatim}

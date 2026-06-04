@@ -1,0 +1,36 @@
+\begin{verbatim}
+# Perform left, right, inner, and outer joins between two 
+DataFrames
+
+import pandas as pd
+
+# First DataFrame
+df1 = pd.DataFrame({
+    "ID": [1, 2, 3, 4],
+    "Name": ["Amit", "Rahul", "Sita", "John"]
+})
+
+# Second DataFrame
+df2 = pd.DataFrame({
+    "ID": [3, 4, 5, 6],
+    "Marks": [80, 90, 85, 88]
+})
+
+# Inner Join
+inner_join = pd.merge(df1, df2, on="ID", how="inner")
+
+# Left Join
+left_join = pd.merge(df1, df2, on="ID", how="left")
+
+# Right Join
+right_join = pd.merge(df1, df2, on="ID", how="right")
+
+# Outer Join
+outer_join = pd.merge(df1, df2, on="ID", how="outer")
+
+# Display results
+print("Inner Join:\n", inner_join)
+print("\nLeft Join:\n", left_join)
+print("\nRight Join:\n", right_join)
+print("\nOuter Join:\n", outer_join)
+\end{verbatim}

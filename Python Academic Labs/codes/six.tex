@@ -1,0 +1,18 @@
+\begin{verbatim}
+class TemperatureConverter:
+    def __init__(self, celsius):
+        self.celsius = celsius
+
+    def to_fahrenheit(self):
+        return (self.celsius * 9/5) + 32
+
+
+# Input from user
+celsius = float(input("Enter temperature in Celsius: "))
+
+# Create object
+temp = TemperatureConverter(celsius)
+
+# Display result
+print(f"Temperature in Fahrenheit: {temp.to_fahrenheit():.2f}°F")
+\end{verbatim}

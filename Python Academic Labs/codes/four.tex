@@ -1,0 +1,21 @@
+\begin{verbatim}
+from dataclasses import dataclass
+
+@dataclass
+class Plane:
+    distance: float  
+    time: float     
+
+    @property
+    def speed(self) -> float:
+        return self.distance / self.time
+
+    @property
+    def speed_kmh(self) -> float:
+        return self.speed * 3.6
+
+plane = Plane(395000, 9000)
+
+print(f"Speed: {plane.speed:.2f} m/s")
+print(f"Speed: {plane.speed_kmh:.2f} km/h")
+\end{verbatim}

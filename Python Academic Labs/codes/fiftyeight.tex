@@ -1,0 +1,26 @@
+\begin{verbatim}
+class SubstringFinder:
+    def __init__(self, text):
+        self.text = text
+
+    def find_substrings(self):
+        substrings = []
+
+        n = len(self.text)
+
+        for i in range(n):
+            for j in range(i + 1, n + 1):
+                substrings.append(self.text[i:j])
+
+        return substrings
+
+
+text = input("Enter a string: ")
+
+obj = SubstringFinder(text)
+result = obj.find_substrings()
+
+print("Substrings:")
+for s in result:
+    print(s)
+\end{verbatim}

@@ -1,0 +1,44 @@
+\begin{verbatim}
+# Load a CSV file using Pandas, clean missing data,
+# compute summary statistics with NumPy, and visualize using 
+Altair
+
+import pandas as pd
+import numpy as np
+import altair as alt
+
+# Load CSV file
+df = pd.read_csv("data.csv")
+
+# Clean missing data (drop rows with NaN values)
+df_clean = df.dropna()
+
+# Select numeric column for analysis
+values = df_clean["Value"]
+
+# Compute summary statistics using NumPy
+mean_val = np.mean(values)
+median_val = np.median(values)
+std_val = np.std(values)
+
+print("Mean:", mean_val)
+print("Median:", median_val)
+print("Standard Deviation:", std_val)
+
+# Prepare data for visualization
+summary_df = pd.DataFrame({
+    "Statistic": ["Mean", "Median", "Std Dev"],
+    "Value": [mean_val, median_val, std_val]
+})
+
+# Altair bar chart
+chart = alt.Chart(summary_df).mark_bar().encode(
+    x="Statistic:N",
+    y="Value:Q",
+    tooltip=["Statistic", "Value"]
+).properties(
+    title="Summary Statistics Visualization"
+)
+
+chart
+\end{verbatim}

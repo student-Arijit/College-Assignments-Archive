@@ -1,0 +1,20 @@
+\begin{verbatim}
+class UnzipTuples:
+    def __init__(self):
+        self.data = [(1, 'A'), (2, 'B'), (3, 'C'), (4, 'D')]
+
+    def unzip(self):
+        list1 = []
+        list2 = []
+
+        for a, b in self.data:
+            list1.append(a)
+            list2.append(b)
+
+        print("Original List of Tuples:", self.data)
+        print("List 1:", list1)
+        print("List 2:", list2)
+
+obj = UnzipTuples()
+obj.unzip()
+\end{verbatim}

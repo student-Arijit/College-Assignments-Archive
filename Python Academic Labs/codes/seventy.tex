@@ -1,0 +1,36 @@
+\begin{verbatim}
+import xml.etree.ElementTree as ET
+
+class XMLParser:
+    def __init__(self, xml_data):
+        self.root = ET.fromstring(xml_data)
+
+    def display_books(self):
+        for book in self.root.findall("book"):
+            title = book.find("title").text
+            author = book.find("author").text
+            price = book.find("price").text
+
+            print("Title:", title)
+            print("Author:", author)
+            print("Price:", price)
+            print("------------------")
+
+xml_data = """
+<library>
+    <book>
+        <title>Python Basics</title>
+        <author>John Doe</author>
+        <price>350</price>
+    </book>
+    <book>
+        <title>Data Structures</title>
+        <author>Jane Smith</author>
+        <price>450</price>
+    </book>
+</library>
+"""
+
+parser = XMLParser(xml_data)
+parser.display_books()
+\end{verbatim}

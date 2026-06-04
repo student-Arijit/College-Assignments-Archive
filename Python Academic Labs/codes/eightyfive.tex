@@ -1,0 +1,25 @@
+\begin{verbatim}
+# Function to standardize a NumPy array (mean = 0, variance = 1)
+
+import numpy as np
+
+def standardize_array(arr):
+    mean = np.mean(arr)
+    std = np.std(arr)
+    
+    standardized = (arr - mean) / std
+    return standardized
+
+
+# Example usage
+data = np.array([10, 20, 30, 40, 50])
+
+result = standardize_array(data)
+
+print("Original Array:", data)
+print("Standardized Array:", result)
+
+# Check mean and variance
+print("Mean:", np.mean(result))
+print("Variance:", np.var(result))
+\end{verbatim}

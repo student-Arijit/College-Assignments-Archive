@@ -1,0 +1,15 @@
+\begin{verbatim}
+import pandas as pd
+data = {
+    "Values": [10, 20, 15, 25, 30]
+}
+
+df = pd.DataFrame(data)
+
+# Create cumulative sum column
+df["Cumulative_Sum"] = df["Values"].cumsum()
+
+# Display DataFrame
+print("DataFrame with Cumulative Sum:")
+print(df)
+\end{verbatim}

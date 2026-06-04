@@ -1,0 +1,31 @@
+\begin{verbatim}
+class LetterCounter:
+    def __init__(self, filename):
+        self.filename = filename
+
+    def count_letters(self):
+        freq = {}
+
+        with open(self.filename, "r") as file:
+            text = file.read()
+
+        for ch in text:
+            if ch.isalpha():
+                ch = ch.lower()
+                if ch in freq:
+                    freq[ch] += 1
+                else:
+                    freq[ch] = 1
+
+        return freq
+
+
+filename = input("Enter filename: ")
+
+obj = LetterCounter(filename)
+result = obj.count_letters()
+
+print("Letter occurrences:")
+for letter in sorted(result):
+    print(letter, ":", result[letter])
+\end{verbatim}

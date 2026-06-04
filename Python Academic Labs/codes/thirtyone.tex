@@ -1,0 +1,34 @@
+\begin{verbatim}
+class UserDictionary:
+    def __init__(self):
+        self.users = {
+            "arijit": "pass123",
+            "rahul": "rahul@123",
+            "sneha": "sneha456",
+            "amit": "amit789",
+            "priya": "priya321"
+        }
+
+    def show_users(self):
+        print("Original Dictionary:")
+        print(self.users)
+
+    def demonstrate_fromkeys(self):
+        usernames = ["user1", "user2", "user3", "user4", "user5"]
+        new_dict = dict.fromkeys(usernames, "default123")
+        print("\nDictionary created using fromkeys():")
+        print(new_dict)
+
+    def demonstrate_clear(self):
+        temp = self.users.copy()
+        temp.clear()
+        print("\nDictionary after clear():")
+        print(temp)
+
+
+obj = UserDictionary()
+
+obj.show_users()
+obj.demonstrate_fromkeys()
+obj.demonstrate_clear()
+\end{verbatim}

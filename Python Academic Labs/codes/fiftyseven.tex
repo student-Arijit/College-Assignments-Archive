@@ -1,0 +1,19 @@
+\begin{verbatim}
+import re
+
+class NumberSearch:
+    def __init__(self, text):
+        self.text = text
+
+    def find_numbers(self):
+        pattern = re.compile(r"\b\d{1,3}\b")
+        return pattern.findall(self.text)
+
+
+text = input("Enter a string: ")
+
+obj = NumberSearch(text)
+result = obj.find_numbers()
+
+print("Numbers (1 to 3 digits):", result)
+\end{verbatim}

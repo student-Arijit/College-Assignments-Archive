@@ -1,0 +1,21 @@
+\begin{verbatim}
+class Clock:
+    def display_time(self):
+        print("Time: 12:00:00 (Example Time)")
+
+
+class Calendar:
+    def display_month(self):
+        print("Month: January (Example Month)")
+        print("Date: 01")
+
+
+class CalendarClock(Clock, Calendar):
+    def display_all(self):
+        self.display_month()
+        self.display_time()
+
+
+obj = CalendarClock()
+obj.display_all()
+\end{verbatim}

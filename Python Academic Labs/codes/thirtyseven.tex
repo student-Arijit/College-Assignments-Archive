@@ -1,0 +1,16 @@
+\begin{verbatim}
+class TupleSearch:
+    def __init__(self):
+        self.data = (10, 20, 30, 40, 50)
+
+    def check_item(self, item):
+        if item in self.data:
+            print("Item exists in the tuple.")
+        else:
+            print("Item does not exist in the tuple.")
+
+item = int(input("Enter item to search: "))
+
+obj = TupleSearch()
+obj.check_item(item)
+\end{verbatim}

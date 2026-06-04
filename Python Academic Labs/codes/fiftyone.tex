@@ -1,0 +1,25 @@
+\begin{verbatim}
+class CombineFiles:
+    def __init__(self, file1, file2):
+        self.file1 = file1
+        self.file2 = file2
+
+    def combine(self):
+        with open(self.file1, "r") as f1:
+            lines1 = f1.readlines()
+
+        with open(self.file2, "r") as f2:
+            lines2 = f2.readlines()
+
+        min_len = min(len(lines1), len(lines2))
+
+        for i in range(min_len):
+            print(lines1[i].strip(), lines2[i].strip())
+
+
+file1 = input("Enter first filename: ")
+file2 = input("Enter second filename: ")
+
+obj = CombineFiles(file1, file2)
+obj.combine()
+\end{verbatim}

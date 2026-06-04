@@ -1,0 +1,19 @@
+\begin{verbatim}
+import numpy as np
+
+def custom_function(x):
+    return x**2 + 2*x + 1   # (x+1)^2
+
+# Create a NumPy array
+arr = np.array([1, 2, 3, 4, 5])
+
+# Vectorize the function
+vectorized_func = np.vectorize(custom_function)
+
+# Apply function to array
+result = vectorized_func(arr)
+
+# Display results
+print("Original Array:", arr)
+print("After Applying Vectorized Function:", result)
+\end{verbatim}

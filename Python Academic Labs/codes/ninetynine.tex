@@ -1,0 +1,31 @@
+\begin{verbatim}
+# Split a DataFrame into training and testing sets using random 
+sampling
+
+import pandas as pd
+
+# Sample DataFrame
+data = {
+    "ID": range(1, 11),
+    "Feature": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+    "Label": [0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+}
+
+df = pd.DataFrame(data)
+
+# Shuffle DataFrame (random sampling)
+df_shuffled = df.sample(frac=1, random_state=42)
+
+# Split ratio (80% train, 20% test)
+train_size = int(0.8 * len(df_shuffled))
+
+train_df = df_shuffled[:train_size]
+test_df = df_shuffled[train_size:]
+
+# Display results
+print("Training Set:")
+print(train_df)
+
+print("\nTesting Set:")
+print(test_df)
+\end{verbatim}

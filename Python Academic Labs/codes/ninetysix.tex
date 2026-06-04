@@ -1,0 +1,38 @@
+\begin{verbatim}
+# Plot multiple layered charts in Altair with shared axes
+
+import pandas as pd
+import altair as alt
+import numpy as np
+
+# Sample data
+x = np.arange(1, 11)
+
+df = pd.DataFrame({
+    "X": x,
+    "Y1": x**2,
+    "Y2": x**1.5
+})
+
+# Base chart (shared axes)
+base = alt.Chart(df).encode(
+    x="X"
+)
+
+# First line chart
+line1 = base.mark_line(color="blue").encode(
+    y="Y1"
+)
+
+# Second line chart
+line2 = base.mark_line(color="red").encode(
+    y="Y2"
+)
+
+# Layer charts
+chart = alt.layer(line1, line2).properties(
+    title="Layered Charts with Shared Axes"
+)
+
+chart
+\end{verbatim}

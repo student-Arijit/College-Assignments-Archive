@@ -1,0 +1,57 @@
+\begin{verbatim}
+class Polynomial:
+    def __init__(self, coeffs):
+        # coefficients stored from highest degree to lowest
+        self.coeffs = coeffs
+
+    def add(self, other):
+        a = self.coeffs[:]
+        b = other.coeffs[:]
+
+        # make both lists equal length by padding with zeros
+        while len(a) < len(b):
+            a.insert(0, 0)
+        while len(b) < len(a):
+            b.insert(0, 0)
+
+        result = [a[i] + b[i] for i in range(len(a))]
+        return Polynomial(result)
+
+    def display(self):
+        terms = []
+        power = len(self.coeffs) - 1
+
+        for i, c in enumerate(self.coeffs):
+            if c != 0:
+                if power - i == 0:
+                    terms.append(f"{c}")
+                elif power - i == 1:
+                    terms.append(f"{c}x")
+                else:
+                    terms.append(f"{c}x^{power - i}")
+
+        print(" + ".join(terms))
+
+
+deg = int(input("Enter highest degree: "))
+
+print("Enter coefficients for first polynomial:")
+p1 = [int(input(f"Coeff x^{deg-i}: ")) for i in range(deg + 1)]
+
+print("Enter coefficients for second polynomial:")
+p2 = [int(input(f"Coeff x^{deg-i}: ")) for i in range(deg + 1)]
+
+poly1 = Polynomial(p1)
+poly2 = Polynomial(p2)
+
+result = poly1.add(poly2)
+
+print("First Polynomial:")
+poly1.display()
+
+print("Second Polynomial:")
+poly2.display()
+
+print("Sum of Polynomials:")
+result.display()
+\end{verbatim}

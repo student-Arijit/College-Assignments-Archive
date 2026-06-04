@@ -1,0 +1,25 @@
+\begin{verbatim}
+class UniqueWords:
+    def __init__(self, filename):
+        self.filename = filename
+
+    def process_file(self):
+        words = set()
+
+        with open(self.filename, "r") as file:
+            for line in file:
+                for word in line.split():
+                    words.add(word.strip(".,!?;:()[]{}\"'")
+                    .lower())
+
+        sorted_words = sorted(words)
+
+        print("Non-duplicate words in ascending order:")
+        for w in sorted_words:
+            print(w)
+
+filename = input("Enter file name: ")
+
+obj = UniqueWords(filename)
+obj.process_file()
+\end{verbatim}

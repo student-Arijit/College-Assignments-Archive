@@ -1,0 +1,33 @@
+\begin{verbatim}
+import json
+
+class JSONParser:
+    def __init__(self, json_string):
+        self.json_string = json_string
+
+    def parse(self):
+        data = json.loads(self.json_string)
+        return data
+
+
+json_data = '''
+{
+    "name": "Arijit",
+    "age": 20,
+    "course": "Computer Science",
+    "marks": {
+        "math": 90,
+        "python": 95
+    }
+}
+'''
+
+obj = JSONParser(json_data)
+result = obj.parse()
+
+print("Parsed JSON:")
+print(result)
+
+print("\nName:", result["name"])
+print("Math Marks:", result["marks"]["math"])
+\end{verbatim}

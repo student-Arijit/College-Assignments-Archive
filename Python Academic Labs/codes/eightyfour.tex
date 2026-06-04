@@ -1,0 +1,25 @@
+\begin{verbatim}
+# Generate 1000 random numbers from a normal distribution
+# and plot histogram using Altair
+
+import numpy as np
+import pandas as pd
+import altair as alt
+
+# Generate data
+np.random.seed(42)
+data = np.random.normal(loc=0, scale=1, size=1000)
+
+# Convert to DataFrame
+df = pd.DataFrame({"values": data})
+
+# Create histogram using binning
+histogram = alt.Chart(df).mark_bar().encode(
+    alt.X("values", bin=alt.Bin(maxbins=30), title="Value"),
+    y="count()"
+).properties(
+    title="Histogram of Normally Distributed Data (n=1000)"
+)
+
+histogram
+\end{verbatim}

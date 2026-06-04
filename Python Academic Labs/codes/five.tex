@@ -1,0 +1,41 @@
+\begin{verbatim}
+from dataclasses import dataclass
+from typing import Union
+
+Number = Union[int, float]
+@dataclass
+class Pool:
+	a: Number
+	b: Number
+	c: Number
+	
+	@property
+	def volume(self) -> Number:
+		return self.a*self.b*self.c
+		
+@dataclass
+class Pump:
+	flow_rate: Number
+	
+	def time_to_empty(self, pool: Pool) -> float:
+		return pool.volume/self.flow_rate
+
+@dataclass
+class Hour:
+    time: float   
+
+    def to_hms(self):
+        hours, remainder = divmod(self.time, 1)
+        minutes, remainder = divmod(remainder * 60, 1)
+        seconds = remainder * 60
+        return int(hours), int(minutes), int(seconds)
+
+    def __str__(self):
+        h, m, s = self.to_hms()
+        return f"{h} hr {m} min {s} sec"
+
+pool = Pool(12, 7, 2)
+pump = Pump(17)
+t = Hour(pump.time_to_empty(pool))
+print(t)
+\end{verbatim}

@@ -1,0 +1,23 @@
+\begin{verbatim}
+    class StringConcatenate:
+        def __init__(self, str1, str2):
+            self.str1 = str1
+            self.str2 = str2
+    
+        def concatenate(self):
+            result = ""
+            
+            for ch in self.str1:
+                result += ch
+    
+            for ch in self.str2:
+                result += ch
+    
+            return result
+    
+    s1 = input("Enter first string: ")
+    s2 = input("Enter second string: ")
+    
+    obj = StringConcatenate(s1, s2)
+    print("Concatenated string:", obj.concatenate())
+\end{verbatim}

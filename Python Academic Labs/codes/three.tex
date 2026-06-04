@@ -1,0 +1,27 @@
+\begin{verbatim}
+from dataclasses import dataclass
+from typing import Union
+
+Number = Union[int, float]
+@dataclass
+class Prism:
+    a: Number
+    b: Number
+    c: Number
+    
+    def __post_init__(self):
+        if self.a <= 0 or self.b <= 0 or self.c <= 0:
+            raise ValueError("All sides must be positive
+            integers.")
+    
+    @property
+    def surface_area(self) -> Number:
+        return 2*(self.a*self.b + self.b*self.c + self.a*self.c)
+
+try:
+    a, b, c = map(int, input("Enter the sides: ").split())
+    p = Prism(a, b, c)
+    print("Surface Area =", p.surface_area)
+except ValueError as e:
+    print("Error:", e)
+\end{verbatim}

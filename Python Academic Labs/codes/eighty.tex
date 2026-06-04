@@ -1,0 +1,31 @@
+\begin{verbatim}
+import pandas as pd
+import numpy as np
+import altair as alt
+
+# Create sample data
+np.random.seed(42)
+x = np.arange(1, 21)
+y = 2 * x + np.random.normal(0, 5, 20)
+
+df = pd.DataFrame({
+    "x": x,
+    "y": y
+})
+
+# Scatter plot
+scatter = alt.Chart(df).mark_circle(size=80).encode(
+    x="x",
+    y="y"
+)
+
+# Regression line
+regression_line = scatter.transform_regression(
+    "x", "y"
+).mark_line(color="red")
+
+# Combine both
+chart = scatter + regression_line
+
+chart
+\end{verbatim}

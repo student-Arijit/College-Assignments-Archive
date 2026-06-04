@@ -1,0 +1,21 @@
+\begin{verbatim}
+class ReadFirstNLines:
+    def __init__(self, filename, n):
+        self.filename = filename
+        self.n = n
+
+    def display_lines(self):
+        with open(self.filename, "r") as file:
+            for i, line in enumerate(file):
+                if i < self.n:
+                    print(line, end="")
+                else:
+                    break
+
+
+filename = input("Enter filename: ")
+n = int(input("Enter number of lines: "))
+
+obj = ReadFirstNLines(filename, n)
+obj.display_lines()
+\end{verbatim}

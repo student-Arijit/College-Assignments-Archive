@@ -1,0 +1,27 @@
+\begin{verbatim}
+# Time-series line chart with tooltips using Altair
+
+import pandas as pd
+import altair as alt
+import numpy as np
+
+# Create sample time-series data
+dates = pd.date_range("2024-01-01", periods=20, freq="D")
+values = np.random.randint(50, 100, size=20)
+
+df = pd.DataFrame({
+    "Date": dates,
+    "Value": values
+})
+
+# Create line chart with tooltips
+chart = alt.Chart(df).mark_line(point=True).encode(
+    x=alt.X("Date:T", title="Date"),
+    y=alt.Y("Value:Q", title="Value"),
+    tooltip=["Date:T", "Value:Q"]
+).properties(
+    title="Time-Series Line Chart with Tooltips"
+)
+
+chart
+\end{verbatim}
